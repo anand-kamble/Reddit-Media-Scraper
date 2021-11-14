@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reddit media Scraper</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Software for downloading Reddit media posts in bulk.">
+    <meta name="keywords" content="Reddit,Post Download,Software,Web Scraper,Media Downloader">
+    <meta name="author" content="Anand Kamble">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-color: #eeeeee/* #2C2F32 */;
+        margin: 0%;
+        overflow-x: hidden;
+        font-family: 'Roboto', sans-serif;
+    }
+    .centerclass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page1holder{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #page1layer{
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+    }
+    .img_1{
+        width: 40vw;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px #2C2F32;
+        transform: perspective(300px) rotateY(5deg);
+        transition: .3s;
+        animation: img1animetion 3s infinite;
+    }
+    .img_1:hover{
+        box-shadow: 0px 0px 20px #0080ff;
+        transform: perspective(300px) rotateY(6deg) translateY(-3%);
+    }
+    #header{
+        width: 100vw;
+        background-color: black;
+        height: 5vh;
+        color: whitesmoke;
+        position: fixed;
+        z-index: 900;
+    }
+
+    @keyframes img1animetion {
+        0%{ transform: perspective(300px) rotateY(6deg) translateY(-3%);}
+        50%{transform: perspective(300px) rotateY(6deg) translateY(0%);}
+        100%{transform: perspective(300px) rotateY(6deg) translateY(-3%);}
+    }
+
+    .dwnlbtn{
+        width: 20vw;
+        margin-left: 10vw;
+        height: 5vh;
+        border: none;
+        font-size: 20px;
+        color: whitesmoke;
+        box-shadow: 0px 0px 0px #de6262 ;
+        border-radius: 2.5vh;
+        cursor: pointer;
+        background: linear-gradient(to right,#de6262  ,#ffb88c);
+        transition: .2s;
+    }
+    .dwnlbtn:hover{
+        box-shadow: 0px 0px 10px #ffb88c ;
+        transform: scale(102%);
+    }
+    #page2{
+        width: 100vw;
+        height: 170vh;
+        background-color: ivory;
+        padding-top: 5vh;
+    }
+    #featureholder{
+        margin-top: 10vh;
+        width: 90vw;
+        margin-left: 5vw;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 80vw;
+    }
+
+    .feature{
+        display: grid;
+        grid-template-columns: 45vw 1vw 44vw;
+        height: 50vh;
+        margin-top: 0vh;
+    }
+
+    .feature p {
+        text-align: center;
+    }
+    .featureimg{
+        max-width: 45vw;
+        max-height: 40vh;
+        border-radius: 2vh;
+        margin: 5vh 0;
+    }
+    .verlinefeture{
+        margin-top: 5vh;
+        height: 40vh;
+        width: 5px;
+        background-color: #ffb88c;
+    }
+
+    @keyframes fade-in {
+    from {opacity: 0; transform:rotateY(45deg)}
+    to {opacity: 1;}
+    }
+    .fade-in-element {
+    animation: fade-in 1s;
+    }
+    .hidden {
+    opacity: 0;
+    }
+
+    #page3{
+        width: 100vw;
+        height: 100vh;
+        padding-top: 5vh;
+    }
+
+    #sourcecode{
+        width: 50vw;
+        margin-left: 25vw;
+        display: grid;
+        text-align: center;
+    }
+
+    #sourcecode p {
+        cursor: pointer;
+        margin-bottom: 10vh;
+    }
+
+    .githublogo{
+        height: 10vh;
+        margin-left: 25vw;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+
+    #footer{
+        width: 100vw;
+        height: 40vh;
+        background-color: black;
+        bottom: 0;
+        color: whitesmoke;
+        text-align: center;
+        padding-top: 10vh;
+    }
+    #socials{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 5vw 10vw;
+        margin-left: 45vw;
+        margin-top: 10vh;
+    }
+    #socials p {
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .invert{
+        filter: invert();
+    }
+    .sociallogo{
+        height: 3vh;
+        cursor: pointer;
+    }
+    .featureimgparent{
+        width: 45vw;height: 50vh;
+    }
+    .featuretextparent{
+        height: 50vh;
+    }
+    .bottomdwnlbtn{
+        margin-left: 15vw;
+    }
+    @media only screen and (max-width: 800px) {
+    #page1text{
+        margin-top: 10vh;
+    }
+    .img_1{
+        margin-left: 10vw;
+        width: 80vw;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px #2C2F32;
+        transform: perspective(300px) rotateY(5deg);
+        transition: .3s;
+        animation: img1animetion 3s infinite;
+    }
+    #page1layer{
+        display: grid;
+        grid-template-columns: 100vw ;
+    }
+
+    .feature{
+        display: grid;
+        grid-template-columns: 100vw;
+        height: 60vh;
+        margin-top: 0vh;
+    }
+
+    #featureholder{
+        margin-top: 10vh;
+        width: 100vw;
+        margin-left: 0vw;
+        height: 180vh;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 60vh 60vh 60vh;
+    }
+    .verlinefeture{
+        margin-top: 2vh;
+        height: 5px;
+        width: 80vw;
+        margin-left: 10vw;
+        background-color: #ffb88c;
+    }
+    .featureimg{
+        max-width: 90vw;
+        max-height: 50vh;
+        border-radius: 2vh;
+        margin: 5vh 0;
+    }
+    .featureimgparent{
+        width: 100vw;height: 50vh;
+    }
+    .featuretextparent{
+        margin-top: 2vh;
+        height: 5vh;
+        text-align: center;
+    }
+    #page2{
+        width: 100vw;
+        height: 200vh;
+        background-color: ivory;
+        padding-top: 5vh;
+    }
+    .dwnlbtn{
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 20vh;
+        height: 5vh;
+        border: none;
+        font-size: 20px;
+        color: whitesmoke;
+        box-shadow: 0px 0px 0px #de6262 ;
+        border-radius: 2.5vh;
+        cursor: pointer;
+        background: linear-gradient(to right,#de6262  ,#ffb88c);
+        transition: .2s;
+    }
+    .bottomdwnlbtn{
+        margin-left: 10vw;
+    }
+    #sourcecode{
+        width: 80vw;
+        margin-left: 10vw;
+        display: grid;
+        text-align: center;
+    }
+    .githublogo{
+        height: 10vh;
+        margin-left: 40vw;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    #socials{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 7vw 30vw;
+        margin-left: 25vw;
+        margin-top: 10vh;
+    }
+}
+</style>
+<body>
+   <!--  <div id="header">
+        <h4 style="margin: 0%;">Anand Kamble</h4>
+    </div> -->
+    <div style="height: inherit;width: 100vw;">
+        <div id="page1holder" class="centerclass">
+            <div id="page1layer">
+                <img class="img_1" src="Screenshot (179).png" alt="Software Main Page">
+                <div id="page1text" class="centerclass">
+                    <div>
+                        <h1 style="margin: 0%;">Reddit Media Scraper</h1>
+                        <p style="margin: 0%;">v1.0.1 Beta</p>
+                        
+                    </div>
+                    
+                </div>
+                <div></div>
+                <button class="dwnlbtn" onclick="downloadPageOpen()">DOWNLOAD</button>
+            </div>
+        </div>
+        <div id="page2">
+            <h1 style="text-align: center;">Features</h1>
+            <div id="featureholder">
+                <div class="feature hidden">
+                    <div  class="centerclass featureimgparent">
+                        <img src="Screenshot (180).png" class="featureimg">
+                    </div>
+                        <div class="verlinefeture"></div>
+                    <div  class="centerclass featuretextparent">
+                        <h2>Search For your Favourite Sub Reddits.</h2>
+                    </div>
+                </div>
+                <div id="forchange" class="feature hidden">
+                    <div class="centerclass featuretextparent ">
+                        <h2>Lot of options to customize your downloading.</h2>
+                    </div>
+                    <div class="verlinefeture"></div>
+                    <div  class="centerclass featureimgparent">
+                        <img src="Screenshot (181).png" class="featureimg">
+                    </div>
+                </div>
+                <div class="feature hidden">
+                    <div  class="centerclass featureimgparent">
+                        <img src="Screenshot (182).png" class="featureimg">
+                    </div>
+                    <div class="verlinefeture"></div>
+                    <div  class="centerclass featuretextparent">
+                        <h2>Option to use Proxy.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page3">
+            <div id="sourcecode">
+                <h1>Download the Latest Version from Google Drive.</h1>
+                <button class="dwnlbtn bottomdwnlbtn" onclick="downloadPageOpen()">DOWNLOAD</button>
+                
+                <h2 style="margin-top: 20vh;">Source Code of the Project available on </h2>
+                <img class="githublogo" onclick="openrepository()" src="GitHub-Emblem.png">
+                <p onclick="openrepository()">https://github.com/anand-kamble/Reddit-Media-Scraper</p>
+            </div>
+            <div id="footer">
+                <h3>Devoloped By Anand Kamble</h3>
+                <div id="socials">
+                    <img onclick="mailme()" src="icons8-email-64.png" class="invert sociallogo">
+                    <p onclick="mailme()">anandmk837@gmail.com</p>
+                    <img onclick="openInsta()" src="icons8-instagram-50.png" class="invert sociallogo">
+                    <p onclick="openInsta()">anandkamble_</p>
+                    <img onclick="opengithub()" src="icons8-github-60.png  " class="invert sociallogo">
+                    <p onclick="opengithub()">anand-kamble</p>
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    function downloadPageOpen(){
+        window.open('https://drive.google.com/file/d/1f7kegw85uXIPK_wTj5guK37wZhsgCYGf/view?usp=sharing')
+    }
+    function openrepository(){
+        window.open('https://github.com/anand-kamble/Reddit-Media-Scraper')
+    }
+    function opengithub (){
+        window.open('https://github.com/anand-kamble')
+    }
+    function openInsta(){
+        window.open('https://www.instagram.com/anandkamble_/')
+    }
+    function mailme(){
+        window.open('mailto: "anandmk837@gmail.com"')
+    }
+    var elements;
+    var windowHeight;
+
+    function chnangeposition(){
+        var width = window.innerWidth;
+        if(width <= 800){
+            document.getElementById('forchange').innerHTML = `<div  class="centerclass featureimgparent">
+                        <img src="Screenshot (181).png" class="featureimg">
+                    </div>
+                    <div class="verlinefeture"></div>
+                    <div class="centerclass featuretextparent ">
+                        <h2>Lot of options to customize your downloading.</h2>
+                    </div>
+                   
+                    `
+        }else{
+            document.getElementById('forchange').innerHTML = `<div class="centerclass featuretextparent ">
+                        <h2>Lot of options to customize your downloading.</h2>
+                    </div>
+                    <div class="verlinefeture"></div>
+                    <div  class="centerclass featureimgparent">
+                        <img src="Screenshot (181).png" class="featureimg">
+                    </div>
+                   
+                    `
+        }
+    }
+    chnangeposition()
+    function init() {
+        chnangeposition()
+      elements = document.querySelectorAll('.hidden');
+      windowHeight = window.innerHeight;
+    }
+  
+    function checkPosition() {
+      
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var positionFromTop = elements[i].getBoundingClientRect().top;
+  
+        if (positionFromTop - windowHeight <= 0) {
+          element.classList.add('fade-in-element');
+          element.classList.remove('hidden');
+        }
+      }
+    }
+    window.addEventListener('resize', init);
+    window.addEventListener('scroll', checkPosition);
+    init();
+    checkPosition();
+
+   // # Reddit-Media-Scraper
+
+//v1.0.1 Beta - [Download](https://drive.google.com/file/d/1f7kegw85uXIPK_wTj5guK37wZhsgCYGf/view?usp=sharing) For Windows (x64)
+
+</script>
+</html>
