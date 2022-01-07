@@ -1,12 +1,12 @@
 # Reddit-Media-Scraper
 
-Download multiple media from a subreddit you like.\
+Download multiple media from a subreddit you like.
 
 ## Select from the todays popular subreddit.
 ![Screenshot of Home page](https://raw.githubusercontent.com/anand-kamble/Reddit-Media-Scraper/main/src/RMS%20(1).png)
 
 ## Search for your favourite Sub-Reddits
-Searches are filtered, *Safe Search* toggle switch allowes you enable or disable NSWF content from appearing in the search results.
+Searches are filtered, *Safe Search* toggle allowes you to enable or disable NSWF content from appearing in the search results.
 ![Screenshot of search bar](https://raw.githubusercontent.com/anand-kamble/Reddit-Media-Scraper/main/src/RMS%20(2).png)
 
 
