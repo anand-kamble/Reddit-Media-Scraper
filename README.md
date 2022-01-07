@@ -1,6 +1,6 @@
 # Reddit-Media-Scraper
 
-Download multiple media from a subreddit you like.
+v1.0.1 - [Download](https://drive.google.com/file/d/1f7kegw85uXIPK_wTj5guK37wZhsgCYGf/view?usp=sharing) For Windows (x64)
 
 ## Home page - Suggestions of the today's popular subreddit.
 ![Screenshot of Home page](https://raw.githubusercontent.com/anand-kamble/Reddit-Media-Scraper/main/src/RMS%20(1).png)
