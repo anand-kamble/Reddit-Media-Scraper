@@ -1,0 +1,685 @@
+@font-face {
+  font-family: poppins;
+  src: url("assets/fonts/Poppins-Regular.otf") format("opentype");
+}
+
+body {
+  font-family: poppins;
+  background: linear-gradient(#141e30, #2c2f32) /* #2C2F32 */;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#copyright {
+  color: rgba(245, 245, 245, 0.493);
+  position: absolute;
+  z-index: 10;
+  bottom: 0vh;
+  right: 1vw;
+}
+.backVideo {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+}
+
+#TitleHead {
+  color: #f7fdff;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#TitleHeadDwnpg {
+  color: #f7fdff;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#searchInp {
+  margin-left: 10vw;
+  width: 80vw;
+  padding: 10px 20px;
+  color: #f7fdff;
+  font-family: poppins;
+  background-color: #1f2223;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+}
+#seachresults {
+  position: relative;
+  z-index: 2;
+  background-color: #17191a;
+  width: 80vw;
+  margin-left: 10vw;
+  padding: 50px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: scroll;
+  max-height: 80vh;
+}
+
+#searchgotsubreddit {
+  display: grid;
+  grid-template-columns: 10vw 70vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+  cursor: pointer;
+}
+#subimg {
+  margin-top: 10px;
+  margin-left: 5vw;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50%;
+}
+#subredditinfo {
+  color: #f7fdff;
+  height: 100px;
+  max-width: 60vw;
+  word-wrap: break-word;
+  text-overflow: none;
+  overflow: hidden;
+}
+
+#nsfwicon {
+  font-size: 10px;
+  width: 36px;
+  border: tomato 2px solid;
+  border-radius: 5px;
+  float: right;
+}
+#nsfwicon p {
+  color: tomato;
+  margin: 0 0 0 2px;
+  display: inline;
+  width: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+#safesearchdiv {
+  display: grid;
+  grid-template-columns: 54vw 15vw 10vw;
+}
+.safesearch {
+  color: white;
+  margin-left: 50%;
+  margin-top: 4px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transform: scale(0.7);
+  margin-left: 0vw;
+}
+input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+.toggle {
+  height: 32px;
+  width: 52px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border: 2px solid #474755;
+  background: linear-gradient(180deg, #2d2f39 0%, #1f2027 100%);
+  transition: all 0.2s ease;
+}
+.toggle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+.toggle:checked {
+  border-color: #654fec;
+}
+.toggle:checked:after {
+  transform: translatex(20px);
+}
+#windowcontrols {
+  /* margin-left: 92vw; */
+  position: relative;
+  z-index: 999;
+  max-height: 40px;
+  width: 100px;
+}
+.windowactionbtn {
+  background-color: #1f2223;
+  border: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: 50% 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.windowactionbtn:hover {
+  background-color: #393f41;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #17191a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #615e73;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}
+
+#downloadpagemain {
+  position: absolute;
+  margin-top: 20px;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#141e30, #243b55);
+  z-index: 4;
+}
+.bannerheading {
+  margin-top: 5vh;
+  position: relative;
+  text-shadow: 2px 2px 8px #000000;
+  z-index: 3;
+}
+#bannerimg {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 20vh;
+  /*  background: url('https://styles.redditmedia.com/t5_2qjpg/styles/bannerBackgroundImage_b0ojh4ocr2241.png?width=4000&s=6da559a586285fb55ac7302348752d988a66bf9d'); */
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.downloadform {
+  margin-top: 10vh;
+  width: 50vw;
+  margin-left: 10vw;
+  position: absolute;
+}
+
+.user-box {
+  position: relative;
+  width: 25vw;
+}
+.user-box p {
+  color: rgb(163, 163, 163);
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 0px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+#downloadnsfwtoggle {
+  display: grid;
+  grid-template-columns: 15vw 10vw;
+  color: whitesmoke;
+  margin: 5vh 0 2vh 0;
+}
+#downloadnsfwtoggle p {
+  margin-left: 0vw;
+}
+#downloadnsfwtoggle input {
+  margin-top: 0px;
+}
+#downloadnsfwtoggle2 {
+  display: grid;
+  grid-template-columns: 15vw 10vw;
+  color: whitesmoke;
+  margin: 2vh 0 3vh 0;
+}
+#downloadnsfwtoggle2 p {
+  margin-left: 0vw;
+}
+#downloadnsfwtoggle2 input {
+  margin-top: 0px;
+}
+
+.sorttext {
+  color: whitesmoke;
+}
+.sortbtnsstl {
+  margin-right: 10px;
+  font-family: poppins;
+  color: whitesmoke;
+  background-color: #615e73;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 5px 15px;
+  transition: all 0.2s;
+}
+
+.activesortbtn {
+  color: black;
+  background-color: #03e9f4;
+  transition: all 0.2s;
+}
+.topsortoptn {
+  margin-top: 2vh;
+  width: 0vw;
+  max-height: 33px;
+  overflow: hidden;
+  transition: all 0.5s;
+  transition-timing-function: linear;
+}
+
+.topsortshowclass {
+  width: 50vw;
+  transition: all 0.5s;
+  transition-timing-function: linear;
+}
+
+#backbtnDwnlPage {
+  width: 50px;
+  position: absolute;
+  margin-top: 7.5vh;
+  margin-left: 5vw;
+  filter: invert();
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#backbtnDwnlPage:hover {
+  width: 60px;
+}
+#dwnlpagemaindiv {
+  box-shadow: 0px -4px 50px #141e30;
+  background-color: #644fec00;
+  margin-top: 20vh;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  z-index: 2;
+}
+
+.downloadstatus {
+  color: whitesmoke;
+  margin-left: 50vw;
+  position: absolute;
+  background-color: rgba(238, 130, 238, 0);
+  border: 2px solid #243b55;
+  margin-top: 5vh;
+  width: 40vw;
+  height: 50vh;
+}
+
+#currdwnltobar {
+  text-align: center;
+  background-color: #243b55;
+  height: 5vh;
+  /*     display: flex;
+    justify-content: center;
+    align-items: center; */
+  display: grid;
+  grid-template-columns: 33vw 5vh 5vh;
+  position: relative;
+  z-index: 4;
+}
+#downloadstatusTitle {
+  margin-left: 20vw;
+  transform: translate(-50%, -50%);
+  margin-top: 2.5vh;
+}
+#listview {
+  height: 4vh;
+  width: 4vh;
+  background: url("assets/icons8-list-96.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0.5vh;
+  cursor: pointer;
+  filter: invert();
+}
+#thumbnailsview {
+  scale: 96%;
+  height: 4vh;
+  width: 4vh;
+  background: url("assets/icons8-thumbnails-100.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0.5vh;
+  cursor: pointer;
+  filter: invert();
+}
+#currdwnlfiles {
+  height: 44.6vh;
+  width: 39.8vw;
+  background-color: #243b55;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.thambnalviewcurrdwnl {
+  display: grid;
+  grid-template-columns: 13.26vw 13.26vw 13.26vw;
+}
+
+.thumbnailviewfile {
+  min-height: 13.26vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thumbnailviewfile p {
+  position: relative;
+  z-index: 4;
+}
+
+.thumbnailviewthumbnail {
+  z-index: 3;
+  position: absolute;
+  min-width: 13.26vw;
+  min-height: 13.26vw;
+  border-radius: 0%;
+  filter: brightness(70%);
+}
+.dwnlfile {
+  background-color: #141e30;
+  height: 7vh;
+  display: grid;
+  grid-template-columns: 5vw 34.5vw;
+}
+#dwnlfile p {
+  /* margin: 0%; */
+  margin-top: 3.5vh;
+  transform: translateY(-50%);
+}
+
+.fileThumb {
+  position: relative;
+  z-index: 4;
+  height: 5vh;
+  width: 5vh;
+  margin: 1vh 1vh;
+  border-radius: 50%;
+}
+
+.downloadbtn {
+  height: 7vh;
+  width: 20vw;
+  color: whitesmoke;
+  margin-left: 60vw;
+  margin-top: 55vh;
+  position: absolute;
+  background-color: #243b55;
+  border: #03e9f4 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.downloadbtn:hover {
+  box-shadow: 0px 0px 10px #03e9f4;
+  background-color: #03e9f4;
+}
+
+.cancelbtn {
+  border: red 2px solid;
+  background-color: #243b55;
+  transition: 1s;
+}
+.cancelbtn:hover {
+  box-shadow: 0px 0px 10px red;
+  background-color: red;
+}
+
+#searchingFilesboxtext {
+  position: absolute;
+  z-index: 4;
+  margin-left: 19.9vw;
+  transform: translate(-50%, -50%);
+  margin-top: 22.3vh;
+}
+#searchingFilesboxtext h3 {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+#searchingFilesboxtext span {
+  width: 95px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+}
+#searchingFilesboxtext p {
+  margin: 0;
+}
+
+#populerPosts {
+  width: 80vw;
+  height: 70vh;
+  background-color: rgb(123, 207, 255, 0);
+  margin-left: 10vw;
+  margin-top: 10vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.popularSureddit {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  display: block;
+}
+.popularsubreddittitle {
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  /*   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  width: 8vw;
+  word-break: break-all;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+#popularsubredditholder {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+.popularsubreddittitle {
+  color: whitesmoke;
+  text-shadow: 0px 0px 5px #ffffff;
+  transition: 0.5s;
+  position: absolute;
+}
+.popularsubredditimage {
+  min-width: 8vw;
+  margin-bottom: 2vh;
+  border-radius: 10px;
+  filter: brightness(50%);
+  z-index: 1;
+  position: relative;
+}
+
+.popularSureddit:hover {
+  transform: scale(1.2);
+}
+
+.searchsortbtnsstl {
+  margin-right: 10px;
+  font-family: poppins;
+  color: whitesmoke;
+  background-color: #615e73;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 5px 15px;
+  transition: all 0.2s;
+  width: 10vw;
+  height: 30px;
+}
+
+.searchactivesortbtn {
+  color: black;
+  background-color: #03e9f4;
+  transition: all 0.2s;
+}
+
+#settings {
+  position: absolute;
+  color: whitesmoke;
+  z-index: 5;
+  top: 5vh;
+  right: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#settingicon {
+  height: 30px;
+  filter: invert();
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+#settings:hover #settingicon {
+  transform: rotateZ(90deg);
+}
+
+#settingspanel {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2c2f32;
+  position: absolute;
+  z-index: 4;
+  color: whitesmoke;
+  padding-left: 25vw;
+}
+
+#defaultdownloadpath {
+  background-color: #2c2f32;
+  border: none;
+  width: 25vw;
+  border-bottom: oldlace 2px solid;
+  color: whitesmoke;
+  font-size: 18px;
+  font-family: poppins;
+}
+
+#defaultdownloadpath:focus {
+  outline: none;
+}
+
+#maxparalleltext {
+  margin-top: 5vh;
+}
+#paralleldownloadsslider {
+  -webkit-appearance: none;
+  width: 25vw;
+  background: #474b50;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#paralleldownloadsslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+#paralleldwnlwarning {
+  color: rgb(255, 100, 100);
+  font-size: 14px;
+}
+#defaultproxy {
+  background-color: #2c2f32;
+  border: none;
+  width: 25vw;
+  border-bottom: oldlace 2px solid;
+  color: whitesmoke;
+  font-size: 18px;
+  font-family: poppins;
+}
+#defaultproxy:focus {
+  outline: none;
+}
+.settingpanelbackicon {
+  height: 5vh;
+  filter: invert();
+  margin-top: 5vh;
+  transform: translate(-200%, 150%);
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+#settingsave {
+  margin-left: 15vw;
+  margin-top: 5vh;
+  width: 10vw;
+  font-size: 24px;
+  border: #03e9f4 1px solid;
+  color: #03e9f4;
+  border-radius: 15px;
+  padding: 1vh 0;
+  background: #2c2f32;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#settingsave:hover {
+  box-shadow: 0px 0px 10px #03e9f4;
+  background: #03e9f4;
+  color: whitesmoke;
+}
