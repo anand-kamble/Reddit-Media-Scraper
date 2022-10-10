@@ -1,546 +1,682 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reddit Media Scraper</title>
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      if (typeof module === "object") {
+        window.module = module
+        module = undefined
+      }
+    </script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script>
+      if (window.module) module = window.module
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Reddit Media Scraper</title>
-  <link rel="stylesheet" href="index.css">
-  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
-  <script src="jquery-3.6.0.min.js"></script>
-  <script src="jquery-ui.min.js"></script>
-  <script>if (window.module) module = window.module;</script>
-</head>
-
-<body onload="getPopular()">
-  <p id="copyright">©2021 Anand Kamble</p>
-  <div
-    style='position: absolute;height: 20px;width: 100vw;z-index: 1000;margin-left: 70px;background-color: rgb(22, 22, 22);-webkit-app-region: drag'>
-  </div>
-  <div id="windowcontrols">
-    <div id="min-btn" class="windowactionbtn" style="background-image: url('minimize.png');"></div>
-    <div id="max-btn" class="windowactionbtn" style="background-image: url('maximize.png');"></div>
-    <div id="close-btn" class="windowactionbtn" style="background-image: url('close.png');"></div>
-  </div>
-  <div id="settings" onclick="settingsPanel()">
-    <img id="settingicon" src="setting.png">
-    <p>Settings</p> 
+  <body onload="getPopular()">
+    <p id="copyright">©2021 Anand Kamble</p>
+    <div
+      style="
+        position: absolute;
+        height: 20px;
+        width: 100vw;
+        z-index: 1000;
+        margin-left: 70px;
+        background-color: rgb(22, 22, 22);
+        -webkit-app-region: drag;
+      "
+    ></div>
+    <div id="windowcontrols">
+      <div
+        id="min-btn"
+        class="windowactionbtn"
+        style="background-image: url('assets/minimize.png')"
+      ></div>
+      <div
+        id="max-btn"
+        class="windowactionbtn"
+        style="background-image: url('assets/maximize.png')"
+      ></div>
+      <div
+        id="close-btn"
+        class="windowactionbtn"
+        style="background-image: url('assets/close.png')"
+      ></div>
     </div>
-  <div id="settingspanel" style="display: none;">
-    <img class="settingpanelbackicon" src="—Pngtree—vector back icon_4267356.png" onclick="settingsPanel()">
+    <div id="settings" onclick="settingsPanel()">
+      <img id="settingicon" src="assets/setting.png" />
+      <p>Settings</p>
+    </div>
+    <div id="settingspanel" style="display: none">
+      <img
+        class="settingpanelbackicon"
+        src="assets/—Pngtree—vector back icon_4267356.png"
+        onclick="settingsPanel()"
+      />
       <h1>Settings</h1>
-      <p>Default Downloads folder : </p>
-      <input type="text" name="" id="defaultdownloadpath" onclick="get_folder()">
+      <p>Default Downloads folder :</p>
+      <input
+        type="text"
+        name=""
+        id="defaultdownloadpath"
+        onclick="get_folder()"
+      />
       <p id="maxparalleltext">Maximum parallel downloads : 1</p>
-      <input id="paralleldownloadsslider" type="range" min="1" max="10" step="1" value="1" oninput="document.getElementById('maxparalleltext').innerText='Maximum parallel downloads : '+this.value">
-      <p id="paralleldwnlwarning">Higher number of parallel downloads can cause system overload.</p>
-      <p style="margin-top: 5vh;">Use a Custom Proxy :</p>
-      <input type="text" name="" id="defaultproxy" onclick="">
-      <p style="font-size: 14px;color: rgb(151, 151, 151);">Custom proxy can help to download content blocked in your contry.</p>
+      <input
+        id="paralleldownloadsslider"
+        type="range"
+        min="1"
+        max="10"
+        step="1"
+        value="1"
+        oninput="document.getElementById('maxparalleltext').innerText='Maximum parallel downloads : '+this.value"
+      />
+      <p id="paralleldwnlwarning">
+        Higher number of parallel downloads can cause system overload.
+      </p>
+      <p style="margin-top: 5vh">Use a Custom Proxy :</p>
+      <input type="text" name="" id="defaultproxy" onclick="" />
+      <p style="font-size: 14px; color: rgb(151, 151, 151)">
+        Custom proxy can help to download content blocked in your contry.
+      </p>
       <button id="settingsave" onclick="savesettings()">SAVE</button>
     </div>
-  <h1 id="TitleHead">Reddit Media Scraper</h1>
-  <form>
-    <input type="text" id="searchInp" placeholder="Search ...">
-  </form>
-  <div id="populerPosts">
-    <h2 style="margin-left: 0vw;color: whitesmoke;">Popular Sub-Reddits</h2>  
-    <div id="popularsubredditholder">
-
-      </div>
-  </div>
-  <div id="seachresults" style="display:none;">
-    <div id="safesearchdiv">
-     
-      <!--<button type="button" class="searchsortbtnsstl searchactivesortbtn" id="searchsorttypebtn0" onclick="searchSortType(0)">Posts</button>
-      <button type="button" class="searchsortbtnsstl" id="searchsorttypebtn1" onclick="searchSortType(1)">Communities</button>-->
-      <p></p>
-      <p class="safesearch">Safe Search</p>
-      <input id="safesearchtoggle" type="checkbox" class="toggle" checked onchange="search()">
+    <h1 id="TitleHead">Reddit Media Scraper</h1>
+    <form>
+      <input type="text" id="searchInp" placeholder="Search ..." />
+    </form>
+    <div id="populerPosts">
+      <h2 style="margin-left: 0vw; color: whitesmoke">Popular Sub-Reddits</h2>
+      <div id="popularsubredditholder"></div>
     </div>
-    <div id="searchappending">
-      <p style="color: rgba(245, 245, 245, 0.459);text-align: center;" id="loading">Loading ...</p>
-      <div id="searchgotsubreddit">
-          <div id="subimg" style="background-image: url('');"></div>
+    <div id="seachresults" style="display: none">
+      <div id="safesearchdiv">
+        <p></p>
+        <p class="safesearch">Safe Search</p>
+        <input
+          id="safesearchtoggle"
+          type="checkbox"
+          class="toggle"
+          checked
+          onchange="search()"
+        />
+      </div>
+      <div id="searchappending">
+        <p
+          style="color: rgba(245, 245, 245, 0.459); text-align: center"
+          id="loading"
+        >
+          Loading ...
+        </p>
+        <div id="searchgotsubreddit">
+          <div id="subimg" style="background-image: url('')"></div>
           <div id="subredditinfo">
-            <h4 style="margin-bottom: 0%;">r/[Sub-Reddit Title]</h4>
-            <p style="font-size: 0.8rem;">[Sub Reddit Description]</p>
+            <h4 style="margin-bottom: 0%">r/[Sub-Reddit Title]</h4>
+            <p style="font-size: 0.8rem">[Sub Reddit Description]</p>
           </div>
         </div>
-    </div>
-  </div>
-  <div id="downloadpagemain" style="display: none;">
-    <div id="bannerimg">
-    </div>
-    <!--<img id="bannerimg" src="https://styles.redditmedia.com/t5_2qhl2/styles/bannerBackgroundImage_5eqiu4e5i7t71.jpg?width=4000&s=90b2017721d2b6e5c0d4336af18e0676814d98ea">-->
-    <div id="dwnlpagemaindiv">
-      <div class="downloadstatus" id="downloadstatus">
-
-        <div id="currdwnltobar">
-          <h3 id="downloadstatusTitle">Searching...</h3>
-          <div id="listview" onclick="listview()"></div>
-          <div id="thumbnailsview" onclick="thumbnailview()"></div>
-        </div>
-        <!--<div id="searchingFilesboxtext">
-          <h3>100</h3>
-          <span></span>
-          <p>Posts Found</p>
-        </div>-->
-        <div id="currdwnlfiles" class="">
-          <div class="dwnlfile">
-                    <!--<div  class="fileThumb " style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>
-                  <div  class="dwnlfile ">
-                    <div class="fileThumb " style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>
-                  <div class="dwnlfile">
-                    <div class="fileThumb" style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>
-                  <div  class="dwnlfile">
-                    <div class="fileThumb" style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>
-                  <div  class="dwnlfile">
-                    <div class="fileThumb" style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>
-                  <div class="dwnlfile">
-                    <div class="fileThumb" style = "background: url('https://preview.redd.it/ssvtkbs8ldw71.jpg?width=640&crop=smart&auto=webp&s=3603911cb88745a7333fe304520bc1f0b518e0ed');background-size: cover;background-repeat: no-repeat;background-position: center center;">
-                      
-                    </div>
-                    <p>${file.title}</p>
-                  </div>--> 
-
-        </div>
-        </div>
       </div>
-      <div id="downloadbtn" class="downloadbtn" onclick="downloadstarter()">
-        <h2 id="downloadbtntext">
-          DOWNLOAD
-        </h2>
-      </div>
-      <img id="backbtnDwnlPage" onclick="downloadPageHide()" src="—Pngtree—vector back icon_4267356.png">
-      <h1 id="TitleHeadDwnpg" class="bannerheading"> r/Jennie</h1>
-      <form class="downloadform">
-        <div class="user-box">
-          <input type="text" name="" value="100" id="numberofposts">
-          <label>Number of posts to scan</label>
-          <!--<p>Enter zero to download all posts from a subreddit.</p>-->
-          <p></p>
-        </div>
-        <div class="user-box">
-          <input type="text" name="" id="downloadpath" onclick="selectFolder()">
-          <input type="file" webkitdirectory id="folderSelector" style="display: none;"/>
-          <label>Path</label>
-          <p>Path to the folder where you want to Download posts</p>
-        </div>
-        <div id="downloadnsfwtoggle">
-          <p style="margin-top: 1px;">Download NSFW posts.</p>
-          <input id="downloadnsfw" type="checkbox" class="toggle" checked onchange="">
-        </div>
-        <div id="downloadnsfwtoggle2">
-          <p style="margin-top: 1px;">Rename posts while downloading.</p>
-          <input id="downloadnsfw2" type="checkbox" class="toggle" checked onchange="">
-        </div>
-        <p class="sorttext">Sort Posts By</p>
-        <div id="sortbtns">
-          <button type="button" class="sortbtnsstl" id="sorttypebtn0" onclick="selectsort(0)">Hot</button>
-          <button type="button" class="sortbtnsstl" id="sorttypebtn1" onclick="selectsort(1)">Top</button>
-          <button type="button" class="sortbtnsstl" id="sorttypebtn2" onclick="selectsort(2)">New</button>
-          <button type="button" class="sortbtnsstl" id="sorttypebtn3" onclick="selectsort(3)">Rising</button>
-          <div id="topsortoptn" class="topsortoptn">
-            <button type="button" id="topsortbtn0" class="sortbtnsstl" onclick="selecttopsort(0)">Now</button>
-            <button type="button" id="topsortbtn1" class="sortbtnsstl" onclick="selecttopsort(1)">Today</button>
-            <button type="button" id="topsortbtn2" class="sortbtnsstl" onclick="selecttopsort(2)">This Week</button>
-            <button type="button" id="topsortbtn3" class="sortbtnsstl" onclick="selecttopsort(3)">This Month</button>
-            <button type="button" id="topsortbtn4" class="sortbtnsstl" onclick="selecttopsort(4)">This Year</button>
-            <button type="button" id="topsortbtn5" class="sortbtnsstl" onclick="selecttopsort(5)">All Time</button>
+    </div>
+    <div id="downloadpagemain" style="display: none">
+      <div id="bannerimg"></div>
+      <div id="dwnlpagemaindiv">
+        <div class="downloadstatus" id="downloadstatus">
+          <div id="currdwnltobar">
+            <h3 id="downloadstatusTitle">Searching...</h3>
+            <div id="listview" onclick="listview()"></div>
+            <div id="thumbnailsview" onclick="thumbnailview()"></div>
+          </div>
+          <div id="currdwnlfiles" class="">
+            <div class="dwnlfile"></div>
           </div>
         </div>
-      </form>
+        <div id="downloadbtn" class="downloadbtn" onclick="downloadstarter()">
+          <h2 id="downloadbtntext">DOWNLOAD</h2>
+        </div>
+        <img
+          id="backbtnDwnlPage"
+          onclick="downloadPageHide()"
+          src="assets/—Pngtree—vector back icon_4267356.png"
+        />
+        <h1 id="TitleHeadDwnpg" class="bannerheading">r/Jennie</h1>
+        <form class="downloadform">
+          <div class="user-box">
+            <input type="text" name="" value="100" id="numberofposts" />
+            <label>Number of posts to scan</label>
+            <!--<p>Enter zero to download all posts from a subreddit.</p>-->
+            <p></p>
+          </div>
+          <div class="user-box">
+            <input
+              type="text"
+              name=""
+              id="downloadpath"
+              onclick="selectFolder()"
+            />
+            <input
+              type="file"
+              webkitdirectory
+              id="folderSelector"
+              style="display: none"
+            />
+            <label>Path</label>
+            <p>Path to the folder where you want to Download posts</p>
+          </div>
+          <div id="downloadnsfwtoggle">
+            <p style="margin-top: 1px">Download NSFW posts.</p>
+            <input
+              id="downloadnsfw"
+              type="checkbox"
+              class="toggle"
+              checked
+              onchange=""
+            />
+          </div>
+          <div id="downloadnsfwtoggle2">
+            <p style="margin-top: 1px">Rename posts while downloading.</p>
+            <input
+              id="downloadnsfw2"
+              type="checkbox"
+              class="toggle"
+              checked
+              onchange=""
+            />
+          </div>
+          <p class="sorttext">Sort Posts By</p>
+          <div id="sortbtns">
+            <button
+              type="button"
+              class="sortbtnsstl"
+              id="sorttypebtn0"
+              onclick="selectsort(0)"
+            >
+              Hot
+            </button>
+            <button
+              type="button"
+              class="sortbtnsstl"
+              id="sorttypebtn1"
+              onclick="selectsort(1)"
+            >
+              Top
+            </button>
+            <button
+              type="button"
+              class="sortbtnsstl"
+              id="sorttypebtn2"
+              onclick="selectsort(2)"
+            >
+              New
+            </button>
+            <button
+              type="button"
+              class="sortbtnsstl"
+              id="sorttypebtn3"
+              onclick="selectsort(3)"
+            >
+              Rising
+            </button>
+            <div id="topsortoptn" class="topsortoptn">
+              <button
+                type="button"
+                id="topsortbtn0"
+                class="sortbtnsstl"
+                onclick="selecttopsort(0)"
+              >
+                Now
+              </button>
+              <button
+                type="button"
+                id="topsortbtn1"
+                class="sortbtnsstl"
+                onclick="selecttopsort(1)"
+              >
+                Today
+              </button>
+              <button
+                type="button"
+                id="topsortbtn2"
+                class="sortbtnsstl"
+                onclick="selecttopsort(2)"
+              >
+                This Week
+              </button>
+              <button
+                type="button"
+                id="topsortbtn3"
+                class="sortbtnsstl"
+                onclick="selecttopsort(3)"
+              >
+                This Month
+              </button>
+              <button
+                type="button"
+                id="topsortbtn4"
+                class="sortbtnsstl"
+                onclick="selecttopsort(4)"
+              >
+                This Year
+              </button>
+              <button
+                type="button"
+                id="topsortbtn5"
+                class="sortbtnsstl"
+                onclick="selecttopsort(5)"
+              >
+                All Time
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</body>
-<script>
-  function settingsPanel(){
-    $("#settingspanel").toggle('fade')
-  }
-  function get_folder(){
-    ipcRenderer.send('getFolder')
-  }
-  function savesettings(){
-    var settings = {
-      downloadpath : $("#defaultdownloadpath").val(),
-      parallellimit : $("#paralleldownloadsslider").val(),
-      proxy : $("#defaultproxy").val()
+  </body>
+  <script>
+    function settingsPanel() {
+      $("#settingspanel").toggle("fade")
     }
-    ipcRenderer.send('settings',settings)
-    $("#settingspanel").toggle('fade')
-    console.log(settings)
-  }
-
-  function thumbnailview(){
-    console.log('thumbnail')
-    document.getElementById('listview').style = 'filter: brightness(50%);'
-    document.getElementById('thumbnailsview').style = ''
-
-    var maindivs = document.getElementsByClassName('dwnlfile')//thumbnailviewfile
-    var thumbnails = document.getElementsByClassName('fileThumb')//fileThumb thumbnailviewthumbnail
-    $("#currdwnlfiles").fadeOut(400,()=>{
-      document.getElementById('currdwnlfiles').classList.add('thambnalviewcurrdwnl');
-    console.log(maindivs.length)
-    var forloopslenght = maindivs.length
-    //for(i=0;i<forloopslenght;i++){
-    Array.from(maindivs).forEach(kid => {
-      try{
-      kid.classList.add('thumbnailviewfile')
-      kid.classList.remove('dwnlfile')
-      }catch(e){
-        console.log(e)
+    function get_folder() {
+      ipcRenderer.send("getFolder")
+    }
+    function savesettings() {
+      var settings = {
+        downloadpath: $("#defaultdownloadpath").val(),
+        parallellimit: $("#paralleldownloadsslider").val(),
+        proxy: $("#defaultproxy").val(),
       }
-      
-    })
-    //for(i=0;i<thumbnails.length;i++){
-    Array.from(thumbnails).forEach(kid => {
-      try{
-        kid.classList.add('thumbnailviewthumbnail')
-        kid.classList.remove('fileThumb')
-      }catch(e){
-        console.log(e)
-      }
-    })
-    $("#currdwnlfiles").fadeIn()
-    })
+      ipcRenderer.send("settings", settings)
+      $("#settingspanel").toggle("fade")
+      console.log(settings)
+    }
 
+    function thumbnailview() {
+      console.log("thumbnail")
+      document.getElementById("listview").style = "filter: brightness(50%);"
+      document.getElementById("thumbnailsview").style = ""
 
-  }
+      var maindivs = document.getElementsByClassName("dwnlfile") //thumbnailviewfile
+      var thumbnails = document.getElementsByClassName("fileThumb") //fileThumb thumbnailviewthumbnail
+      $("#currdwnlfiles").fadeOut(400, () => {
+        document
+          .getElementById("currdwnlfiles")
+          .classList.add("thambnalviewcurrdwnl")
+        console.log(maindivs.length)
+        var forloopslenght = maindivs.length
+        Array.from(maindivs).forEach((kid) => {
+          try {
+            kid.classList.add("thumbnailviewfile")
+            kid.classList.remove("dwnlfile")
+          } catch (e) {
+            console.log(e)
+          }
+        })
+        Array.from(thumbnails).forEach((kid) => {
+          try {
+            kid.classList.add("thumbnailviewthumbnail")
+            kid.classList.remove("fileThumb")
+          } catch (e) {
+            console.log(e)
+          }
+        })
+        $("#currdwnlfiles").fadeIn()
+      })
+    }
 
-  function listview(){
-    document.getElementById('listview').style = ''
-    document.getElementById('thumbnailsview').style = 'filter: brightness(50%);'
-    console.log('LIST VIEW')
-    var maindivs = document.getElementsByClassName('thumbnailviewfile')//thumbnailviewfile
-    var thumbnails = document.getElementsByClassName('thumbnailviewthumbnail')//fileThumb thumbnailviewthumbnail
-    $("#currdwnlfiles").fadeOut(400,()=>{
-      document.getElementById('currdwnlfiles').classList.remove('thambnalviewcurrdwnl');
-    console.log(maindivs.length)
-    var forloopslenght = maindivs.length
-    //for(i=0;i<forloopslenght;i++){
-    Array.from(maindivs).forEach(kid => {
-      try{
-      kid.classList.add('dwnlfile')
-      kid.classList.remove('thumbnailviewfile')
-      }catch(e){
-        console.log(e)
-      }
-      
-    })
-    //for(i=0;i<thumbnails.length;i++){
-    Array.from(thumbnails).forEach(kid => {
-      try{
-        kid.classList.add('fileThumb')
-        kid.classList.remove('thumbnailviewthumbnail')
-      }catch(e){
-        console.log(e)
-      }
-    })
-    $("#currdwnlfiles").fadeIn()
-    })
-  }
+    function listview() {
+      document.getElementById("listview").style = ""
+      document.getElementById("thumbnailsview").style =
+        "filter: brightness(50%);"
+      console.log("LIST VIEW")
+      var maindivs = document.getElementsByClassName("thumbnailviewfile")
+      var thumbnails = document.getElementsByClassName("thumbnailviewthumbnail")
+      $("#currdwnlfiles").fadeOut(400, () => {
+        document
+          .getElementById("currdwnlfiles")
+          .classList.remove("thambnalviewcurrdwnl")
+        console.log(maindivs.length)
+        var forloopslenght = maindivs.length
+        Array.from(maindivs).forEach((kid) => {
+          try {
+            kid.classList.add("dwnlfile")
+            kid.classList.remove("thumbnailviewfile")
+          } catch (e) {
+            console.log(e)
+          }
+        })
+        Array.from(thumbnails).forEach((kid) => {
+          try {
+            kid.classList.add("fileThumb")
+            kid.classList.remove("thumbnailviewthumbnail")
+          } catch (e) {
+            console.log(e)
+          }
+        })
+        $("#currdwnlfiles").fadeIn()
+      })
+    }
 
- // $("#seachresults").slideDown(400);
-  function getPopular(){
-    $.get('https://www.reddit.com/r/popular/.json?limit=32',(json)=>{
-      console.log(json)
-      json.data.children.forEach(post=>{
-        document.getElementById('popularsubredditholder').insertAdjacentHTML('beforeend', `      <div onclick="selectsubreddit('${post.data.subreddit}','${post.data.thumbnail}')" class="popularSureddit" style="">
+    function getPopular() {
+      $.get("https://www.reddit.com/r/popular/.json?limit=32", (json) => {
+        console.log(json)
+        json.data.children.forEach((post) => {
+          document.getElementById("popularsubredditholder").insertAdjacentHTML(
+            "beforeend",
+            `      <div onclick="selectsubreddit('${post.data.subreddit}','${post.data.thumbnail}')" class="popularSureddit" style="">
         <p class="popularsubreddittitle">${post.data.subreddit_name_prefixed}</p>
         <img class="popularsubredditimage" src="${post.data.thumbnail}" alt="">
-      </div>`)
+      </div>`
+          )
+        })
+      })
+    }
+    var searchsort0_selected = true
+    var searchsort1_selected = false
+    var is_community_search_on = false
+
+    function searchSortType(sortNum) {
+      var sorts = [0, 1]
+      if (sortNum == 0) {
+        is_community_search_on = false
+        search()
+        if (searchsort0_selected == true) {
+          document
+            .getElementById("searchsorttypebtn0")
+            .classList.remove("searchactivesortbtn")
+          searchsort0_selected = false
+        } else {
+          document
+            .getElementById("searchsorttypebtn0")
+            .classList.add("searchactivesortbtn")
+          document
+            .getElementById("searchsorttypebtn1")
+            .classList.remove("searchactivesortbtn")
+          searchsort0_selected = true
+        }
+      }
+      if (sortNum == 1) {
+        is_community_search_on = true
+        search()
+        if (searchsort1_selected == false) {
+          document
+            .getElementById("searchsorttypebtn1")
+            .classList.add("searchactivesortbtn")
+          document
+            .getElementById("searchsorttypebtn0")
+            .classList.remove("searchactivesortbtn")
+          searchsort1_selected = true
+        } else {
+          document
+            .getElementById("searchsorttypebtn1")
+            .classList.remove("searchactivesortbtn")
+          document
+            .getElementById("searchsorttypebtn0")
+            .classList.add("searchactivesortbtn")
+          searchsort1_selected = false
+        }
+      }
+    }
+    function selectFolder() {
+      ipcRenderer.send("select-dirs")
+    }
+
+    var cancelBTN = false
+    var is_download_running = false
+    function downloadstarter() {
+      console.log("TOO")
+
+      if (is_sort_selected == true) {
+        if (is_top_sort_selected == true) {
+          if (is_top_sub_sort_selected == true) {
+            if (is_download_running == false) {
+              document.getElementById("currdwnlfiles").innerHTML = ""
+              document.getElementById("backbtnDwnlPage").style = "display:none;"
+            }
+            if (cancelBTN == false) {
+              document.getElementById("downloadstatusTitle").innerText =
+                "Starting Download ..."
+              var numberofpoststodwnl = $("#numberofposts").val()
+              console.log(
+                "StartingDownload",
+                numberofpoststodwnl,
+                document.getElementById("downloadnsfw").checked
+              )
+              is_download_running == true
+              ipcRenderer.send(
+                "StartDownload",
+                numberofpoststodwnl,
+                document.getElementById("downloadnsfw").checked,
+                document.getElementById("downloadnsfw2").checked
+              )
+              is_download_cancelled = false
+              $("#downloadstatus").fadeIn(500, () => {
+                document
+                  .getElementById("downloadbtn")
+                  .classList.add("cancelbtn")
+                document.getElementById("downloadbtntext").innerText = "CANCEL"
+                document.getElementById("currdwnlfiles").innerHTML = ""
+                cancelBTN = true
+              })
+            } else {
+              document.getElementById("downloadbtntext").innerText =
+                "CANCELING..."
+              ipcRenderer.send("canceldownload")
+            }
+          } else {
+            $("#sortbtns").effect("shake")
+          }
+        } else {
+          if (is_download_running == false) {
+            document.getElementById("currdwnlfiles").innerHTML = ""
+            document.getElementById("backbtnDwnlPage").style = "display:none;"
+          }
+          if (cancelBTN == false) {
+            document.getElementById("downloadstatusTitle").innerText =
+              "Starting Download ..."
+            var numberofpoststodwnl = $("#numberofposts").val()
+            console.log(
+              "StartingDownload",
+              numberofpoststodwnl,
+              document.getElementById("downloadnsfw").checked
+            )
+            is_download_running == true
+            ipcRenderer.send(
+              "StartDownload",
+              numberofpoststodwnl,
+              document.getElementById("downloadnsfw").checked,
+              document.getElementById("downloadnsfw2").checked
+            )
+            is_download_cancelled = false
+            $("#downloadstatus").fadeIn(500, () => {
+              document.getElementById("downloadbtn").classList.add("cancelbtn")
+              document.getElementById("downloadbtntext").innerText = "CANCEL"
+              document.getElementById("currdwnlfiles").innerHTML = ""
+              cancelBTN = true
+            })
+          } else {
+            document.getElementById("downloadbtntext").innerText =
+              "CANCELING..."
+            ipcRenderer.send("canceldownload")
+          }
+        }
+      } else {
+        $("#sortbtns").effect("shake")
+      }
+    }
+
+    var sort1 = false //'sort=hot'
+    var sort2 = false //'sort=new'
+    var sort3 = false //'sort=rising'
+    var sort4 = false //'sort=top&t=hour'
+    var sort5 = false //'sort=top&t=day'
+    var sort6 = false //'sort=top&t=week'
+    var sort7 = false //'sort=top&t=month'
+    var sort8 = false //'sort=top&t=year'
+    var sort9 = false //'sort=top&t=all'
+
+    var is_sort_selected = false
+    var is_top_sort_selected = false
+    var is_top_sub_sort_selected = false
+
+    var sort_types = ["sort=hot", "sort=top", "sort=new", "sort=rising"]
+    var top_sub_sorts = [
+      "sort=top&t=hour",
+      "sort=top&t=day",
+      "sort=top&t=week",
+      "sort=top&t=month",
+      "sort=top&t=year",
+      "sort=top&t=all",
+    ]
+
+    function selectsort(sortType) {
+      var buttons = [0, 1, 2, 3]
+      if (sortType == 1) {
+        addtopsorts()
+        is_top_sort_selected = true
+        is_sort_selected = true
+      } else {
+        is_sort_selected = true
+        sendSortType(sort_types[sortType])
+        is_top_sort_selected = false
+        topsortvisible = false
+        document
+          .getElementById("topsortoptn")
+          .classList.remove("topsortshowclass")
+      }
+      buttons.splice(sortType, 1)
+      var btn0 = document.getElementById("sorttypebtn" + sortType)
+      btn0.classList.add("activesortbtn")
+      buttons.forEach((btn) => {
+        var btnother = document.getElementById("sorttypebtn" + btn)
+        btnother.classList.remove("activesortbtn")
+      })
+    }
+
+    function clearsort() {
+      var buttons = [0, 1, 2, 3]
+      document
+        .getElementById("topsortoptn")
+        .classList.remove("topsortshowclass")
+      buttons.forEach((btn) => {
+        var btnother = document.getElementById("sorttypebtn" + btn)
+        btnother.classList.remove("activesortbtn")
+      })
+
+      var buttons2 = [0, 1, 2, 3, 4, 5]
+      buttons2.forEach((btn) => {
+        var btnother = document.getElementById("topsortbtn" + btn)
+        btnother.classList.remove("activesortbtn")
+      })
+    }
+    function downloadPageHide() {
+      $("#downloadpagemain").toggle("slide", { direction: "right" }, 800)
+      $("#settings").toggle("fade")
+      document.getElementById("currdwnlfiles").innerHTML = ""
+    }
+
+    function selecttopsort(btnnum) {
+      console.log("top sort selected")
+      is_top_sub_sort_selected = true
+      sendSortType(top_sub_sorts[btnnum])
+      var buttons = [0, 1, 2, 3, 4, 5]
+      buttons.splice(btnnum, 1)
+      var btn0 = document.getElementById("topsortbtn" + btnnum)
+      btn0.classList.add("activesortbtn")
+      buttons.forEach((btn) => {
+        var btnother = document.getElementById("topsortbtn" + btn)
+        btnother.classList.remove("activesortbtn")
+      })
+    }
+    var topsortvisible = false
+    function addtopsorts() {
+      if (topsortvisible == false) {
+        topsortvisible = true
+        document.getElementById("topsortoptn").classList.add("topsortshowclass")
+      } else {
+        topsortvisible = false
+        document
+          .getElementById("topsortoptn")
+          .classList.remove("topsortshowclass")
+      }
+    }
+    const electron = require("electron")
+    const { ipcRenderer } = electron
+
+    $(document).ready(function () {
+      $(window).keydown(function (event) {
+        if (event.keyCode == 13) {
+          event.preventDefault()
+          return false
+        }
       })
     })
-  }
-  var searchsort0_selected = true;
-  var searchsort1_selected = false;
-  var is_community_search_on = false;
+    var isserachresHidden = true
+    $("#searchInp").keyup(search)
+    function search() {
+      document.getElementById("loading").innerText = `Loading ...`
+      console.log(isserachresHidden)
 
-  function searchSortType(sortNum){
-    var sorts = [0,1];
-    if(sortNum == 0){
-      is_community_search_on = false;
-      search();
-      if(searchsort0_selected == true){
-        document.getElementById('searchsorttypebtn0').classList.remove('searchactivesortbtn');
-        searchsort0_selected = false
-      }else{
-        document.getElementById('searchsorttypebtn0').classList.add('searchactivesortbtn');
-        document.getElementById('searchsorttypebtn1').classList.remove('searchactivesortbtn');
-        searchsort0_selected = true
+      var query = $("#searchInp").val()
+      console.log(query)
+      var searchParam = {
+        query: query,
+        safeSearch: document.getElementById("safesearchtoggle").checked,
       }
-    }
-    if(sortNum == 1){
-      is_community_search_on = true;
-      search();
-      if(searchsort1_selected == false){
-        document.getElementById('searchsorttypebtn1').classList.add('searchactivesortbtn');
-        document.getElementById('searchsorttypebtn0').classList.remove('searchactivesortbtn');
-        searchsort1_selected = true
-      }else{
-        document.getElementById('searchsorttypebtn1').classList.remove('searchactivesortbtn');
-        document.getElementById('searchsorttypebtn0').classList.add('searchactivesortbtn');
-        searchsort1_selected = false
+      if (query.length > 0) {
+        ipcRenderer.send("search", searchParam)
+      }
+      if (isserachresHidden == true && query.length > 0) {
+        $("#seachresults").slideDown(400)
+        isserachresHidden = false
+      }
+      if (query.length == 0 && isserachresHidden == false) {
+        console.log("blank")
+        $("#seachresults").slideUp(400)
+        isserachresHidden = true
       }
     }
 
-  }
-  function selectFolder(){
-    ipcRenderer.send('select-dirs')
-    //$('#button').on('click', function() {
-      // $('#folderSelector').trigger('click');
-       //console.log($('#folderSelector').val())
-    //});
-  }
+    function sendSortType(sortType) {
+      if (is_download_running !== true) {
+        ipcRenderer.send("setSortType", sortType)
+        console.log(sortType)
+      }
+    }
 
-  var cancelBTN = false
-  var is_download_running = false
-  function downloadstarter() {
-    console.log("TOO")
-    
-    if(is_sort_selected == true){
-      if(is_top_sort_selected == true){
-        if(is_top_sub_sort_selected == true){
-          if(is_download_running == false){
-             
-            //document.getElementById('downloadstatusTitle').innerText = 'Gathering Data ...'
-            document.getElementById('currdwnlfiles').innerHTML = ''
-            document.getElementById('backbtnDwnlPage').style = 'display:none;'
-            }
-          if(cancelBTN == false){
-            document.getElementById('downloadstatusTitle').innerText = 'Starting Download ...'
-            var numberofpoststodwnl = $('#numberofposts').val()
-            console.log('StartingDownload',numberofpoststodwnl,document.getElementById('downloadnsfw').checked)
-            is_download_running == true
-            ipcRenderer.send('StartDownload',numberofpoststodwnl,document.getElementById('downloadnsfw').checked,document.getElementById('downloadnsfw2').checked) 
-            is_download_cancelled = false
-            $('#downloadstatus').fadeIn(500, () => {
-              document.getElementById('downloadbtn').classList.add('cancelbtn')
-              document.getElementById('downloadbtntext').innerText = 'CANCEL'
-              document.getElementById('currdwnlfiles').innerHTML = ''
-              cancelBTN = true
-            })
-          }else{
-            document.getElementById('downloadbtntext').innerText = 'CANCELING...'
-            ipcRenderer.send('canceldownload');
-          }
-        }else{
-          $('#sortbtns').effect( "shake" );
+    document.getElementById("min-btn").addEventListener("click", function (e) {
+      sendwindowaction(1)
+    })
+
+    document.getElementById("max-btn").addEventListener("click", function (e) {
+      sendwindowaction(2)
+    })
+
+    document
+      .getElementById("close-btn")
+      .addEventListener("click", function (e) {
+        sendwindowaction(3)
+      })
+
+    // Minimise 1 , maximise 2 , close 3
+    var isMaximized = false
+    function sendwindowaction(actionnum) {
+      ipcRenderer.send("windowaction", actionnum)
+      if (actionnum == 2) {
+        if (isMaximized == false) {
+          isMaximized = true
+          document.getElementById("max-btn").style =
+            "background-image: url('assets/squares.png');"
+        } else {
+          isMaximized = true
+          document.getElementById("max-btn").style =
+            "background-image: url('assets/maximize.png');"
         }
-      }else{
-        if(is_download_running == false){
-        
-        document.getElementById('currdwnlfiles').innerHTML = ''
-        document.getElementById('backbtnDwnlPage').style = 'display:none;'
-        }
-        if(cancelBTN == false){
-          document.getElementById('downloadstatusTitle').innerText = 'Starting Download ...'
-          var numberofpoststodwnl = $('#numberofposts').val()
-            console.log('StartingDownload',numberofpoststodwnl,document.getElementById('downloadnsfw').checked)
-            is_download_running == true
-            ipcRenderer.send('StartDownload',numberofpoststodwnl,document.getElementById('downloadnsfw').checked,document.getElementById('downloadnsfw2').checked) 
-            is_download_cancelled = false
-            $('#downloadstatus').fadeIn(500, () => {
-              document.getElementById('downloadbtn').classList.add('cancelbtn')
-              document.getElementById('downloadbtntext').innerText = 'CANCEL'
-              document.getElementById('currdwnlfiles').innerHTML = ''
-              cancelBTN = true
-            })
-          }else{
-            document.getElementById('downloadbtntext').innerText = 'CANCELING...'
-            ipcRenderer.send('canceldownload');
-          }
-      }
-    }else{
-      $('#sortbtns').effect( "shake" );
-    }
-  }
-
-  var sort1 = false   //'sort=hot'
-  var sort2 = false   //'sort=new'
-  var sort3 = false   //'sort=rising'
-  var sort4 = false   //'sort=top&t=hour'
-  var sort5 = false   //'sort=top&t=day'
-  var sort6 = false   //'sort=top&t=week'
-  var sort7 = false   //'sort=top&t=month'
-  var sort8 = false   //'sort=top&t=year'
-  var sort9 = false   //'sort=top&t=all'
-
-  var is_sort_selected = false
-  var is_top_sort_selected = false
-  var is_top_sub_sort_selected = false
-  
-  var sort_types = ['sort=hot',
-                    'sort=top',
-                    'sort=new',
-                    'sort=rising']
-  var top_sub_sorts = ['sort=top&t=hour',
-               'sort=top&t=day',
-               'sort=top&t=week',
-               'sort=top&t=month',
-               'sort=top&t=year',
-               'sort=top&t=all']
-
-  function selectsort(sortType) {
-    var buttons = [0, 1, 2, 3];
-    if (sortType == 1) {
-      addtopsorts()
-      is_top_sort_selected = true
-      is_sort_selected = true
-    } else {
-      is_sort_selected = true
-      sendSortType(sort_types[sortType])
-      is_top_sort_selected = false
-      topsortvisible = false
-      document.getElementById('topsortoptn').classList.remove('topsortshowclass')
-    }
-    buttons.splice(sortType, 1)
-    var btn0 = document.getElementById('sorttypebtn' + sortType);
-    btn0.classList.add('activesortbtn')
-    buttons.forEach(btn => {
-      var btnother = document.getElementById('sorttypebtn' + btn);
-      btnother.classList.remove('activesortbtn')
-    })
-  }
-
-  function clearsort(){
-    var buttons = [0, 1, 2, 3];
-    document.getElementById('topsortoptn').classList.remove('topsortshowclass');
-    buttons.forEach(btn => {
-      var btnother = document.getElementById('sorttypebtn' + btn);
-      btnother.classList.remove('activesortbtn')
-    })
-
-    var buttons2 = [0, 1, 2, 3, 4, 5];
-    buttons2.forEach(btn => {
-      var btnother = document.getElementById('topsortbtn' + btn);
-      btnother.classList.remove('activesortbtn')
-    })
-
-  }
-  //downloadPageHide()
-  function downloadPageHide() {
-    $("#downloadpagemain").toggle('slide', { direction: 'right' }, 800)
-    $("#settings").toggle('fade');
-    document.getElementById('currdwnlfiles').innerHTML = ''
-
-  }
-
-  function selecttopsort(btnnum) {
-    console.log('top sort selected')
-    is_top_sub_sort_selected = true
-    sendSortType(top_sub_sorts[btnnum])
-    var buttons = [0, 1, 2, 3, 4, 5];
-    buttons.splice(btnnum, 1)
-    var btn0 = document.getElementById('topsortbtn' + btnnum);
-    btn0.classList.add('activesortbtn')
-    buttons.forEach(btn => {
-      var btnother = document.getElementById('topsortbtn' + btn);
-      btnother.classList.remove('activesortbtn')
-    })
-
-  }
-  var topsortvisible = false;
-  function addtopsorts() {
-    if (topsortvisible == false) {
-      topsortvisible = true
-      document.getElementById('topsortoptn').classList.add('topsortshowclass')
-    } else {
-      topsortvisible = false
-      document.getElementById('topsortoptn').classList.remove('topsortshowclass')
-    }
-  }
-  const electron = require('electron');
-  const { ipcRenderer } = electron;
-
-  $(document).ready(function () {
-    $(window).keydown(function (event) {
-      if (event.keyCode == 13) {
-        event.preventDefault();
-        return false;
-      }
-    });
-  });
-  var isserachresHidden = true;
-  $("#searchInp").keyup(search)
-  function search() {
-    document.getElementById('loading').innerText = `Loading ...`
-    console.log(isserachresHidden)
-
-    var query = $("#searchInp").val()
-    console.log(query)
-    var searchParam = {
-      query: query,
-      safeSearch: document.getElementById("safesearchtoggle").checked
-    }
-    if (query.length > 0) {
-      ipcRenderer.send('search', searchParam)
-    }
-    if (isserachresHidden == true && query.length > 0) {
-      $("#seachresults").slideDown(400);
-      isserachresHidden = false
-    }
-    if (query.length == 0 && isserachresHidden == false) {
-      console.log('blank')
-      $("#seachresults").slideUp(400);
-      isserachresHidden = true
-    }
-  }
-
-  function sendSortType(sortType){
-    if(is_download_running !== true){
-    ipcRenderer.send('setSortType',sortType)
-    console.log(sortType)
-    }
-  }
-
-  document.getElementById("min-btn").addEventListener("click", function (e) {
-    sendwindowaction(1)
-  });
-
-  document.getElementById("max-btn").addEventListener("click", function (e) {
-    sendwindowaction(2)
-  });
-
-  document.getElementById("close-btn").addEventListener("click", function (e) {
-    sendwindowaction(3)
-  });
-
-  // Minimise 1 , maximise 2 , close 3
-  var isMaximized = false;
-  function sendwindowaction(actionnum) {
-    ipcRenderer.send('windowaction', actionnum)
-    if (actionnum == 2) {
-      if (isMaximized == false) {
-        isMaximized = true;
-        document.getElementById('max-btn').style = "background-image: url('squares.png');"
-      } else {
-        isMaximized = true;
-        document.getElementById('max-btn').style = "background-image: url('maximize.png');"
       }
     }
-  }
-  var safeHTML = `<div id="searchgotsubreddit">
+    var safeHTML = `<div id="searchgotsubreddit">
           <div id="subimg" style="background-image: url('https://b.thumbs.redditmedia.com/vmt5lG3qan-DyrGKuzAtNqIDV0VeHpYF-SHlul95G3E.jpg');"></div>
           <div id="subredditinfo">
             <h4 style="margin-bottom: 0%;">r/kpics</h4>
@@ -548,7 +684,7 @@
           </div>
         </div>`
 
-  var riskHTML = `<div id="searchgotsubreddit">
+    var riskHTML = `<div id="searchgotsubreddit">
           <div id="subimg" style="background-image: url('https://a.thumbs.redditmedia.com/Bk6v9-Bb93Hi4horr7c1HlGGZscdt6X6baNFnIx6884.png');"></div>
           <div id="subredditinfo">
             <h4 style="margin-bottom: 0%;">r/kpopfap</h4>
@@ -559,22 +695,23 @@
           </div>
         </div>`
 
-  ipcRenderer.on('searchResult', (e, res) => {
-    console.log(res)
-    if (res.query.query == $("#searchInp").val()) {
-      document.getElementById('searchappending').innerHTML = `<p style="color: rgba(245, 245, 245, 0.459);text-align: center;" id="loading">Loading ...</p>`
-      if (res.length == 0) {
-        document.getElementById('loading').innerText = `Nothing Found...`
-      }
-      document.getElementById('loading').innerText = `Here you go ...`
-      //document.getElementById('searchappending').insertAdjacentHTML('beforeend',safeHTML)
-      if (res.length > 0) {
-        res.kids.forEach(result => {
-          if (result.thumbnail == '') {
-            result.thumbnail = 'download.png'
-          }
-          if (result.is_nsfw == true) {
-            var riskHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
+    ipcRenderer.on("searchResult", (e, res) => {
+      console.log(res)
+      if (res.query.query == $("#searchInp").val()) {
+        document.getElementById(
+          "searchappending"
+        ).innerHTML = `<p style="color: rgba(245, 245, 245, 0.459);text-align: center;" id="loading">Loading ...</p>`
+        if (res.length == 0) {
+          document.getElementById("loading").innerText = `Nothing Found...`
+        }
+        document.getElementById("loading").innerText = `Here you go ...`
+        if (res.length > 0) {
+          res.kids.forEach((result) => {
+            if (result.thumbnail == "") {
+              result.thumbnail = "assets/download.png"
+            }
+            if (result.is_nsfw == true) {
+              var riskHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
                     <div id="subimg" style="background-image: url('${result.thumbnail}');"></div>
                     <div id="subredditinfo">
                       <h4 style="margin-bottom: 0%;">r/${result.title}</h4>
@@ -584,95 +721,107 @@
                       <p style="font-size: 0.8rem;">${result.description}</p>
                     </div>
                   </div>`
-            document.getElementById('searchappending').insertAdjacentHTML('beforeend', riskHTML)
-          }
-          if (result.is_nsfw == false) {
-            var safeHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
+              document
+                .getElementById("searchappending")
+                .insertAdjacentHTML("beforeend", riskHTML)
+            }
+            if (result.is_nsfw == false) {
+              var safeHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
                     <div id="subimg" style="background-image: url('${result.thumbnail}');"></div>
                     <div id="subredditinfo">
                       <h4 style="margin-bottom: 0%;">r/${result.title}</h4>
                       <p style="font-size: 0.8rem;">${result.description}</p>
                     </div>
                   </div>`
-            document.getElementById('searchappending').insertAdjacentHTML('beforeend', safeHTML)
-          }
-        });
+              document
+                .getElementById("searchappending")
+                .insertAdjacentHTML("beforeend", safeHTML)
+            }
+          })
+        }
       }
+    })
+
+    function selectsubreddit(subreddit, bannerURL) {
+      is_sort_selected = false
+      is_top_sort_selected = false
+      is_top_sub_sort_selected = false
+      clearsort()
+      document.getElementById("currdwnlfiles").innerHTML = ""
+      document.getElementById("downloadstatusTitle").innerText = `Loading ...`
+      console.log(subreddit)
+      document.getElementById("TitleHeadDwnpg").innerText = "r/" + subreddit
+      document.getElementById(
+        "bannerimg"
+      ).style = `background: url('${bannerURL}');background-position: 50% 50%;background-size: cover;background-repeat: no-repeat;;`
+      downloadPageHide()
+      ipcRenderer.send("subredditSelected", subreddit)
+      ipcRenderer.send("givedownloadsfolder")
     }
-  })
-
-  function selectsubreddit(subreddit, bannerURL) {
-
-   is_sort_selected = false;
-   is_top_sort_selected = false;
-   is_top_sub_sort_selected = false;
-   clearsort()
-    document.getElementById('currdwnlfiles').innerHTML = ''
-    document.getElementById('downloadstatusTitle').innerText = `Loading ...`
-    console.log(subreddit)
-    document.getElementById('TitleHeadDwnpg').innerText = 'r/' + subreddit;
-    document.getElementById('bannerimg').style = `background: url('${bannerURL}');background-position: 50% 50%;background-size: cover;background-repeat: no-repeat;;`
-    downloadPageHide()
-    ipcRenderer.send("subredditSelected", subreddit)
-    ipcRenderer.send('givedownloadsfolder');
-  }
-  ipcRenderer.on('getdownloadsfolder',(e,res)=>{
-    document.getElementById('downloadpath').value = res
-  })
-  ipcRenderer.on('takesubredditdata', (e, res) => {
-    document.getElementById('currdwnlfiles').innerHTML = ''
-    console.log(res)
-    document.getElementById('downloadstatusTitle').innerText = `First ${res.length} posts of Subreddit.`
-    res.forEach(file => {
-      document.getElementById('currdwnlfiles').insertAdjacentHTML('beforeend', `                  <div  class="dwnlfile">
+    ipcRenderer.on("getdownloadsfolder", (e, res) => {
+      document.getElementById("downloadpath").value = res
+    })
+    ipcRenderer.on("takesubredditdata", (e, res) => {
+      document.getElementById("currdwnlfiles").innerHTML = ""
+      console.log(res)
+      document.getElementById(
+        "downloadstatusTitle"
+      ).innerText = `First ${res.length} posts of Subreddit.`
+      res.forEach((file) => {
+        document.getElementById("currdwnlfiles").insertAdjacentHTML(
+          "beforeend",
+          `                  <div  class="dwnlfile">
                     <div class=" fileThumb"style = "background: url('${file.thumbnail}');background-size: cover;background-repeat: no-repeat;background-position: center center;">
                       
                     </div>
                     <p>${file.title}</p>
-                  </div>`)
-      //var fileHTML = 
+                  </div>`
+        )
+      })
+    })
+    ipcRenderer.on("takedefaultfolder", (e, res) => {
+      document.getElementById("defaultdownloadpath").value = res
     })
 
-  })
-  ipcRenderer.on('takedefaultfolder',(e,res)=>{
-    document.getElementById('defaultdownloadpath').value = res
-  })
-
-  ipcRenderer.on('cancelConfirm',(e,res)=>{
-    document.getElementById('downloadbtn').classList.remove('cancelbtn')
-    document.getElementById('downloadbtntext').innerText = 'DOWNLOAD';
-    document.getElementById('backbtnDwnlPage').style = '';
-    document.getElementById('downloadstatusTitle').innerText = 'Canceled.'
-    is_download_running = false;
-    cancelBTN = false;  
-    is_download_cancelled = true
-  })
-  var totalDownloads = 0;
-  var is_download_cancelled = false
-  ipcRenderer.on('downloadedFiles',(e,d)=>{
-    totalDownloads++;
-    if(is_download_cancelled == false){
-    document.getElementById('downloadstatusTitle').innerText = `Downloading ...(${totalDownloads})`
-    document.getElementById('currdwnlfiles').insertAdjacentHTML('beforeend', `                  <div  class="dwnlfile">
+    ipcRenderer.on("cancelConfirm", (e, res) => {
+      document.getElementById("downloadbtn").classList.remove("cancelbtn")
+      document.getElementById("downloadbtntext").innerText = "DOWNLOAD"
+      document.getElementById("backbtnDwnlPage").style = ""
+      document.getElementById("downloadstatusTitle").innerText = "Canceled."
+      is_download_running = false
+      cancelBTN = false
+      is_download_cancelled = true
+    })
+    var totalDownloads = 0
+    var is_download_cancelled = false
+    ipcRenderer.on("downloadedFiles", (e, d) => {
+      totalDownloads++
+      if (is_download_cancelled == false) {
+        document.getElementById(
+          "downloadstatusTitle"
+        ).innerText = `Downloading ...(${totalDownloads})`
+        document.getElementById("currdwnlfiles").insertAdjacentHTML(
+          "beforeend",
+          `                  <div  class="dwnlfile">
                     <div class=" fileThumb"style = "background: url('${d.thumbnail}');background-size: cover;background-repeat: no-repeat;background-position: center center;">
                       
                     </div>
                     <p>${d.title}</p>
-                  </div>`)
-    }
-  })
+                  </div>`
+        )
+      }
+    })
 
-  ipcRenderer.on('DownloadFinished',(e,d)=>{
-    document.getElementById('downloadstatusTitle').innerText = `Done! you have ${d} Files.`
-    document.getElementById('downloadbtn').classList.remove('cancelbtn')
-    document.getElementById('downloadbtntext').innerText = 'DOWNLOAD';
-    document.getElementById('backbtnDwnlPage').style = ''
-    cancelBTN = false;
-    is_download_running = false;
-    is_download_cancelled = false;
-  })
-    //document.getElementById('searchappending').insertAdjacentHTML('beforeend',safeHTML)
-    //document.getElementById('searchappending').insertAdjacentHTML('beforeend',riskHTML)
-</script>
-
+    ipcRenderer.on("DownloadFinished", (e, d) => {
+      document.getElementById(
+        "downloadstatusTitle"
+      ).innerText = `Done! you have ${d} Files.`
+      document.getElementById("downloadbtn").classList.remove("cancelbtn")
+      document.getElementById("downloadbtntext").innerText = "DOWNLOAD"
+      document.getElementById("backbtnDwnlPage").style = ""
+      cancelBTN = false
+      is_download_running = false
+      is_download_cancelled = false
+    })
+  </script>
 </html>
