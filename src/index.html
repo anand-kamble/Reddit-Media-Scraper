@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Reddit Media Scraper</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script>
       if (typeof module === "object") {
         window.module = module
@@ -147,7 +147,7 @@
           <div class="user-box">
             <input type="text" name="" value="100" id="numberofposts" />
             <label>Number of posts to scan</label>
-            <!--<p>Enter zero to download all posts from a subreddit.</p>-->
+            <!-- <p>Enter zero to download all posts from a subreddit.</p> -->
             <p></p>
           </div>
           <div class="user-box">
@@ -172,7 +172,6 @@
               id="downloadnsfw"
               type="checkbox"
               class="toggle"
-              checked
               onchange=""
             />
           </div>
@@ -290,11 +289,9 @@
       }
       ipcRenderer.send("settings", settings)
       $("#settingspanel").toggle("fade")
-      console.log(settings)
     }
 
     function thumbnailview() {
-      console.log("thumbnail")
       document.getElementById("listview").style = "filter: brightness(50%);"
       document.getElementById("thumbnailsview").style = ""
 
@@ -304,23 +301,19 @@
         document
           .getElementById("currdwnlfiles")
           .classList.add("thambnalviewcurrdwnl")
-        console.log(maindivs.length)
+
         var forloopslenght = maindivs.length
         Array.from(maindivs).forEach((kid) => {
           try {
             kid.classList.add("thumbnailviewfile")
             kid.classList.remove("dwnlfile")
-          } catch (e) {
-            console.log(e)
-          }
+          } catch (e) {}
         })
         Array.from(thumbnails).forEach((kid) => {
           try {
             kid.classList.add("thumbnailviewthumbnail")
             kid.classList.remove("fileThumb")
-          } catch (e) {
-            console.log(e)
-          }
+          } catch (e) {}
         })
         $("#currdwnlfiles").fadeIn()
       })
@@ -330,30 +323,26 @@
       document.getElementById("listview").style = ""
       document.getElementById("thumbnailsview").style =
         "filter: brightness(50%);"
-      console.log("LIST VIEW")
+
       var maindivs = document.getElementsByClassName("thumbnailviewfile")
       var thumbnails = document.getElementsByClassName("thumbnailviewthumbnail")
       $("#currdwnlfiles").fadeOut(400, () => {
         document
           .getElementById("currdwnlfiles")
           .classList.remove("thambnalviewcurrdwnl")
-        console.log(maindivs.length)
+
         var forloopslenght = maindivs.length
         Array.from(maindivs).forEach((kid) => {
           try {
             kid.classList.add("dwnlfile")
             kid.classList.remove("thumbnailviewfile")
-          } catch (e) {
-            console.log(e)
-          }
+          } catch (e) {}
         })
         Array.from(thumbnails).forEach((kid) => {
           try {
             kid.classList.add("fileThumb")
             kid.classList.remove("thumbnailviewthumbnail")
-          } catch (e) {
-            console.log(e)
-          }
+          } catch (e) {}
         })
         $("#currdwnlfiles").fadeIn()
       })
@@ -361,7 +350,6 @@
 
     function getPopular() {
       $.get("https://www.reddit.com/r/popular/.json?limit=32", (json) => {
-        console.log(json)
         json.data.children.forEach((post) => {
           document.getElementById("popularsubredditholder").insertAdjacentHTML(
             "beforeend",
@@ -426,8 +414,6 @@
     var cancelBTN = false
     var is_download_running = false
     function downloadstarter() {
-      console.log("TOO")
-
       if (is_sort_selected == true) {
         if (is_top_sort_selected == true) {
           if (is_top_sub_sort_selected == true) {
@@ -439,11 +425,7 @@
               document.getElementById("downloadstatusTitle").innerText =
                 "Starting Download ..."
               var numberofpoststodwnl = $("#numberofposts").val()
-              console.log(
-                "StartingDownload",
-                numberofpoststodwnl,
-                document.getElementById("downloadnsfw").checked
-              )
+
               is_download_running == true
               ipcRenderer.send(
                 "StartDownload",
@@ -477,11 +459,7 @@
             document.getElementById("downloadstatusTitle").innerText =
               "Starting Download ..."
             var numberofpoststodwnl = $("#numberofposts").val()
-            console.log(
-              "StartingDownload",
-              numberofpoststodwnl,
-              document.getElementById("downloadnsfw").checked
-            )
+
             is_download_running == true
             ipcRenderer.send(
               "StartDownload",
@@ -572,13 +550,12 @@
       })
     }
     function downloadPageHide() {
-      $("#downloadpagemain").toggle("slide", { direction: "right" }, 800)
+      $("#downloadpagemain").toggle("slide", { direction: "right" }, 400)
       $("#settings").toggle("fade")
       document.getElementById("currdwnlfiles").innerHTML = ""
     }
 
     function selecttopsort(btnnum) {
-      console.log("top sort selected")
       is_top_sub_sort_selected = true
       sendSortType(top_sub_sorts[btnnum])
       var buttons = [0, 1, 2, 3, 4, 5]
@@ -617,10 +594,9 @@
     $("#searchInp").keyup(search)
     function search() {
       document.getElementById("loading").innerText = `Loading ...`
-      console.log(isserachresHidden)
 
       var query = $("#searchInp").val()
-      console.log(query)
+
       var searchParam = {
         query: query,
         safeSearch: document.getElementById("safesearchtoggle").checked,
@@ -633,7 +609,6 @@
         isserachresHidden = false
       }
       if (query.length == 0 && isserachresHidden == false) {
-        console.log("blank")
         $("#seachresults").slideUp(400)
         isserachresHidden = true
       }
@@ -642,7 +617,6 @@
     function sendSortType(sortType) {
       if (is_download_running !== true) {
         ipcRenderer.send("setSortType", sortType)
-        console.log(sortType)
       }
     }
 
@@ -696,7 +670,6 @@
         </div>`
 
     ipcRenderer.on("searchResult", (e, res) => {
-      console.log(res)
       if (res.query.query == $("#searchInp").val()) {
         document.getElementById(
           "searchappending"
@@ -704,8 +677,8 @@
         if (res.length == 0) {
           document.getElementById("loading").innerText = `Nothing Found...`
         }
-        document.getElementById("loading").innerText = `Here you go ...`
         if (res.length > 0) {
+          document.getElementById("loading").innerText = `Here you go ...`
           res.kids.forEach((result) => {
             if (result.thumbnail == "") {
               result.thumbnail = "assets/download.png"
@@ -749,7 +722,7 @@
       clearsort()
       document.getElementById("currdwnlfiles").innerHTML = ""
       document.getElementById("downloadstatusTitle").innerText = `Loading ...`
-      console.log(subreddit)
+
       document.getElementById("TitleHeadDwnpg").innerText = "r/" + subreddit
       document.getElementById(
         "bannerimg"
@@ -763,7 +736,7 @@
     })
     ipcRenderer.on("takesubredditdata", (e, res) => {
       document.getElementById("currdwnlfiles").innerHTML = ""
-      console.log(res)
+
       document.getElementById(
         "downloadstatusTitle"
       ).innerText = `First ${res.length} posts of Subreddit.`

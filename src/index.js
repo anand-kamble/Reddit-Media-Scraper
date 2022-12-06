@@ -1,11 +1,4 @@
-const {
-  app,
-  BrowserWindow,
-  Menu,
-  ipcMain,
-  dialog,
-  ipcRenderer,
-} = require("electron")
+const { app, BrowserWindow, Menu, ipcMain, dialog } = require("electron")
 const path = require("path")
 const request = require("request")
 const fs = require("fs")
@@ -73,7 +66,7 @@ const createWindow = () => {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: false,
+      devTools: true,
       icon: __dirname + "assets/src/logo.ico",
     },
   })
@@ -110,66 +103,66 @@ app.on("activate", () => {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
 
-ipcMain.on("windowaction", (e, action) => {
-  //logging(action)
-  if (action == 1) {
-    mainWindow.minimize()
-  }
-  if (action == 2) {
-    if (mainWindow.isMaximized()) {
-      mainWindow.restore()
-    } else {
-      mainWindow.maximize()
-    }
-  }
-  if (action == 3) {
-    mainWindow.close()
-  }
-})
-ipcMain.on("givedownloadsfolder", (e, data) => {
-  mainWindow.webContents.send("getdownloadsfolder", downloadFolder)
-})
+// ipcMain.on("windowaction", (e, action) => {
+//   //logging(action)
+//   if (action == 1) {
+//     mainWindow.minimize()
+//   }
+//   if (action == 2) {
+//     if (mainWindow.isMaximized()) {
+//       mainWindow.restore()
+//     } else {
+//       mainWindow.maximize()
+//     }
+//   }
+//   if (action == 3) {
+//     mainWindow.close()
+//   }
+// })
 
-ipcMain.on("select-dirs", async (event, arg) => {
-  const result = await dialog.showOpenDialog(mainWindow, {
-    properties: ["openDirectory"],
-  })
-  logging("directories selected", result.filePaths)
-  downloadPath = result.filePaths
-  mainWindow.webContents.send("getdownloadsfolder", result.filePaths)
-})
+// ipcMain.on("givedownloadsfolder", (e, data) => {
+//   mainWindow.webContents.send("getdownloadsfolder", downloadFolder)
+// })
 
-ipcMain.on("getFolder", async (e, d) => {
-  const result = await dialog.showOpenDialog(mainWindow, {
-    properties: ["openDirectory"],
-  })
-  mainWindow.webContents.send("takedefaultfolder", result.filePaths)
-})
+// ipcMain.on("select-dirs", async (event, arg) => {
+//   const result = await dialog.showOpenDialog(mainWindow, {
+//     properties: ["openDirectory"],
+//   })
+//   logging("directories selected", result.filePaths)
+//   downloadPath = result.filePaths
+//   mainWindow.webContents.send("getdownloadsfolder", result.filePaths)
+// })
 
-ipcMain.on("search", (e, query) => {
-  //logging(query)
-  var url = `https://www.reddit.com/search.json?q=${query.query}&source=recent&type=sr%2Cuser`
-  if (query.safeSearch == false) {
-    url += "&include_over_18=1"
-  }
-  logging('Search for "' + query.query + '" resolved Url = ' + url)
-  request(url, { json: true }, (err, res, body) => {
-    if (err) {
-      return logging(`Can't Connect to Reddit.com`)
-    }
-    if (!err && res.statusCode == 200) {
-      processSearchJSON(body, query)
-    }
-  })
-})
+// ipcMain.on("getFolder", async (e, d) => {
+//   const result = await dialog.showOpenDialog(mainWindow, {
+//     properties: ["openDirectory"],
+//   })
+//   mainWindow.webContents.send("takedefaultfolder", result.filePaths)
+// })
 
-ipcMain.on("subredditSelected", (e, subreddit) => {
-  sub_reddit = subreddit
-  postsdata = []
-  postsdata.length = 0
-  numofPostsGot = 0
-  get_subreddit_posts("", false)
-})
+// ipcMain.on("search", (e, query) => {
+//   var url = `https://www.reddit.com/search.json?q=${query.query}&source=recent&type=sr%2Cuser`
+//   if (query.safeSearch == false) {
+//     url += "&include_over_18=1"
+//   }
+//   logging('Search for "' + query.query + '" resolved Url = ' + url)
+//   request(url, { json: true }, (err, res, body) => {
+//     if (err) {
+//       return logging(`Can't Connect to Reddit.com`)
+//     }
+//     if (!err && res.statusCode == 200) {
+//       processSearchJSON(body, query)
+//     }
+//   })
+// })
+
+// ipcMain.on("subredditSelected", (e, subreddit) => {
+//   sub_reddit = subreddit
+//   postsdata = []
+//   postsdata.length = 0
+//   numofPostsGot = 0
+//   get_subreddit_posts("", false)
+// })
 
 ipcMain.on("setSortType", (e, sortType) => {
   logging("Selected sort Type = " + sortType)
@@ -198,7 +191,6 @@ ipcMain.on("StartDownload", (e, d, is_nsfw_allowed, is_rename_on) => {
   q.drain(() => {
     var filesDownloaded = fs.readdirSync(downloadsfinalPath)
     mainWindow.webContents.send("DownloadFinished", filesDownloaded.length)
-    //mainWindow.webContents.send('cancelConfirm');
     postsdata = []
   })
 })
@@ -220,7 +212,7 @@ ipcMain.on("canceldownload", (e, d) => {
   mainWindow.webContents.send("cancelConfirm")
 })
 
-function processSearchJSON(jsonData, query, is_final_download) {
+function processSearchJSON(jsonData, query) {
   try {
     if (jsonData == "{}") {
       logging("No search results from query " + query)
@@ -237,7 +229,6 @@ function processSearchJSON(jsonData, query, is_final_download) {
         kids: [],
       }
       jsonData.data.children.forEach((subreddit) => {
-        //logging('BANNER __ '+ subreddit.data.banner_background_image.split('?')[0])
         var subredditIntro = {
           thumbnail: subreddit.data.icon_img,
           title: subreddit.data.display_name,
@@ -277,12 +268,9 @@ function getMore() {
     logging(numofPostsGot + "--GOT TIll Noew")
     if (numofPostsGot < numberOfPOSTS) {
       logging("Loading more posts")
-      //var newURL = mainURL + '&after=' + afterToken;
       logging("Requesting more posts. [aftertoken :" + afterToken + "]")
       get_subreddit_posts(afterToken, true)
     } else {
-      // logging(numofPostsGot + '--GOT')
-      //fs.writeFileSync('posts.json',JSON.stringify(postsdata))
       createDir(sub_reddit)
       logging(postsdata.length + "--POSTS IN DOWNLOAD QUEUE")
     }
@@ -292,8 +280,6 @@ function getMore() {
 }
 
 function get_subreddit_posts(aftertoken, is_final_download) {
-  //postsdata = [];
-  //numofPostsGot = 0;
   try {
     var mainURL =
       "https://www.reddit.com/r/" +
