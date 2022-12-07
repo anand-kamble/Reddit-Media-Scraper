@@ -1,8 +1,8 @@
 {
   "name": "redditscraper",
   "productName": "Reddit Media Scraper",
-  "version": "1.0.1",
-  "description": "Devoloped by Anand Kamble ©2021",
+  "version": "1.0.2",
+  "description": "Devoloped by Anand Kamble ©2022",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -10,27 +10,33 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build-installer":"electron-builder"
+    "build-installer": "electron-builder"
   },
-  "build":{
+  "build": {
     "appId": "redditscraper",
-    "win":{
-      "target":["nsis"],
-      "icon":"src/logo.png",
-      "legalTrademarks": "(c) 2021 Anand Kamble",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/logo.png",
+      "legalTrademarks": "(c) 2022 Anand Kamble",
       "publisherName": "Anand Kamble"
     },
-    "nsis":{
-      "uninstallDisplayName" : "Reddit Media Scraper",
-      "license":"license.txt",
-      "oneClick":false,
-      "allowToChangeInstallationDirectory":true
+    "nsis": {
+      "uninstallDisplayName": "Reddit Media Scraper",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   },
   "keywords": [],
   "author": {
     "name": "Anand Kamble",
     "email": "anandmk837@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anand-kamble/Reddit-Media-Scraper"
   },
   "license": "MIT",
   "config": {

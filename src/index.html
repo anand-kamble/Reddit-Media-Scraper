@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Reddit Media Scraper</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script>
       if (typeof module === "object") {
-        window.module = module
-        module = undefined
+        window.module = module;
+        module = undefined;
       }
     </script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script>
-      if (window.module) module = window.module
+      if (window.module) module = window.module;
     </script>
   </head>
 
   <body onload="getPopular()">
-    <p id="copyright">©2021 Anand Kamble</p>
+    <p id="copyright">©2022 Anand Kamble</p>
     <div
       style="
         position: absolute;
@@ -147,7 +147,7 @@
           <div class="user-box">
             <input type="text" name="" value="100" id="numberofposts" />
             <label>Number of posts to scan</label>
-            <!--<p>Enter zero to download all posts from a subreddit.</p>-->
+            <!-- <p>Enter zero to download all posts from a subreddit.</p> -->
             <p></p>
           </div>
           <div class="user-box">
@@ -172,7 +172,6 @@
               id="downloadnsfw"
               type="checkbox"
               class="toggle"
-              checked
               onchange=""
             />
           </div>
@@ -277,414 +276,395 @@
   </body>
   <script>
     function settingsPanel() {
-      $("#settingspanel").toggle("fade")
+      $("#settingspanel").toggle("fade");
     }
     function get_folder() {
-      ipcRenderer.send("getFolder")
+      ipcRenderer.send("getFolder");
     }
     function savesettings() {
-      var settings = {
+      let settings = {
         downloadpath: $("#defaultdownloadpath").val(),
         parallellimit: $("#paralleldownloadsslider").val(),
         proxy: $("#defaultproxy").val(),
-      }
-      ipcRenderer.send("settings", settings)
-      $("#settingspanel").toggle("fade")
-      console.log(settings)
+      };
+      ipcRenderer.send("settings", settings);
+      $("#settingspanel").toggle("fade");
     }
 
     function thumbnailview() {
-      console.log("thumbnail")
-      document.getElementById("listview").style = "filter: brightness(50%);"
-      document.getElementById("thumbnailsview").style = ""
+      document.getElementById("listview").style = "filter: brightness(50%);";
+      document.getElementById("thumbnailsview").style = "";
 
-      var maindivs = document.getElementsByClassName("dwnlfile") //thumbnailviewfile
-      var thumbnails = document.getElementsByClassName("fileThumb") //fileThumb thumbnailviewthumbnail
+      let maindivs = document.getElementsByClassName("dwnlfile"); //thumbnailviewfile
+      let thumbnails = document.getElementsByClassName("fileThumb"); //fileThumb thumbnailviewthumbnail
       $("#currdwnlfiles").fadeOut(400, () => {
         document
           .getElementById("currdwnlfiles")
-          .classList.add("thambnalviewcurrdwnl")
-        console.log(maindivs.length)
-        var forloopslenght = maindivs.length
+          .classList.add("thambnalviewcurrdwnl");
+
+        let forloopslenght = maindivs.length;
         Array.from(maindivs).forEach((kid) => {
           try {
-            kid.classList.add("thumbnailviewfile")
-            kid.classList.remove("dwnlfile")
-          } catch (e) {
-            console.log(e)
-          }
-        })
+            kid.classList.add("thumbnailviewfile");
+            kid.classList.remove("dwnlfile");
+          } catch (e) {}
+        });
         Array.from(thumbnails).forEach((kid) => {
           try {
-            kid.classList.add("thumbnailviewthumbnail")
-            kid.classList.remove("fileThumb")
-          } catch (e) {
-            console.log(e)
-          }
-        })
-        $("#currdwnlfiles").fadeIn()
-      })
+            kid.classList.add("thumbnailviewthumbnail");
+            kid.classList.remove("fileThumb");
+          } catch (e) {}
+        });
+        $("#currdwnlfiles").fadeIn();
+      });
     }
 
     function listview() {
-      document.getElementById("listview").style = ""
+      document.getElementById("listview").style = "";
       document.getElementById("thumbnailsview").style =
-        "filter: brightness(50%);"
-      console.log("LIST VIEW")
-      var maindivs = document.getElementsByClassName("thumbnailviewfile")
-      var thumbnails = document.getElementsByClassName("thumbnailviewthumbnail")
+        "filter: brightness(50%);";
+
+      let maindivs = document.getElementsByClassName("thumbnailviewfile");
+      let thumbnails = document.getElementsByClassName(
+        "thumbnailviewthumbnail"
+      );
       $("#currdwnlfiles").fadeOut(400, () => {
         document
           .getElementById("currdwnlfiles")
-          .classList.remove("thambnalviewcurrdwnl")
-        console.log(maindivs.length)
-        var forloopslenght = maindivs.length
+          .classList.remove("thambnalviewcurrdwnl");
+
+        let forloopslenght = maindivs.length;
         Array.from(maindivs).forEach((kid) => {
           try {
-            kid.classList.add("dwnlfile")
-            kid.classList.remove("thumbnailviewfile")
-          } catch (e) {
-            console.log(e)
-          }
-        })
+            kid.classList.add("dwnlfile");
+            kid.classList.remove("thumbnailviewfile");
+          } catch (e) {}
+        });
         Array.from(thumbnails).forEach((kid) => {
           try {
-            kid.classList.add("fileThumb")
-            kid.classList.remove("thumbnailviewthumbnail")
-          } catch (e) {
-            console.log(e)
-          }
-        })
-        $("#currdwnlfiles").fadeIn()
-      })
+            kid.classList.add("fileThumb");
+            kid.classList.remove("thumbnailviewthumbnail");
+          } catch (e) {}
+        });
+        $("#currdwnlfiles").fadeIn();
+      });
     }
 
     function getPopular() {
       $.get("https://www.reddit.com/r/popular/.json?limit=32", (json) => {
-        console.log(json)
         json.data.children.forEach((post) => {
           document.getElementById("popularsubredditholder").insertAdjacentHTML(
             "beforeend",
             `      <div onclick="selectsubreddit('${post.data.subreddit}','${post.data.thumbnail}')" class="popularSureddit" style="">
-        <p class="popularsubreddittitle">${post.data.subreddit_name_prefixed}</p>
-        <img class="popularsubredditimage" src="${post.data.thumbnail}" alt="">
+              <div class="popularsubreddittitleHolder">
+        <p class="popularsubreddittitle">${post.data.subreddit_name_prefixed}</p></div>
+        <img class="popularsubredditimage" src="${post.data.thumbnail}" onerror=this.src="data:image/png;base64,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">
       </div>`
-          )
-        })
-      })
+          );
+        });
+      });
     }
-    var searchsort0_selected = true
-    var searchsort1_selected = false
-    var is_community_search_on = false
+    let searchsort0_selected = true;
+    let searchsort1_selected = false;
+    let is_community_search_on = false;
 
     function searchSortType(sortNum) {
-      var sorts = [0, 1]
+      let sorts = [0, 1];
       if (sortNum == 0) {
-        is_community_search_on = false
-        search()
+        is_community_search_on = false;
+        search();
         if (searchsort0_selected == true) {
           document
             .getElementById("searchsorttypebtn0")
-            .classList.remove("searchactivesortbtn")
-          searchsort0_selected = false
+            .classList.remove("searchactivesortbtn");
+          searchsort0_selected = false;
         } else {
           document
             .getElementById("searchsorttypebtn0")
-            .classList.add("searchactivesortbtn")
+            .classList.add("searchactivesortbtn");
           document
             .getElementById("searchsorttypebtn1")
-            .classList.remove("searchactivesortbtn")
-          searchsort0_selected = true
+            .classList.remove("searchactivesortbtn");
+          searchsort0_selected = true;
         }
       }
       if (sortNum == 1) {
-        is_community_search_on = true
-        search()
+        is_community_search_on = true;
+        search();
         if (searchsort1_selected == false) {
           document
             .getElementById("searchsorttypebtn1")
-            .classList.add("searchactivesortbtn")
+            .classList.add("searchactivesortbtn");
           document
             .getElementById("searchsorttypebtn0")
-            .classList.remove("searchactivesortbtn")
-          searchsort1_selected = true
+            .classList.remove("searchactivesortbtn");
+          searchsort1_selected = true;
         } else {
           document
             .getElementById("searchsorttypebtn1")
-            .classList.remove("searchactivesortbtn")
+            .classList.remove("searchactivesortbtn");
           document
             .getElementById("searchsorttypebtn0")
-            .classList.add("searchactivesortbtn")
-          searchsort1_selected = false
+            .classList.add("searchactivesortbtn");
+          searchsort1_selected = false;
         }
       }
     }
     function selectFolder() {
-      ipcRenderer.send("select-dirs")
+      ipcRenderer.send("select-dirs");
     }
 
-    var cancelBTN = false
-    var is_download_running = false
+    let cancelBTN = false;
+    let is_download_running = false;
     function downloadstarter() {
-      console.log("TOO")
-
       if (is_sort_selected == true) {
         if (is_top_sort_selected == true) {
           if (is_top_sub_sort_selected == true) {
             if (is_download_running == false) {
-              document.getElementById("currdwnlfiles").innerHTML = ""
-              document.getElementById("backbtnDwnlPage").style = "display:none;"
+              document.getElementById("currdwnlfiles").innerHTML = "";
+              document.getElementById("backbtnDwnlPage").style =
+                "display:none;";
             }
             if (cancelBTN == false) {
               document.getElementById("downloadstatusTitle").innerText =
-                "Starting Download ..."
-              var numberofpoststodwnl = $("#numberofposts").val()
-              console.log(
-                "StartingDownload",
-                numberofpoststodwnl,
-                document.getElementById("downloadnsfw").checked
-              )
-              is_download_running == true
+                "Starting Download ...";
+              let numberofpoststodwnl = $("#numberofposts").val();
+
+              is_download_running == true;
               ipcRenderer.send(
                 "StartDownload",
                 numberofpoststodwnl,
                 document.getElementById("downloadnsfw").checked,
                 document.getElementById("downloadnsfw2").checked
-              )
-              is_download_cancelled = false
+              );
+              is_download_cancelled = false;
               $("#downloadstatus").fadeIn(500, () => {
                 document
                   .getElementById("downloadbtn")
-                  .classList.add("cancelbtn")
-                document.getElementById("downloadbtntext").innerText = "CANCEL"
-                document.getElementById("currdwnlfiles").innerHTML = ""
-                cancelBTN = true
-              })
+                  .classList.add("cancelbtn");
+                document.getElementById("downloadbtntext").innerText = "CANCEL";
+                document.getElementById("currdwnlfiles").innerHTML = "";
+                cancelBTN = true;
+              });
             } else {
               document.getElementById("downloadbtntext").innerText =
-                "CANCELING..."
-              ipcRenderer.send("canceldownload")
+                "CANCELING...";
+              ipcRenderer.send("canceldownload");
             }
           } else {
-            $("#sortbtns").effect("shake")
+            $("#sortbtns").effect("shake");
           }
         } else {
           if (is_download_running == false) {
-            document.getElementById("currdwnlfiles").innerHTML = ""
-            document.getElementById("backbtnDwnlPage").style = "display:none;"
+            document.getElementById("currdwnlfiles").innerHTML = "";
+            document.getElementById("backbtnDwnlPage").style = "display:none;";
           }
           if (cancelBTN == false) {
             document.getElementById("downloadstatusTitle").innerText =
-              "Starting Download ..."
-            var numberofpoststodwnl = $("#numberofposts").val()
-            console.log(
-              "StartingDownload",
-              numberofpoststodwnl,
-              document.getElementById("downloadnsfw").checked
-            )
-            is_download_running == true
+              "Starting Download ...";
+            let numberofpoststodwnl = $("#numberofposts").val();
+
+            is_download_running == true;
             ipcRenderer.send(
               "StartDownload",
               numberofpoststodwnl,
               document.getElementById("downloadnsfw").checked,
               document.getElementById("downloadnsfw2").checked
-            )
-            is_download_cancelled = false
+            );
+            is_download_cancelled = false;
             $("#downloadstatus").fadeIn(500, () => {
-              document.getElementById("downloadbtn").classList.add("cancelbtn")
-              document.getElementById("downloadbtntext").innerText = "CANCEL"
-              document.getElementById("currdwnlfiles").innerHTML = ""
-              cancelBTN = true
-            })
+              document.getElementById("downloadbtn").classList.add("cancelbtn");
+              document.getElementById("downloadbtntext").innerText = "CANCEL";
+              document.getElementById("currdwnlfiles").innerHTML = "";
+              cancelBTN = true;
+            });
           } else {
             document.getElementById("downloadbtntext").innerText =
-              "CANCELING..."
-            ipcRenderer.send("canceldownload")
+              "CANCELING...";
+            ipcRenderer.send("canceldownload");
           }
         }
       } else {
-        $("#sortbtns").effect("shake")
+        $("#sortbtns").effect("shake");
       }
     }
 
-    var sort1 = false //'sort=hot'
-    var sort2 = false //'sort=new'
-    var sort3 = false //'sort=rising'
-    var sort4 = false //'sort=top&t=hour'
-    var sort5 = false //'sort=top&t=day'
-    var sort6 = false //'sort=top&t=week'
-    var sort7 = false //'sort=top&t=month'
-    var sort8 = false //'sort=top&t=year'
-    var sort9 = false //'sort=top&t=all'
+    let sort1 = false; //'sort=hot'
+    let sort2 = false; //'sort=new'
+    let sort3 = false; //'sort=rising'
+    let sort4 = false; //'sort=top&t=hour'
+    let sort5 = false; //'sort=top&t=day'
+    let sort6 = false; //'sort=top&t=week'
+    let sort7 = false; //'sort=top&t=month'
+    let sort8 = false; //'sort=top&t=year'
+    let sort9 = false; //'sort=top&t=all'
 
-    var is_sort_selected = false
-    var is_top_sort_selected = false
-    var is_top_sub_sort_selected = false
+    let is_sort_selected = false;
+    let is_top_sort_selected = false;
+    let is_top_sub_sort_selected = false;
 
-    var sort_types = ["sort=hot", "sort=top", "sort=new", "sort=rising"]
-    var top_sub_sorts = [
+    let sort_types = ["sort=hot", "sort=top", "sort=new", "sort=rising"];
+    let top_sub_sorts = [
       "sort=top&t=hour",
       "sort=top&t=day",
       "sort=top&t=week",
       "sort=top&t=month",
       "sort=top&t=year",
       "sort=top&t=all",
-    ]
+    ];
 
     function selectsort(sortType) {
-      var buttons = [0, 1, 2, 3]
+      let buttons = [0, 1, 2, 3];
       if (sortType == 1) {
-        addtopsorts()
-        is_top_sort_selected = true
-        is_sort_selected = true
+        addtopsorts();
+        is_top_sort_selected = true;
+        is_sort_selected = true;
       } else {
-        is_sort_selected = true
-        sendSortType(sort_types[sortType])
-        is_top_sort_selected = false
-        topsortvisible = false
+        is_sort_selected = true;
+        sendSortType(sort_types[sortType]);
+        is_top_sort_selected = false;
+        topsortvisible = false;
         document
           .getElementById("topsortoptn")
-          .classList.remove("topsortshowclass")
+          .classList.remove("topsortshowclass");
       }
-      buttons.splice(sortType, 1)
-      var btn0 = document.getElementById("sorttypebtn" + sortType)
-      btn0.classList.add("activesortbtn")
+      buttons.splice(sortType, 1);
+      let btn0 = document.getElementById("sorttypebtn" + sortType);
+      btn0.classList.add("activesortbtn");
       buttons.forEach((btn) => {
-        var btnother = document.getElementById("sorttypebtn" + btn)
-        btnother.classList.remove("activesortbtn")
-      })
+        let btnother = document.getElementById("sorttypebtn" + btn);
+        btnother.classList.remove("activesortbtn");
+      });
     }
 
     function clearsort() {
-      var buttons = [0, 1, 2, 3]
+      let buttons = [0, 1, 2, 3];
       document
         .getElementById("topsortoptn")
-        .classList.remove("topsortshowclass")
+        .classList.remove("topsortshowclass");
       buttons.forEach((btn) => {
-        var btnother = document.getElementById("sorttypebtn" + btn)
-        btnother.classList.remove("activesortbtn")
-      })
+        let btnother = document.getElementById("sorttypebtn" + btn);
+        btnother.classList.remove("activesortbtn");
+      });
 
-      var buttons2 = [0, 1, 2, 3, 4, 5]
+      let buttons2 = [0, 1, 2, 3, 4, 5];
       buttons2.forEach((btn) => {
-        var btnother = document.getElementById("topsortbtn" + btn)
-        btnother.classList.remove("activesortbtn")
-      })
+        let btnother = document.getElementById("topsortbtn" + btn);
+        btnother.classList.remove("activesortbtn");
+      });
     }
     function downloadPageHide() {
-      $("#downloadpagemain").toggle("slide", { direction: "right" }, 800)
-      $("#settings").toggle("fade")
-      document.getElementById("currdwnlfiles").innerHTML = ""
+      $("#downloadpagemain").toggle("slide", { direction: "right" }, 400);
+      $("#settings").toggle("fade");
+      document.getElementById("currdwnlfiles").innerHTML = "";
     }
 
     function selecttopsort(btnnum) {
-      console.log("top sort selected")
-      is_top_sub_sort_selected = true
-      sendSortType(top_sub_sorts[btnnum])
-      var buttons = [0, 1, 2, 3, 4, 5]
-      buttons.splice(btnnum, 1)
-      var btn0 = document.getElementById("topsortbtn" + btnnum)
-      btn0.classList.add("activesortbtn")
+      is_top_sub_sort_selected = true;
+      sendSortType(top_sub_sorts[btnnum]);
+      let buttons = [0, 1, 2, 3, 4, 5];
+      buttons.splice(btnnum, 1);
+      let btn0 = document.getElementById("topsortbtn" + btnnum);
+      btn0.classList.add("activesortbtn");
       buttons.forEach((btn) => {
-        var btnother = document.getElementById("topsortbtn" + btn)
-        btnother.classList.remove("activesortbtn")
-      })
+        let btnother = document.getElementById("topsortbtn" + btn);
+        btnother.classList.remove("activesortbtn");
+      });
     }
-    var topsortvisible = false
+    let topsortvisible = false;
     function addtopsorts() {
       if (topsortvisible == false) {
-        topsortvisible = true
-        document.getElementById("topsortoptn").classList.add("topsortshowclass")
-      } else {
-        topsortvisible = false
+        topsortvisible = true;
         document
           .getElementById("topsortoptn")
-          .classList.remove("topsortshowclass")
+          .classList.add("topsortshowclass");
+      } else {
+        topsortvisible = false;
+        document
+          .getElementById("topsortoptn")
+          .classList.remove("topsortshowclass");
       }
     }
-    const electron = require("electron")
-    const { ipcRenderer } = electron
+    const electron = require("electron");
+    const { ipcRenderer } = electron;
 
     $(document).ready(function () {
       $(window).keydown(function (event) {
         if (event.keyCode == 13) {
-          event.preventDefault()
-          return false
+          event.preventDefault();
+          return false;
         }
-      })
-    })
-    var isserachresHidden = true
-    $("#searchInp").keyup(search)
+      });
+    });
+    let isserachresHidden = true;
+    $("#searchInp").keyup(search);
     function search() {
-      document.getElementById("loading").innerText = `Loading ...`
-      console.log(isserachresHidden)
+      document.getElementById("loading").innerText = `Loading ...`;
 
-      var query = $("#searchInp").val()
-      console.log(query)
-      var searchParam = {
+      let query = $("#searchInp").val();
+
+      let searchParam = {
         query: query,
         safeSearch: document.getElementById("safesearchtoggle").checked,
-      }
+      };
       if (query.length > 0) {
-        ipcRenderer.send("search", searchParam)
+        ipcRenderer.send("search", searchParam);
       }
       if (isserachresHidden == true && query.length > 0) {
-        $("#seachresults").slideDown(400)
-        isserachresHidden = false
+        $("#seachresults").slideDown(400);
+        isserachresHidden = false;
       }
       if (query.length == 0 && isserachresHidden == false) {
-        console.log("blank")
-        $("#seachresults").slideUp(400)
-        isserachresHidden = true
+        $("#seachresults").slideUp(400);
+        isserachresHidden = true;
       }
     }
 
     function sendSortType(sortType) {
       if (is_download_running !== true) {
-        ipcRenderer.send("setSortType", sortType)
-        console.log(sortType)
+        ipcRenderer.send("setSortType", sortType);
       }
     }
 
     document.getElementById("min-btn").addEventListener("click", function (e) {
-      sendwindowaction(1)
-    })
+      sendwindowaction(1);
+    });
 
     document.getElementById("max-btn").addEventListener("click", function (e) {
-      sendwindowaction(2)
-    })
+      sendwindowaction(2);
+    });
 
     document
       .getElementById("close-btn")
       .addEventListener("click", function (e) {
-        sendwindowaction(3)
-      })
+        sendwindowaction(3);
+      });
 
     // Minimise 1 , maximise 2 , close 3
-    var isMaximized = false
+    let isMaximized = false;
     function sendwindowaction(actionnum) {
-      ipcRenderer.send("windowaction", actionnum)
+      ipcRenderer.send("windowaction", actionnum);
       if (actionnum == 2) {
         if (isMaximized == false) {
-          isMaximized = true
+          isMaximized = true;
           document.getElementById("max-btn").style =
-            "background-image: url('assets/squares.png');"
+            "background-image: url('assets/squares.png');";
         } else {
-          isMaximized = true
+          isMaximized = true;
           document.getElementById("max-btn").style =
-            "background-image: url('assets/maximize.png');"
+            "background-image: url('assets/maximize.png');";
         }
       }
     }
-    var safeHTML = `<div id="searchgotsubreddit">
+    let safeHTML = `<div id="searchgotsubreddit">
           <div id="subimg" style="background-image: url('https://b.thumbs.redditmedia.com/vmt5lG3qan-DyrGKuzAtNqIDV0VeHpYF-SHlul95G3E.jpg');"></div>
           <div id="subredditinfo">
             <h4 style="margin-bottom: 0%;">r/kpics</h4>
             <p style="font-size: 0.8rem;">High Quality, unedited images of Kpop and the Korean Entertainment Industry. \n\nK-pop (Korean popular music) is a musical genre consisting of pop, dance...</p>
           </div>
-        </div>`
+        </div>`;
 
-    var riskHTML = `<div id="searchgotsubreddit">
+    let riskHTML = `<div id="searchgotsubreddit">
           <div id="subimg" style="background-image: url('https://a.thumbs.redditmedia.com/Bk6v9-Bb93Hi4horr7c1HlGGZscdt6X6baNFnIx6884.png');"></div>
           <div id="subredditinfo">
             <h4 style="margin-bottom: 0%;">r/kpopfap</h4>
@@ -693,25 +673,24 @@
               </div>
             <p style="font-size: 0.8rem;">Korean pop music - the lewd edition.</p>
           </div>
-        </div>`
+        </div>`;
 
     ipcRenderer.on("searchResult", (e, res) => {
-      console.log(res)
       if (res.query.query == $("#searchInp").val()) {
         document.getElementById(
           "searchappending"
-        ).innerHTML = `<p style="color: rgba(245, 245, 245, 0.459);text-align: center;" id="loading">Loading ...</p>`
+        ).innerHTML = `<p style="color: rgba(245, 245, 245, 0.459);text-align: center;" id="loading">Loading ...</p>`;
         if (res.length == 0) {
-          document.getElementById("loading").innerText = `Nothing Found...`
+          document.getElementById("loading").innerText = `Nothing Found...`;
         }
-        document.getElementById("loading").innerText = `Here you go ...`
         if (res.length > 0) {
+          document.getElementById("loading").innerText = `Here you go ...`;
           res.kids.forEach((result) => {
             if (result.thumbnail == "") {
-              result.thumbnail = "assets/download.png"
+              result.thumbnail = "assets/download.png";
             }
             if (result.is_nsfw == true) {
-              var riskHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
+              let riskHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
                     <div id="subimg" style="background-image: url('${result.thumbnail}');"></div>
                     <div id="subredditinfo">
                       <h4 style="margin-bottom: 0%;">r/${result.title}</h4>
@@ -720,53 +699,53 @@
                         </div>
                       <p style="font-size: 0.8rem;">${result.description}</p>
                     </div>
-                  </div>`
+                  </div>`;
               document
                 .getElementById("searchappending")
-                .insertAdjacentHTML("beforeend", riskHTML)
+                .insertAdjacentHTML("beforeend", riskHTML);
             }
             if (result.is_nsfw == false) {
-              var safeHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
+              let safeHTML = `<div id="searchgotsubreddit" onclick="selectsubreddit('${result.title}','${result.banner}')">
                     <div id="subimg" style="background-image: url('${result.thumbnail}');"></div>
                     <div id="subredditinfo">
                       <h4 style="margin-bottom: 0%;">r/${result.title}</h4>
                       <p style="font-size: 0.8rem;">${result.description}</p>
                     </div>
-                  </div>`
+                  </div>`;
               document
                 .getElementById("searchappending")
-                .insertAdjacentHTML("beforeend", safeHTML)
+                .insertAdjacentHTML("beforeend", safeHTML);
             }
-          })
+          });
         }
       }
-    })
+    });
 
     function selectsubreddit(subreddit, bannerURL) {
-      is_sort_selected = false
-      is_top_sort_selected = false
-      is_top_sub_sort_selected = false
-      clearsort()
-      document.getElementById("currdwnlfiles").innerHTML = ""
-      document.getElementById("downloadstatusTitle").innerText = `Loading ...`
-      console.log(subreddit)
-      document.getElementById("TitleHeadDwnpg").innerText = "r/" + subreddit
+      is_sort_selected = false;
+      is_top_sort_selected = false;
+      is_top_sub_sort_selected = false;
+      clearsort();
+      document.getElementById("currdwnlfiles").innerHTML = "";
+      document.getElementById("downloadstatusTitle").innerText = `Loading ...`;
+
+      document.getElementById("TitleHeadDwnpg").innerText = "r/" + subreddit;
       document.getElementById(
         "bannerimg"
-      ).style = `background: url('${bannerURL}');background-position: 50% 50%;background-size: cover;background-repeat: no-repeat;;`
-      downloadPageHide()
-      ipcRenderer.send("subredditSelected", subreddit)
-      ipcRenderer.send("givedownloadsfolder")
+      ).style = `background: url('${bannerURL}');background-position: 50% 50%;background-size: cover;background-repeat: no-repeat;;`;
+      downloadPageHide();
+      ipcRenderer.send("subredditSelected", subreddit);
+      ipcRenderer.send("givedownloadsfolder");
     }
     ipcRenderer.on("getdownloadsfolder", (e, res) => {
-      document.getElementById("downloadpath").value = res
-    })
+      document.getElementById("downloadpath").value = res;
+    });
     ipcRenderer.on("takesubredditdata", (e, res) => {
-      document.getElementById("currdwnlfiles").innerHTML = ""
-      console.log(res)
+      document.getElementById("currdwnlfiles").innerHTML = "";
+
       document.getElementById(
         "downloadstatusTitle"
-      ).innerText = `First ${res.length} posts of Subreddit.`
+      ).innerText = `First ${res.length} posts of Subreddit.`;
       res.forEach((file) => {
         document.getElementById("currdwnlfiles").insertAdjacentHTML(
           "beforeend",
@@ -776,30 +755,30 @@
                     </div>
                     <p>${file.title}</p>
                   </div>`
-        )
-      })
-    })
+        );
+      });
+    });
     ipcRenderer.on("takedefaultfolder", (e, res) => {
-      document.getElementById("defaultdownloadpath").value = res
-    })
+      document.getElementById("defaultdownloadpath").value = res;
+    });
 
     ipcRenderer.on("cancelConfirm", (e, res) => {
-      document.getElementById("downloadbtn").classList.remove("cancelbtn")
-      document.getElementById("downloadbtntext").innerText = "DOWNLOAD"
-      document.getElementById("backbtnDwnlPage").style = ""
-      document.getElementById("downloadstatusTitle").innerText = "Canceled."
-      is_download_running = false
-      cancelBTN = false
-      is_download_cancelled = true
-    })
-    var totalDownloads = 0
-    var is_download_cancelled = false
+      document.getElementById("downloadbtn").classList.remove("cancelbtn");
+      document.getElementById("downloadbtntext").innerText = "DOWNLOAD";
+      document.getElementById("backbtnDwnlPage").style = "";
+      document.getElementById("downloadstatusTitle").innerText = "Canceled.";
+      is_download_running = false;
+      cancelBTN = false;
+      is_download_cancelled = true;
+    });
+    let totalDownloads = 0;
+    let is_download_cancelled = false;
     ipcRenderer.on("downloadedFiles", (e, d) => {
-      totalDownloads++
+      totalDownloads++;
       if (is_download_cancelled == false) {
         document.getElementById(
           "downloadstatusTitle"
-        ).innerText = `Downloading ...(${totalDownloads})`
+        ).innerText = `Downloading ...(${totalDownloads})`;
         document.getElementById("currdwnlfiles").insertAdjacentHTML(
           "beforeend",
           `                  <div  class="dwnlfile">
@@ -808,20 +787,20 @@
                     </div>
                     <p>${d.title}</p>
                   </div>`
-        )
+        );
       }
-    })
+    });
 
     ipcRenderer.on("DownloadFinished", (e, d) => {
       document.getElementById(
         "downloadstatusTitle"
-      ).innerText = `Done! you have ${d} Files.`
-      document.getElementById("downloadbtn").classList.remove("cancelbtn")
-      document.getElementById("downloadbtntext").innerText = "DOWNLOAD"
-      document.getElementById("backbtnDwnlPage").style = ""
-      cancelBTN = false
-      is_download_running = false
-      is_download_cancelled = false
-    })
+      ).innerText = `Done! you have ${d} Files.`;
+      document.getElementById("downloadbtn").classList.remove("cancelbtn");
+      document.getElementById("downloadbtntext").innerText = "DOWNLOAD";
+      document.getElementById("backbtnDwnlPage").style = "";
+      cancelBTN = false;
+      is_download_running = false;
+      is_download_cancelled = false;
+    });
   </script>
 </html>

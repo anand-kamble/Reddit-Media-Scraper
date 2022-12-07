@@ -7462,3 +7462,1356 @@ TypeError: Cannot read properties of undefined (reading '0')
 [1636527137603] : Search for "barb" resolved Url = https://www.reddit.com/search.json?q=barb&source=recent&type=sr%2Cuser
 [1636527776062] : No proxy
 [1636527981942] : No proxy
+[1665423508338] : No proxy
+[1669707193042] : No proxy
+[1669707203358] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707203466] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707203697] : No search results from query [object Object]
+[1669707203747] : No search results from query [object Object]
+[1669707203750] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707207533] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707207679] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707207829] : No search results from query [object Object]
+[1669707207969] : No search results from query [object Object]
+[1669707210409] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707210697] : No search results from query [object Object]
+[1669707212103] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707212409] : No search results from query [object Object]
+[1669707213145] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707216923] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707217061] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707217214] : No search results from query [object Object]
+[1669707217366] : No search results from query [object Object]
+[1669707249876] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707250162] : No search results from query [object Object]
+[1669707253190] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707253490] : No search results from query [object Object]
+[1669707254916] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707255204] : No search results from query [object Object]
+[1669707258582] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707258881] : No search results from query [object Object]
+[1669707260975] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707261266] : No search results from query [object Object]
+[1669707262466] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707262756] : No search results from query [object Object]
+[1669707263319] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707273341] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707274265] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707285027] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707330324] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707330617] : No search results from query [object Object]
+[1669707331686] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707331977] : No search results from query [object Object]
+[1669707502313] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707502606] : No search results from query [object Object]
+[1669707504309] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1669707504607] : No search results from query [object Object]
+[1669707505432] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1669707505727] : No search results from query [object Object]
+[1669707506532] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1669707506827] : No search results from query [object Object]
+[1669707529966] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707530079] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707530260] : No search results from query [object Object]
+[1669707530382] : No search results from query [object Object]
+[1669707530626] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707541496] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707541649] : Search for "c" resolved Url = https://www.reddit.com/search.json?q=c&source=recent&type=sr%2Cuser
+[1669707541786] : No search results from query [object Object]
+[1669707541936] : No search results from query [object Object]
+[1669707543420] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707543569] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669707543706] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669707543723] : No search results from query [object Object]
+[1669707543856] : No search results from query [object Object]
+[1669707551597] : Generated Main URL : https://www.reddit.com/r/carporn/.json?limit=100&sort=hot&after=
+[1669707554280] : Got 100 posts till now.
+[1669707554282] : No after token Reached the end of the Feed
+[1669707554283] : Found 100 posts that can be downloaded.  
+[1669707571705] : Generated Main URL : https://www.reddit.com/r/car/.json?limit=100&sort=hot&after=
+[1669707574028] : Got 100 posts till now.
+[1669707574029] : Found a non Media post.
+[1669707574030] : Found a non Media post.
+[1669707574031] : Found a non Media post.
+[1669707574031] : Found a non Media post.
+[1669707574032] : Found a non Media post.
+[1669707574033] : Found a non Media post.
+[1669707574033] : Found a non Media post.
+[1669707574034] : Found a non Media post.
+[1669707574034] : Found a non Media post.
+[1669707574035] : Found a non Media post.
+[1669707574035] : Found a non Media post.
+[1669707574036] : Found a non Media post.
+[1669707574036] : Found a non Media post.
+[1669707574037] : Found a non Media post.
+[1669707574038] : Found a non Media post.
+[1669707574038] : Found a non Media post.
+[1669707574039] : Found a non Media post.
+[1669707574040] : Found a non Media post.
+[1669707574040] : Found a non Media post.
+[1669707574041] : Found a non Media post.
+[1669707574041] : Found a non Media post.
+[1669707574042] : Found a non Media post.
+[1669707574042] : Found a non Media post.
+[1669707574042] : Found a non Media post.
+[1669707574043] : Found a non Media post.
+[1669707574043] : Found a non Media post.
+[1669707574044] : Found a non Media post.
+[1669707574044] : Found a non Media post.
+[1669707574045] : Found a non Media post.
+[1669707574045] : Found a non Media post.
+[1669707574046] : Found a non Media post.
+[1669707574046] : Found a non Media post.
+[1669707574046] : Found a non Media post.
+[1669707574047] : Found a non Media post.
+[1669707574047] : Found a non Media post.
+[1669707574048] : Found a non Media post.
+[1669707574048] : Found a non Media post.
+[1669707574048] : Found a non Media post.
+[1669707581048] : Generated Main URL : https://www.reddit.com/r/carporn/.json?limit=100&sort=hot&after=
+[1669707583920] : Got 100 posts till now.
+[1669707585651] : Selected sort Type = sort=hot
+[1669707585652] : Generated Main URL : https://www.reddit.com/r/carporn/.json?limit=100&sort=hot&after=
+[1669707586458] : Selected sort Type = sort=hot
+[1669707586459] : Generated Main URL : https://www.reddit.com/r/carporn/.json?limit=100&sort=hot&after=
+[1669707587894] : Got 200 posts till now.
+[1669707588677] : Got 300 posts till now.
+[1669707588698] : Generated Main URL : https://www.reddit.com/r/carporn/.json?limit=100&sort=hot&after=
+[1669707590876] : Got 100 posts till now.
+[1669707669260] : Generated Main URL : https://www.reddit.com/r/AskReddit/.json?limit=100&sort=hot&after=
+[1669707671283] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=hot&after=
+[1669707671331] : Got 100 posts till now.
+[1669707671332] : Found a non Media post.
+[1669707671333] : Found a non Media post.
+[1669707671333] : Found a non Media post.
+[1669707671334] : Found a non Media post.
+[1669707671335] : Found a non Media post.
+[1669707671335] : Found a non Media post.
+[1669707671336] : Found a non Media post.
+[1669707671336] : Found a non Media post.
+[1669707671337] : Found a non Media post.
+[1669707671337] : Found a non Media post.
+[1669707671338] : Found a non Media post.
+[1669707671338] : Found a non Media post.
+[1669707671339] : Found a non Media post.
+[1669707671339] : Found a non Media post.
+[1669707671340] : Found a non Media post.
+[1669707671340] : Found a non Media post.
+[1669707671341] : Found a non Media post.
+[1669707671341] : Found a non Media post.
+[1669707671342] : Found a non Media post.
+[1669707671342] : Found a non Media post.
+[1669707671343] : Found a non Media post.
+[1669707671344] : Found a non Media post.
+[1669707671344] : Found a non Media post.
+[1669707671345] : Found a non Media post.
+[1669707671345] : Found a non Media post.
+[1669707671346] : Found a non Media post.
+[1669707671346] : Found a non Media post.
+[1669707671347] : Found a non Media post.
+[1669707671347] : Found a non Media post.
+[1669707671348] : Found a non Media post.
+[1669707671348] : Found a non Media post.
+[1669707671349] : Found a non Media post.
+[1669707671349] : Found a non Media post.
+[1669707671350] : Found a non Media post.
+[1669707671351] : Found a non Media post.
+[1669707671351] : Found a non Media post.
+[1669707671352] : Found a non Media post.
+[1669707671352] : Found a non Media post.
+[1669707671353] : Found a non Media post.
+[1669707671353] : Found a non Media post.
+[1669707671354] : Found a non Media post.
+[1669707671355] : Found a non Media post.
+[1669707671355] : Found a non Media post.
+[1669707671355] : Found a non Media post.
+[1669707671356] : Found a non Media post.
+[1669707671356] : Found a non Media post.
+[1669707671357] : Found a non Media post.
+[1669707671357] : Found a non Media post.
+[1669707671358] : Found a non Media post.
+[1669707671359] : Found a non Media post.
+[1669707671359] : Found a non Media post.
+[1669707671360] : Found a non Media post.
+[1669707671360] : Found a non Media post.
+[1669707671361] : Found a non Media post.
+[1669707671362] : Found a non Media post.
+[1669707671362] : Found a non Media post.
+[1669707671363] : Found a non Media post.
+[1669707671363] : Found a non Media post.
+[1669707671364] : Found a non Media post.
+[1669707671365] : Found a non Media post.
+[1669707671365] : Found a non Media post.
+[1669707671366] : Found a non Media post.
+[1669707671366] : Found a non Media post.
+[1669707671367] : Found a non Media post.
+[1669707671368] : Found a non Media post.
+[1669707671368] : Found a non Media post.
+[1669707671369] : Found a non Media post.
+[1669707671370] : Found a non Media post.
+[1669707671370] : Found a non Media post.
+[1669707671371] : Found a non Media post.
+[1669707671371] : Found a non Media post.
+[1669707671372] : Found a non Media post.
+[1669707671372] : Found a non Media post.
+[1669707671373] : Found a non Media post.
+[1669707671373] : Found a non Media post.
+[1669707671374] : Found a non Media post.
+[1669707671374] : Found a non Media post.
+[1669707671375] : Found a non Media post.
+[1669707671376] : Found a non Media post.
+[1669707671376] : Found a non Media post.
+[1669707671377] : Found a non Media post.
+[1669707671377] : Found a non Media post.
+[1669707671378] : Found a non Media post.
+[1669707671378] : Found a non Media post.
+[1669707671379] : Found a non Media post.
+[1669707671380] : Found a non Media post.
+[1669707671380] : Found a non Media post.
+[1669707671381] : Found a non Media post.
+[1669707671381] : Found a non Media post.
+[1669707671382] : Found a non Media post.
+[1669707671382] : Found a non Media post.
+[1669707671382] : Found a non Media post.
+[1669707671383] : Found a non Media post.
+[1669707671383] : Found a non Media post.
+[1669707671384] : Found a non Media post.
+[1669707671384] : Found a non Media post.
+[1669707671385] : Found a non Media post.
+[1669707671385] : Found a non Media post.
+[1669707671385] : Found a non Media post.
+[1669707671386] : Found a non Media post.
+[1669707674074] : Got 201 posts till now.
+[1669707674075] : Found a non Media post.
+[1669707676960] : Generated Main URL : https://www.reddit.com/r/AskReddit/.json?limit=100&sort=hot&after=
+[1669707679058] : Got 100 posts till now.
+[1669707679059] : Found a non Media post.
+[1669707679060] : Found a non Media post.
+[1669707679060] : Found a non Media post.
+[1669707679061] : Found a non Media post.
+[1669707679061] : Found a non Media post.
+[1669707679062] : Found a non Media post.
+[1669707679062] : Found a non Media post.
+[1669707679063] : Found a non Media post.
+[1669707679063] : Found a non Media post.
+[1669707679064] : Found a non Media post.
+[1669707679064] : Found a non Media post.
+[1669707679065] : Found a non Media post.
+[1669707679065] : Found a non Media post.
+[1669707679066] : Found a non Media post.
+[1669707679067] : Found a non Media post.
+[1669707679067] : Found a non Media post.
+[1669707679068] : Found a non Media post.
+[1669707679069] : Found a non Media post.
+[1669707679069] : Found a non Media post.
+[1669707679069] : Found a non Media post.
+[1669707679070] : Found a non Media post.
+[1669707679070] : Found a non Media post.
+[1669707679072] : Found a non Media post.
+[1669707679073] : Found a non Media post.
+[1669707679073] : Found a non Media post.
+[1669707679073] : Found a non Media post.
+[1669707679074] : Found a non Media post.
+[1669707679074] : Found a non Media post.
+[1669707679075] : Found a non Media post.
+[1669707679075] : Found a non Media post.
+[1669707679075] : Found a non Media post.
+[1669707679076] : Found a non Media post.
+[1669707679076] : Found a non Media post.
+[1669707679077] : Found a non Media post.
+[1669707679077] : Found a non Media post.
+[1669707679078] : Found a non Media post.
+[1669707679078] : Found a non Media post.
+[1669707679079] : Found a non Media post.
+[1669707679079] : Found a non Media post.
+[1669707679079] : Found a non Media post.
+[1669707679080] : Found a non Media post.
+[1669707679080] : Found a non Media post.
+[1669707679081] : Found a non Media post.
+[1669707679081] : Found a non Media post.
+[1669707679082] : Found a non Media post.
+[1669707679082] : Found a non Media post.
+[1669707679082] : Found a non Media post.
+[1669707679083] : Found a non Media post.
+[1669707679083] : Found a non Media post.
+[1669707679084] : Found a non Media post.
+[1669707679084] : Found a non Media post.
+[1669707679084] : Found a non Media post.
+[1669707679085] : Found a non Media post.
+[1669707679085] : Found a non Media post.
+[1669707679086] : Found a non Media post.
+[1669707679086] : Found a non Media post.
+[1669707679086] : Found a non Media post.
+[1669707679087] : Found a non Media post.
+[1669707679087] : Found a non Media post.
+[1669707679088] : Found a non Media post.
+[1669707679088] : Found a non Media post.
+[1669707679089] : Found a non Media post.
+[1669707679089] : Found a non Media post.
+[1669707679090] : Found a non Media post.
+[1669707679090] : Found a non Media post.
+[1669707679091] : Found a non Media post.
+[1669707679091] : Found a non Media post.
+[1669707679092] : Found a non Media post.
+[1669707679092] : Found a non Media post.
+[1669707679093] : Found a non Media post.
+[1669707679093] : Found a non Media post.
+[1669707679093] : Found a non Media post.
+[1669707679094] : Found a non Media post.
+[1669707679094] : Found a non Media post.
+[1669707679095] : Found a non Media post.
+[1669707679095] : Found a non Media post.
+[1669707679096] : Found a non Media post.
+[1669707679096] : Found a non Media post.
+[1669707679097] : Found a non Media post.
+[1669707679097] : Found a non Media post.
+[1669707679098] : Found a non Media post.
+[1669707679098] : Found a non Media post.
+[1669707679099] : Found a non Media post.
+[1669707679099] : Found a non Media post.
+[1669707679099] : Found a non Media post.
+[1669707679100] : Found a non Media post.
+[1669707679100] : Found a non Media post.
+[1669707679101] : Found a non Media post.
+[1669707679101] : Found a non Media post.
+[1669707679102] : Found a non Media post.
+[1669707679102] : Found a non Media post.
+[1669707679103] : Found a non Media post.
+[1669707679103] : Found a non Media post.
+[1669707679104] : Found a non Media post.
+[1669707679104] : Found a non Media post.
+[1669707679105] : Found a non Media post.
+[1669707679105] : Found a non Media post.
+[1669707679106] : Found a non Media post.
+[1669707679106] : Found a non Media post.
+[1669707679106] : Found a non Media post.
+[1669707680008] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=hot&after=
+[1669707682225] : Generated Main URL : https://www.reddit.com/r/europe/.json?limit=100&sort=hot&after=
+[1669707683249] : Got 101 posts till now.
+[1669707683250] : Found a non Media post.
+[1669707684492] : Generated Main URL : https://www.reddit.com/r/Wellthatsucks/.json?limit=100&sort=hot&after=
+[1669707685037] : Got 101 posts till now.
+[1669707685038] : Found a non Media post.
+[1669707687206] : Got 202 posts till now.
+[1669707687207] : Found a non Media post.
+[1669707687207] : Found a non Media post.
+[1669707731429] : Generated Main URL : https://www.reddit.com/r/nevertellmetheodds/.json?limit=100&sort=hot&after=
+[1669707734668] : Got 101 posts till now.
+[1669707734671] : Caught an error
+TypeError: Cannot read properties of undefined (reading '0')
+[1669707757908] : Generated Main URL : https://www.reddit.com/r/europe/.json?limit=100&sort=hot&after=
+[1669707760366] : Got 101 posts till now.
+[1669707760367] : Found a non Media post.
+[1669707766841] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=hot&after=
+[1669707775063] : Got 101 posts till now.
+[1669707775064] : Found a non Media post.
+[1669707782153] : Selected sort Type = sort=top&t=all
+[1669707782154] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=top&t=all&after=
+[1669707785292] : Got 202 posts till now.
+[1669707785292] : Found a non Media post.
+[1669707786232] : NSFW Posts allowed : false
+[1669707786233] : Starting Download 0
+[1669707786233] : Clearing Cache
+[1669707786234] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=top&t=all&after=
+[1669707789192] : Got 101 posts till now.
+[1669707789193] : Found a non Media post.
+[1669707789194] : 101--GOT TIll Noew
+[1669707789198] : 100--POSTS IN DOWNLOAD QUEUE
+[1669707791860] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=top&t=all&after=
+[1669707794831] : Got 101 posts till now.
+[1669707794831] : Found a non Media post.
+[1669707796557] : Selected sort Type = sort=new
+[1669707796558] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=new&after=
+[1669707797591] : Selected sort Type = sort=top&t=all
+[1669707797592] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=top&t=all&after=
+[1669707798102] : NSFW Posts allowed : false
+[1669707798103] : Starting Download 0
+[1669707798103] : Clearing Cache
+[1669707798104] : Generated Main URL : https://www.reddit.com/r/interestingasfuck/.json?limit=100&sort=top&t=all&after=
+[1669707801348] : Got 101 posts till now.
+[1669707801349] : Found a non Media post.
+[1669707801406] : Got 202 posts till now.
+[1669707801407] : Found a non Media post.
+[1669707801504] : Got 303 posts till now.
+[1669707801504] : Found a non Media post.
+[1669707801505] : 303--GOT TIll Noew
+[1669707801507] : 300--POSTS IN DOWNLOAD QUEUE
+[1669708191568] : No proxy
+[1669708194177] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669708194247] : Search for "ca" resolved Url = https://www.reddit.com/search.json?q=ca&source=recent&type=sr%2Cuser
+[1669708194486] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser
+[1669708194495] : No search results from query [object Object]
+[1669708194535] : No search results from query [object Object]
+[1669708197675] : Search for "car" resolved Url = https://www.reddit.com/search.json?q=car&source=recent&type=sr%2Cuser&include_over_18=1
+[1669708206832] : Generated Main URL : https://www.reddit.com/r/CarSexPorn/.json?limit=100&sort=hot&after=
+[1669708209702] : Got 100 posts till now.
+[1669708209704] : No after token Reached the end of the Feed
+[1669708209705] : Found 100 posts that can be downloaded.  
+[1670346771551] : No proxy
+[1670346777125] : Generated Main URL : https://www.reddit.com/r/memes/.json?limit=100&sort=hot&after=
+[1670346781056] : Got 100 posts till now.
+[1670346781058] : No after token Reached the end of the Feed
+[1670346781058] : Found 100 posts that can be downloaded.  
+[1670346786404] : Selected sort Type = sort=hot
+[1670346786405] : Generated Main URL : https://www.reddit.com/r/memes/.json?limit=100&sort=hot&after=
+[1670346787864] : NSFW Posts allowed : false
+[1670346787865] : Starting Download 10
+[1670346787866] : Clearing Cache
+[1670346787866] : Generated Main URL : https://www.reddit.com/r/memes/.json?limit=100&sort=hot&after=
+[1670346789572] : Got 100 posts till now.
+[1670346790966] : Got 200 posts till now.
+[1670346790967] : 200--GOT TIll Noew
+[1670346790971] : 200--POSTS IN DOWNLOAD QUEUE
+[1670346791654] : ---[Downloaded] : r/memes - Two different ways to address competition
+[1670346793195] : ---[Downloaded] : r/memes - Ignorance is a bliss
+[1670346793659] : ---[Downloaded] : r/memes - It's only ok if you're a girl.
+[1670346830371] : ---[Downloaded] : r/memes - What have I just done
+[1670347041134] : No proxy
+[1670347063838] : No proxy
+[1670347584512] : No proxy
+[1670347586793] : Generated Main URL : https://www.reddit.com/r/WatchPeopleDieInside/.json?limit=100&sort=hot&after=
+[1670347590367] : directories selected
+[1670347593348] : directories selected
+[1670347595884] : Generated Main URL : https://www.reddit.com/r/AskReddit/.json?limit=100&sort=hot&after=
+[1670347596096] : Got 100 posts till now.
+[1670347596098] : Found a non Media post.
+[1670347596099] : Caught an error
+TypeError: Cannot read properties of undefined (reading '0')
+[1670347596100] : No after token Reached the end of the Feed
+[1670347596101] : Found 99 posts that can be downloaded.  
+[1670347597975] : Got 200 posts till now.
+[1670347597975] : Found a non Media post.
+[1670347597976] : Found a non Media post.
+[1670347597976] : Found a non Media post.
+[1670347597977] : Found a non Media post.
+[1670347597978] : Found a non Media post.
+[1670347597978] : Found a non Media post.
+[1670347597979] : Found a non Media post.
+[1670347597979] : Found a non Media post.
+[1670347597980] : Found a non Media post.
+[1670347597980] : Found a non Media post.
+[1670347597981] : Found a non Media post.
+[1670347597981] : Found a non Media post.
+[1670347597982] : Found a non Media post.
+[1670347597982] : Found a non Media post.
+[1670347597982] : Found a non Media post.
+[1670347597983] : Found a non Media post.
+[1670347597983] : Found a non Media post.
+[1670347597984] : Found a non Media post.
+[1670347597984] : Found a non Media post.
+[1670347597985] : Found a non Media post.
+[1670347597986] : Found a non Media post.
+[1670347597986] : Found a non Media post.
+[1670347597987] : Found a non Media post.
+[1670347597987] : Found a non Media post.
+[1670347597988] : Found a non Media post.
+[1670347597988] : Found a non Media post.
+[1670347597989] : Found a non Media post.
+[1670347597989] : Found a non Media post.
+[1670347597990] : Found a non Media post.
+[1670347597991] : Found a non Media post.
+[1670347597991] : Found a non Media post.
+[1670347597991] : Found a non Media post.
+[1670347597992] : Found a non Media post.
+[1670347597993] : Found a non Media post.
+[1670347597993] : Found a non Media post.
+[1670347597994] : Found a non Media post.
+[1670347597994] : Found a non Media post.
+[1670347597995] : Found a non Media post.
+[1670347597995] : Found a non Media post.
+[1670347597996] : Found a non Media post.
+[1670347597996] : Found a non Media post.
+[1670347597996] : Found a non Media post.
+[1670347597997] : Found a non Media post.
+[1670347597997] : Found a non Media post.
+[1670347597998] : Found a non Media post.
+[1670347597998] : Found a non Media post.
+[1670347597999] : Found a non Media post.
+[1670347597999] : Found a non Media post.
+[1670347598000] : Found a non Media post.
+[1670347598000] : Found a non Media post.
+[1670347598001] : Found a non Media post.
+[1670347598001] : Found a non Media post.
+[1670347598002] : Found a non Media post.
+[1670347598002] : Found a non Media post.
+[1670347598002] : Found a non Media post.
+[1670347598003] : Found a non Media post.
+[1670347598003] : Found a non Media post.
+[1670347598004] : Found a non Media post.
+[1670347598004] : Found a non Media post.
+[1670347598005] : Found a non Media post.
+[1670347598005] : Found a non Media post.
+[1670347598006] : Found a non Media post.
+[1670347598006] : Found a non Media post.
+[1670347598007] : Found a non Media post.
+[1670347598007] : Found a non Media post.
+[1670347598008] : Found a non Media post.
+[1670347598008] : Found a non Media post.
+[1670347598009] : Found a non Media post.
+[1670347598009] : Found a non Media post.
+[1670347598009] : Found a non Media post.
+[1670347598010] : Found a non Media post.
+[1670347598010] : Found a non Media post.
+[1670347598011] : Found a non Media post.
+[1670347598011] : Found a non Media post.
+[1670347598012] : Found a non Media post.
+[1670347598012] : Found a non Media post.
+[1670347598013] : Found a non Media post.
+[1670347598013] : Found a non Media post.
+[1670347598013] : Found a non Media post.
+[1670347598014] : Found a non Media post.
+[1670347598014] : Found a non Media post.
+[1670347598015] : Found a non Media post.
+[1670347598015] : Found a non Media post.
+[1670347598015] : Found a non Media post.
+[1670347598016] : Found a non Media post.
+[1670347598016] : Found a non Media post.
+[1670347598017] : Found a non Media post.
+[1670347598017] : Found a non Media post.
+[1670347598018] : Found a non Media post.
+[1670347598018] : Found a non Media post.
+[1670347598019] : Found a non Media post.
+[1670347598019] : Found a non Media post.
+[1670347598020] : Found a non Media post.
+[1670347598020] : Found a non Media post.
+[1670347598021] : Found a non Media post.
+[1670347598021] : Found a non Media post.
+[1670347598022] : Found a non Media post.
+[1670347598022] : Found a non Media post.
+[1670347598023] : Found a non Media post.
+[1670347598023] : Found a non Media post.
+[1670348190227] : No proxy
+[1670348377490] : No proxy
+[1670348396547] : No proxy
+[1670348535107] : No proxy
+[1670348555617] : No proxy
+[1670348653536] : No proxy
+[1670348731559] : No proxy
+[1670349272866] : No proxy
+[1670349417289] : No proxy
+[1670349418902] : ReferenceError: sort_type is not defined
+[1670349423271] : ReferenceError: sort_type is not defined
+[1670350007546] : No proxy
+[1670350030454] : No proxy
+[1670350090975] : No proxy
+[1670350375744] : No proxy
+[1670397766083] : No proxy
+[1670397840857] : No proxy
+[1670397895756] : No proxy
+[1670397904173] : ReferenceError: sort_type is not defined
+[1670397929804] : No proxy
+[1670397931180] : ReferenceError: sort_type is not defined
+[1670398206859] : No proxy
+[1670398208504] : ReferenceError: sort_type is not defined
+[1670398213037] : ReferenceError: sort_type is not defined
+[1670398389958] : No proxy
+[1670398392076] : Search for "y" resolved Url = https://www.reddit.com/search.json?q=y&source=recent&type=sr%2Cuser
+[1670398459344] : No proxy
+[1670398461659] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670398461751] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670398461992] : No search results from query [object Object]
+[1670398462058] : No search results from query [object Object]
+[1670398463746] : Search for "red" resolved Url = https://www.reddit.com/search.json?q=red&source=recent&type=sr%2Cuser
+[1670398465431] : Search for "redd" resolved Url = https://www.reddit.com/search.json?q=redd&source=recent&type=sr%2Cuser
+[1670398469619] : Search for "red" resolved Url = https://www.reddit.com/search.json?q=red&source=recent&type=sr%2Cuser
+[1670398469786] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670398469942] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670398470074] : No search results from query [object Object]
+[1670398470238] : No search results from query [object Object]
+[1670398470907] : Search for "po" resolved Url = https://www.reddit.com/search.json?q=po&source=recent&type=sr%2Cuser
+[1670398470975] : Search for "po" resolved Url = https://www.reddit.com/search.json?q=po&source=recent&type=sr%2Cuser
+[1670398471199] : No search results from query [object Object]
+[1670398471262] : No search results from query [object Object]
+[1670398471847] : Search for "por" resolved Url = https://www.reddit.com/search.json?q=por&source=recent&type=sr%2Cuser
+[1670398473334] : Search for "porn" resolved Url = https://www.reddit.com/search.json?q=porn&source=recent&type=sr%2Cuser
+[1670398477579] : ReferenceError: sort_type is not defined
+[1670404488144] : No proxy
+[1670404496515] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404502395] : Selected sort Type = sort=top&t=day
+[1670404502395] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404502965] : Selected sort Type = sort=top&t=week
+[1670404502965] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404503603] : Selected sort Type = sort=hot
+[1670404503603] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404518957] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404523269] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404530931] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404536484] : Selected sort Type = sort=hot
+[1670404536484] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404616964] : No proxy
+[1670404618444] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404696689] : No proxy
+[1670404700069] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404806562] : No proxy
+[1670404810047] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670404891269] : No proxy
+[1670404941835] : No proxy
+[1670404960063] : No proxy
+[1670404962173] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405000475] : No proxy
+[1670405003175] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405135096] : No proxy
+[1670405137334] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405150963] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405241785] : No proxy
+[1670405243381] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405281687] : No proxy
+[1670405283346] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405412443] : No proxy
+[1670405414766] : Generated Main URL : https://www.reddit.com/r/undefined/.json?limit=100&undefined&after=
+[1670405585713] : No proxy
+[1670405587137] : Generated Main URL : https://www.reddit.com/r/AskReddit/.json?limit=100&sort=hot&after=
+[1670405589116] : Got 100 posts till now.
+[1670405589116] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589117] : Found a non Media post.
+[1670405589118] : Found a non Media post.
+[1670405589118] : Found a non Media post.
+[1670405589118] : Found a non Media post.
+[1670405589118] : Found a non Media post.
+[1670405589118] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589119] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589120] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589121] : Found a non Media post.
+[1670405589122] : Found a non Media post.
+[1670405589122] : Found a non Media post.
+[1670405589122] : Found a non Media post.
+[1670405589122] : Found a non Media post.
+[1670405589122] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589123] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589124] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589125] : Found a non Media post.
+[1670405589126] : Found a non Media post.
+[1670405589126] : Found a non Media post.
+[1670405589126] : Found a non Media post.
+[1670405589126] : Found a non Media post.
+[1670405589126] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589127] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589128] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589129] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589130] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589131] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589132] : Found a non Media post.
+[1670405589133] : Found a non Media post.
+[1670405589133] : Found a non Media post.
+[1670405589133] : Found a non Media post.
+[1670405589133] : Found a non Media post.
+[1670405589133] : Found a non Media post.
+[1670405589134] : No after token Reached the end of the Feed
+[1670405589134] : Found 0 posts that can be downloaded.  
+[1670405596152] : Generated Main URL : https://www.reddit.com/r/MadeMeSmile/.json?limit=100&sort=hot&after=
+[1670405599831] : Got 202 posts till now.
+[1670405599832] : Found a non Media post.
+[1670405599832] : Found a non Media post.
+[1670405774582] : Selected sort Type = sort=hot
+[1670405774583] : Generated Main URL : https://www.reddit.com/r/MadeMeSmile/.json?limit=100&sort=hot&after=
+[1670405778131] : Got 304 posts till now.
+[1670405778132] : Found a non Media post.
+[1670405778132] : Found a non Media post.
+[1670420860701] : No proxy
+[1670420871084] : Search for "a" resolved Url = https://www.reddit.com/search.json?q=a&source=recent&type=sr%2Cuser
+[1670420871454] : No search results from query [object Object]
+[1670420871489] : Search for "an" resolved Url = https://www.reddit.com/search.json?q=an&source=recent&type=sr%2Cuser
+[1670420871637] : Search for "ana" resolved Url = https://www.reddit.com/search.json?q=ana&source=recent&type=sr%2Cuser
+[1670420872300] : No search results from query [object Object]
+[1670420877604] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=hot&after=
+[1670420882914] : Got 100 posts till now.
+[1670420882915] : No after token Reached the end of the Feed
+[1670420882915] : Found 99 posts that can be downloaded.  
+[1670420891930] : Selected sort Type = sort=top&t=month
+[1670420891931] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=top&t=month&after=
+[1670420893089] : NSFW Posts allowed : false
+[1670420893089] : Starting Download 2
+[1670420893089] : Clearing Cache
+[1670420893090] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=top&t=month&after=
+[1670420894673] : Got 200 posts till now.
+[1670420894674] : TypeError: globals.postsdata.push is not a function
+[1670420896099] : Got 300 posts till now.
+[1670420896100] : TypeError: globals.postsdata.push is not a function
+[1670421005498] : No proxy
+[1670421009030] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670421011817] : Got 101 posts till now.
+[1670421011818] : No after token Reached the end of the Feed
+[1670421011818] : Found 101 posts that can be downloaded.  
+[1670421017032] : Selected sort Type = sort=hot
+[1670421017033] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670421018571] : NSFW Posts allowed : false
+[1670421018571] : Starting Download 2
+[1670421018571] : Clearing Cache
+[1670421018572] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670421020392] : Got 202 posts till now.
+[1670421020393] : TypeError: globals.postsdata is not iterable
+[1670421022458] : Got 303 posts till now.
+[1670421022458] : TypeError: globals.postsdata is not iterable
+[1670421380227] : directories selectedC:\Users\91911\Documents\Blue Cat Audio\Blue Cat's DP Meter Pro 4
+[1670421638865] : Proxy selected
+[1670421640284] : Generated Main URL : https://www.reddit.com/r/memes/.json?limit=100&sort=hot&after=
+[1670421643341] : Got 100 posts till now.
+[1670421643342] : No after token Reached the end of the Feed
+[1670421643342] : Found 100 posts that can be downloaded.  
+[1670421643926] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670421646757] : Got 201 posts till now.
+[1670421649714] : Selected sort Type = sort=rising
+[1670421649714] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=rising&after=
+[1670421651641] : NSFW Posts allowed : false
+[1670421651642] : Starting Download 2
+[1670421651642] : Clearing Cache
+[1670421651642] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=rising&after=
+[1670421652262] : Got 302 posts till now.
+[1670421654618] : Got 403 posts till now.
+[1670421654618] : 403--GOT TIll Noew
+[1670421654619] : 202--POSTS IN DOWNLOAD QUEUE
+[1670421942896] : Proxy selected
+[1670422079719] : Proxy selected
+[1670422082881] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670422085532] : Got 100 posts till now.
+[1670422085533] : No after token Reached the end of the Feed
+[1670422085533] : Found 100 posts that can be downloaded.  
+[1670422091195] : Selected sort Type = sort=top&t=all
+[1670422091196] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=top&t=all&after=
+[1670422093505] : NSFW Posts allowed : false
+[1670422093505] : Starting Download 5
+[1670422093505] : Clearing Cache
+[1670422093506] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=top&t=all&after=
+[1670422093968] : Got 200 posts till now.
+[1670422096583] : Got 300 posts till now.
+[1670422096584] : 300--GOT TIll Noew
+[1670422096586] : 200--POSTS IN DOWNLOAD QUEUE
+[1670422121990] : Proxy selected
+[1670422124674] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670422127210] : Got 100 posts till now.
+[1670422127211] : No after token Reached the end of the Feed
+[1670422127211] : Found 100 posts that can be downloaded.  
+[1670422129878] : Selected sort Type = sort=hot
+[1670422129879] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670422131438] : NSFW Posts allowed : false
+[1670422131438] : Starting Download 5
+[1670422131438] : Clearing Cache
+[1670422131439] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670422132356] : Got 200 posts till now.
+[1670422134503] : Got 300 posts till now.
+[1670422134504] : 300--GOT TIll Noew
+[1670422134505] : 200--POSTS IN DOWNLOAD QUEUE
+[1670423961195] : Proxy selected
+[1670423974526] : Proxy selected
+[1670423976842] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670423979980] : Got 101 posts till now.
+[1670423979981] : No after token Reached the end of the Feed
+[1670423979981] : Found 101 posts that can be downloaded.  
+[1670423981159] : Selected sort Type = sort=hot
+[1670423981159] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670423981848] : NSFW Posts allowed : false
+[1670423981848] : Starting Download 1
+[1670423981848] : Clearing Cache
+[1670423981849] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670423984069] : Got 202 posts till now.
+[1670423984648] : Got 303 posts till now.
+[1670423984648] : 303--GOT TIll Noew
+[1670423984649] : 202--POSTS IN DOWNLOAD QUEUE
+[1670424060985] : Proxy selected
+[1670424062697] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424066249] : Selected sort Type = sort=hot
+[1670424066249] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424066738] : Got 101 posts till now.
+[1670424066739] : No after token Reached the end of the Feed
+[1670424066739] : Found 101 posts that can be downloaded.  
+[1670424067947] : NSFW Posts allowed : false
+[1670424067947] : Starting Download 2
+[1670424067947] : Clearing Cache
+[1670424067948] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424069007] : Got 202 posts till now.
+[1670424070778] : Got 303 posts till now.
+[1670424070779] : 303--GOT TIll Noew
+[1670424070780] : 202--POSTS IN DOWNLOAD QUEUE
+[1670424221692] : Proxy selected
+[1670424225097] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424227994] : Got 101 posts till now.
+[1670424227995] : No after token Reached the end of the Feed
+[1670424227996] : Found 101 posts that can be downloaded.  
+[1670424232066] : Selected sort Type = sort=hot
+[1670424232066] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424233990] : NSFW Posts allowed : false
+[1670424233991] : Starting Download 2
+[1670424233991] : Clearing Cache
+[1670424233992] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670424235357] : Got 202 posts till now.
+[1670424236939] : Got 303 posts till now.
+[1670424236940] : 303--GOT TIll Noew
+[1670424236941] : 202--POSTS IN DOWNLOAD QUEUE
+[1670424241812] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670424244297] : Got 403 posts till now.
+[1670424246973] : Selected sort Type = sort=hot
+[1670424246974] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670424249461] : Got 503 posts till now.
+[1670424249744] : NSFW Posts allowed : false
+[1670424249745] : Starting Download 3
+[1670424249745] : Clearing Cache
+[1670424249745] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670424254749] : Got 603 posts till now.
+[1670424254749] : 603--GOT TIll Noew
+[1670424254750] : 100--POSTS IN DOWNLOAD QUEUE
+[1670424254799] : ---[Downloaded] : r/meirl - meirl
+[1670424254850] : ---[Downloaded] : r/meirl - meirl
+[1670424254904] : ---[Downloaded] : r/meirl - Meirl
+[1670424267822] : Search for "an" resolved Url = https://www.reddit.com/search.json?q=an&source=recent&type=sr%2Cuser
+[1670424267939] : Search for "an" resolved Url = https://www.reddit.com/search.json?q=an&source=recent&type=sr%2Cuser
+[1670424268146] : Search for "ana" resolved Url = https://www.reddit.com/search.json?q=ana&source=recent&type=sr%2Cuser
+[1670424268188] : No search results from query [object Object]
+[1670424268308] : No search results from query [object Object]
+[1670424269526] : Search for "anade" resolved Url = https://www.reddit.com/search.json?q=anade&source=recent&type=sr%2Cuser
+[1670424269570] : Search for "anade" resolved Url = https://www.reddit.com/search.json?q=anade&source=recent&type=sr%2Cuser
+[1670424272394] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=hot&after=
+[1670424275178] : Got 703 posts till now.
+[1670424277704] : Selected sort Type = sort=top&t=all
+[1670424277705] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=top&t=all&after=
+[1670424279439] : NSFW Posts allowed : false
+[1670424279439] : Starting Download 30
+[1670424279439] : Clearing Cache
+[1670424279440] : Generated Main URL : https://www.reddit.com/r/AnadeArmas/.json?limit=100&sort=top&t=all&after=
+[1670424281069] : Got 803 posts till now.
+[1670424282830] : Got 903 posts till now.
+[1670424282830] : 903--GOT TIll Noew
+[1670424282834] : 198--POSTS IN DOWNLOAD QUEUE
+[1670424282887] : ---[Downloaded] : r/AnadeArmas - ana de armas 🖤
+[1670424283085] : ---[Downloaded] : r/AnadeArmas - New selfie , via IG story
+[1670424283205] : ---[Downloaded] : r/AnadeArmas - Blonde beauty
+[1670424283354] : ---[Downloaded] : r/AnadeArmas - HOT Ana de Armas
+[1670424283397] : ---[Downloaded] : r/AnadeArmas - Elegantly pretty
+[1670424283909] : ---[Downloaded] : r/AnadeArmas - Beauty in white
+[1670424285129] : ---[Downloaded] : r/AnadeArmas - Ana's NO TIME TO DIE character poster
+[1670424285237] : ---[Downloaded] : r/AnadeArmas - Ana de Armas at Overdrive movie set
+[1670424285344] : ---[Downloaded] : r/AnadeArmas - Ana de Armas and Eddie Redmayne for Variety’s ‘Actors on Actors’
+[1670424285430] : ---[Downloaded] : r/AnadeArmas - Ana de Armas will be on Variety’s ‘Actors on Actors’ December 9...
+[1670424285533] : ---[Downloaded] : r/AnadeArmas - CUTE ANA
+[1670424285566] : ---[Downloaded] : r/AnadeArmas - Ana de Armas
+[1670424286479] : ---[Downloaded] : r/AnadeArmas - Choose your fighter!
+[1670424286624] : ---[Downloaded] : r/AnadeArmas - Ana from Porter Magazine February 2020
+[1670424291289] : ---[Downloaded] : r/AnadeArmas - Hi-Res 'Blonde' B&amp;W Promo Shot (6000 × 4000)
+[1670424291452] : ---[Downloaded] : r/AnadeArmas - Pretty smile
+[1670424411460] : Proxy selected
+[1670424414880] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424417439] : Got 101 posts till now.
+[1670424417439] : Found a non Media post.
+[1670424417440] : No after token Reached the end of the Feed
+[1670424417440] : Found 100 posts that can be downloaded.  
+[1670424418028] : Selected sort Type = sort=hot
+[1670424418029] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424419910] : NSFW Posts allowed : false
+[1670424419910] : Starting Download 100
+[1670424419910] : Clearing Cache
+[1670424419911] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424421084] : Got 202 posts till now.
+[1670424421085] : Found a non Media post.
+[1670424422685] : Got 303 posts till now.
+[1670424422685] : Found a non Media post.
+[1670424422686] : 303--GOT TIll Noew
+[1670424422698] : 200--POSTS IN DOWNLOAD QUEUE
+[1670424423877] : ---[Downloaded] : r/WhitePeopleTwitter - Hate &amp; Politics have consequences. Seek help if you need it...
+[1670424423945] : ---[Downloaded] : r/WhitePeopleTwitter - if you know someone who thoughts of suicide, please reach out, ...
+[1670424424027] : ---[Downloaded] : r/WhitePeopleTwitter - Herschel Walker’s son reaction to tonight:
+[1670424424101] : ---[Downloaded] : r/WhitePeopleTwitter - Elon Musk is going after Wikipedia because they won't do PR for...
+[1670424424441] : ---[Downloaded] : r/WhitePeopleTwitter - The Dominos Are Falling!
+[1670424424579] : ---[Downloaded] : r/WhitePeopleTwitter - Republicans are Shameful. Full Stop.
+[1670424424842] : ---[Downloaded] : r/WhitePeopleTwitter - Power move!
+[1670424424887] : ---[Downloaded] : r/WhitePeopleTwitter - Thank you Georgia
+[1670424424937] : ---[Downloaded] : r/WhitePeopleTwitter - Lmao that's a good way to be exiled
+[1670424425033] : ---[Downloaded] : r/WhitePeopleTwitter - Their religion is white supremacy, not Christianity
+[1670424425119] : ---[Downloaded] : r/WhitePeopleTwitter - yup
+[1670424425976] : ---[Downloaded] : r/WhitePeopleTwitter - Alpha male makes himself known
+[1670424426018] : ---[Downloaded] : r/WhitePeopleTwitter - All of a sudden “Law &amp; Order” doesn’t apply?
+[1670424426063] : ---[Downloaded] : r/WhitePeopleTwitter - not any time soon
+[1670424427340] : ---[Downloaded] : r/WhitePeopleTwitter - Why do some people seem to think women expire in their 30s?!
+[1670424427596] : ---[Downloaded] : r/WhitePeopleTwitter - Dan the Man
+[1670424427695] : ---[Downloaded] : r/WhitePeopleTwitter - I'd say that's an admission of guilt.
+[1670424427769] : ---[Downloaded] : r/WhitePeopleTwitter - The Onion never disappoints
+[1670424427803] : ---[Downloaded] : r/WhitePeopleTwitter - sawhorse
+[1670424428055] : ---[Downloaded] : r/WhitePeopleTwitter - Herschel Walker's son may not like him... Just a guess.
+[1670424428297] : ---[Downloaded] : r/WhitePeopleTwitter - when you self own
+[1670424428618] : ---[Downloaded] : r/WhitePeopleTwitter - hmm innocent you say
+[1670424428685] : ---[Downloaded] : r/WhitePeopleTwitter - Almost there!
+[1670424428720] : ---[Downloaded] : r/WhitePeopleTwitter - Happy Holidays!🎄
+[1670424428860] : ---[Downloaded] : r/WhitePeopleTwitter - Why do I need an AR-15?
+[1670424429213] : ---[Downloaded] : r/WhitePeopleTwitter - Kids are only off limit when they're parents are Republicans?
+[1670424429273] : ---[Downloaded] : r/WhitePeopleTwitter - Trump's accomplishments 🤣🤣
+[1670424429520] : ---[Downloaded] : r/WhitePeopleTwitter - A true national crisis.
+[1670424429786] : ---[Downloaded] : r/WhitePeopleTwitter - It's about time
+[1670424429867] : ---[Downloaded] : r/WhitePeopleTwitter - stop asking us, ask them corporations !
+[1670424429962] : ---[Downloaded] : r/WhitePeopleTwitter - People are the worst
+[1670424430338] : ---[Downloaded] : r/WhitePeopleTwitter - "FeTtErMaN dIdN't HaVe A jOb TiLl He WaS 40" - Republican morons
+[1670424430383] : ---[Downloaded] : r/WhitePeopleTwitter - GA
+[1670424430536] : ---[Downloaded] : r/WhitePeopleTwitter - You cannot make this up
+[1670424430563] : ---[Downloaded] : r/WhitePeopleTwitter - Put him in prison he belongs there
+[1670424431315] : ---[Downloaded] : r/WhitePeopleTwitter - forced birthing is for the war machine
+[1670424431352] : ---[Downloaded] : r/WhitePeopleTwitter - PSA for those who haven’t realized.
+[1670424431461] : ---[Downloaded] : r/WhitePeopleTwitter - KEVIN!!!!
+[1670424431580] : ---[Downloaded] : r/WhitePeopleTwitter - No wonder...
+[1670424431631] : ---[Downloaded] : r/WhitePeopleTwitter - Well...
+[1670424431669] : ---[Downloaded] : r/WhitePeopleTwitter - Over a decade later and not much has changed.
+[1670424431697] : ---[Downloaded] : r/WhitePeopleTwitter - I dont want a christmas box
+[1670424431948] : ---[Downloaded] : r/WhitePeopleTwitter - JUST A REMINDER
+[1670424432199] : ---[Downloaded] : r/WhitePeopleTwitter - tired of winning yet traitors?
+[1670424432248] : ---[Downloaded] : r/WhitePeopleTwitter - Oh how the turn tables
+[1670424432825] : ---[Downloaded] : r/WhitePeopleTwitter - Deserved
+[1670424433755] : ---[Downloaded] : r/WhitePeopleTwitter - how horrible would this be if more people saw this
+[1670424434540] : ---[Downloaded] : r/WhitePeopleTwitter - this is what cons want
+[1670424436174] : ---[Downloaded] : r/WhitePeopleTwitter - true love
+[1670424436247] : ---[Downloaded] : r/WhitePeopleTwitter - Now I know why I’m not dead
+[1670424436673] : ---[Downloaded] : r/WhitePeopleTwitter - It tells you all you need to know
+[1670424436729] : ---[Downloaded] : r/WhitePeopleTwitter - aye better late than never?
+[1670424437092] : ---[Downloaded] : r/WhitePeopleTwitter - Odds on him being a Republican?
+[1670424437142] : ---[Downloaded] : r/WhitePeopleTwitter - Teach 'em young!
+[1670424437223] : ---[Downloaded] : r/WhitePeopleTwitter - Trump is going to jail
+[1670424437469] : ---[Downloaded] : r/WhitePeopleTwitter - enough said
+[1670424437869] : ---[Downloaded] : r/WhitePeopleTwitter - Volodomyr Zelenskyy has been named TIME's Person of the Year.
+[1670424438142] : ---[Downloaded] : r/WhitePeopleTwitter - Say it with ya chest!!!!
+[1670424438193] : ---[Downloaded] : r/WhitePeopleTwitter - Guilty
+[1670424438526] : ---[Downloaded] : r/WhitePeopleTwitter - Thank you
+[1670424439206] : ---[Downloaded] : r/WhitePeopleTwitter - lol
+[1670424439247] : ---[Downloaded] : r/WhitePeopleTwitter - He sure did. He lost😂
+[1670424439282] : ---[Downloaded] : r/WhitePeopleTwitter - When You Need To Pay Up, But What's Above You Doesn't
+[1670424439383] : ---[Downloaded] : r/WhitePeopleTwitter - It's unfortunate this had to be said
+[1670424439442] : ---[Downloaded] : r/WhitePeopleTwitter - Amen.
+[1670424439480] : ---[Downloaded] : r/WhitePeopleTwitter - A handprint in a sidewalk is beautiful too
+[1670424439764] : ---[Downloaded] : r/WhitePeopleTwitter - Senator Raphael Warnock, D-GA
+[1670424439850] : ---[Downloaded] : r/WhitePeopleTwitter - CVS and “donations”
+[1670424439946] : ---[Downloaded] : r/WhitePeopleTwitter - Wow
+[1670424440204] : ---[Downloaded] : r/WhitePeopleTwitter - probably
+[1670424440266] : ---[Downloaded] : r/WhitePeopleTwitter - richest guy on Earth is so stingy he won't even treat essential...
+[1670424440582] : ---[Downloaded] : r/WhitePeopleTwitter - Just in case
+[1670424440624] : ---[Downloaded] : r/WhitePeopleTwitter - Felt good to get it out
+[1670424440913] : ---[Downloaded] : r/WhitePeopleTwitter - IYKYK
+[1670424441011] : ---[Downloaded] : r/WhitePeopleTwitter - I WAS BORN A BABY
+[1670424441074] : ---[Downloaded] : r/WhitePeopleTwitter - Agreed
+[1670424441115] : ---[Downloaded] : r/WhitePeopleTwitter - Hey Joe Manchin! How does it feel that a progressive candidate ...
+[1670424441236] : ---[Downloaded] : r/WhitePeopleTwitter - The 2022 midterm results explaining Republican opposition to ed...
+[1670424441280] : ---[Downloaded] : r/WhitePeopleTwitter - Did Elon notice the humans being being held at gunpoint? Not a ...
+[1670424441307] : ---[Downloaded] : r/WhitePeopleTwitter - Walker Texas Ranger can go be a full time werewolf now.
+[1670424441391] : ---[Downloaded] : r/WhitePeopleTwitter - Confused Herschel
+[1670424441691] : ---[Downloaded] : r/WhitePeopleTwitter - Thanks for all your help, Ted!
+[1670424441762] : ---[Downloaded] : r/WhitePeopleTwitter - Found this off Tumblr, found it very fitting
+[1670424441957] : ---[Downloaded] : r/WhitePeopleTwitter - It's a Tuesday guys🥰🥰🥰
+[1670424442227] : ---[Downloaded] : r/WhitePeopleTwitter - We love you Bindi 💖
+[1670424442544] : ---[Downloaded] : r/WhitePeopleTwitter - Wendy’s isn’t lacking
+[1670424442581] : ---[Downloaded] : r/WhitePeopleTwitter - TRANSLATION: He’s in big trouble and he's a mess.
+[1670424443152] : ---[Downloaded] : r/WhitePeopleTwitter - Satanic panic is back
+[1670424443198] : ---[Downloaded] : r/WhitePeopleTwitter - But I might need it later
+[1670424443758] : ---[Downloaded] : r/WhitePeopleTwitter - Hail Satan.
+[1670424444311] : ---[Downloaded] : r/WhitePeopleTwitter - whitepeopletwitter
+[1670424444463] : ---[Downloaded] : r/WhitePeopleTwitter - These bees got the best knees
+[1670424444578] : ---[Downloaded] : r/WhitePeopleTwitter - Should not have been that close!
+[1670424444802] : ---[Downloaded] : r/WhitePeopleTwitter - Valid Question.
+[1670424444928] : ---[Downloaded] : r/WhitePeopleTwitter - yea pretty much
+[1670424445106] : ---[Downloaded] : r/WhitePeopleTwitter - $35 Insulin
+[1670424445569] : ---[Downloaded] : r/WhitePeopleTwitter - Wasting No Time Here.
+[1670424445722] : ---[Downloaded] : r/WhitePeopleTwitter - This is the very antithesis of what it means to be an American.
+[1670424606869] : Proxy selected
+[1670424611446] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424614169] : Got 101 posts till now.
+[1670424614170] : Found a non Media post.
+[1670424614171] : No after token Reached the end of the Feed
+[1670424614171] : Found 100 posts that can be downloaded.  
+[1670424614605] : Selected sort Type = sort=hot
+[1670424614606] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424615304] : NSFW Posts allowed : false
+[1670424615304] : Starting Download 100
+[1670424615304] : Clearing Cache
+[1670424615305] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670424617386] : Got 202 posts till now.
+[1670424617386] : Found a non Media post.
+[1670424618487] : Got 303 posts till now.
+[1670424618487] : Found a non Media post.
+[1670424618488] : 303--GOT TIll Noew
+[1670424618500] : 200--POSTS IN DOWNLOAD QUEUE
+[1670424620128] : ---[Downloaded] : r/WhitePeopleTwitter - Hate &amp; Politics have consequences. Seek help if you need it...
+[1670424620212] : ---[Downloaded] : r/WhitePeopleTwitter - if you know someone who thoughts of suicide, please reach out, ...
+[1670424620395] : ---[Downloaded] : r/WhitePeopleTwitter - Herschel Walker’s son reaction to tonight:
+[1670424620443] : ---[Downloaded] : r/WhitePeopleTwitter - Elon Musk is going after Wikipedia because they won't do PR for...
+[1670424620746] : ---[Downloaded] : r/WhitePeopleTwitter - The Dominos Are Falling!
+[1670424620883] : ---[Downloaded] : r/WhitePeopleTwitter - Republicans are Shameful. Full Stop.
+[1670424621137] : ---[Downloaded] : r/WhitePeopleTwitter - Power move!
+[1670424621182] : ---[Downloaded] : r/WhitePeopleTwitter - Thank you Georgia
+[1670424621235] : ---[Downloaded] : r/WhitePeopleTwitter - Lmao that's a good way to be exiled
+[1670424621352] : ---[Downloaded] : r/WhitePeopleTwitter - Their religion is white supremacy, not Christianity
+[1670424621439] : ---[Downloaded] : r/WhitePeopleTwitter - yup
+[1670424622580] : ---[Downloaded] : r/WhitePeopleTwitter - Alpha male makes himself known
+[1670424623008] : ---[Downloaded] : r/WhitePeopleTwitter - Why do some people seem to think women expire in their 30s?!
+[1670424623106] : ---[Downloaded] : r/WhitePeopleTwitter - not any time soon
+[1670424623156] : ---[Downloaded] : r/WhitePeopleTwitter - All of a sudden “Law &amp; Order” doesn’t apply?
+[1670424623214] : ---[Downloaded] : r/WhitePeopleTwitter - Dan the Man
+[1670424623344] : ---[Downloaded] : r/WhitePeopleTwitter - I'd say that's an admission of guilt.
+[1670424623436] : ---[Downloaded] : r/WhitePeopleTwitter - The Onion never disappoints
+[1670424623463] : ---[Downloaded] : r/WhitePeopleTwitter - sawhorse
+[1670424623578] : ---[Downloaded] : r/WhitePeopleTwitter - Herschel Walker's son may not like him... Just a guess.
+[1670424624363] : ---[Downloaded] : r/WhitePeopleTwitter - when you self own
+[1670424625016] : ---[Downloaded] : r/WhitePeopleTwitter - hmm innocent you say
+[1670424625488] : ---[Downloaded] : r/WhitePeopleTwitter - Almost there!
+[1670424625596] : ---[Downloaded] : r/WhitePeopleTwitter - Happy Holidays!🎄
+[1670424625775] : ---[Downloaded] : r/WhitePeopleTwitter - Why do I need an AR-15?
+[1670424626020] : ---[Downloaded] : r/WhitePeopleTwitter - Kids are only off limit when they're parents are Republicans?
+[1670424626068] : ---[Downloaded] : r/WhitePeopleTwitter - A true national crisis.
+[1670424626122] : ---[Downloaded] : r/WhitePeopleTwitter - Trump's accomplishments 🤣🤣
+[1670424626315] : ---[Downloaded] : r/WhitePeopleTwitter - It's about time
+[1670424626617] : ---[Downloaded] : r/WhitePeopleTwitter - "FeTtErMaN dIdN't HaVe A jOb TiLl He WaS 40" - Republican morons
+[1670424626876] : ---[Downloaded] : r/WhitePeopleTwitter - stop asking us, ask them corporations !
+[1670424627015] : ---[Downloaded] : r/WhitePeopleTwitter - People are the worst
+[1670424627171] : ---[Downloaded] : r/WhitePeopleTwitter - GA
+[1670424627379] : ---[Downloaded] : r/WhitePeopleTwitter - You cannot make this up
+[1670424627443] : ---[Downloaded] : r/WhitePeopleTwitter - Put him in prison he belongs there
+[1670424628386] : ---[Downloaded] : r/WhitePeopleTwitter - forced birthing is for the war machine
+[1670424628465] : ---[Downloaded] : r/WhitePeopleTwitter - PSA for those who haven’t realized.
+[1670424628640] : ---[Downloaded] : r/WhitePeopleTwitter - KEVIN!!!!
+[1670424628767] : ---[Downloaded] : r/WhitePeopleTwitter - No wonder...
+[1670424628904] : ---[Downloaded] : r/WhitePeopleTwitter - tired of winning yet traitors?
+[1670424629127] : ---[Downloaded] : r/WhitePeopleTwitter - this is what cons want
+[1670424629308] : ---[Downloaded] : r/WhitePeopleTwitter - Well...
+[1670424629336] : ---[Downloaded] : r/WhitePeopleTwitter - I dont want a christmas box
+[1670424629376] : ---[Downloaded] : r/WhitePeopleTwitter - JUST A REMINDER
+[1670424629410] : ---[Downloaded] : r/WhitePeopleTwitter - Over a decade later and not much has changed.
+[1670424629454] : ---[Downloaded] : r/WhitePeopleTwitter - Oh how the turn tables
+[1670424629504] : ---[Downloaded] : r/WhitePeopleTwitter - how horrible would this be if more people saw this
+[1670424629549] : ---[Downloaded] : r/WhitePeopleTwitter - Deserved
+[1670424629621] : ---[Downloaded] : r/WhitePeopleTwitter - true love
+[1670424629769] : ---[Downloaded] : r/WhitePeopleTwitter - Now I know why I’m not dead
+[1670424629809] : ---[Downloaded] : r/WhitePeopleTwitter - enough said
+[1670424630222] : ---[Downloaded] : r/WhitePeopleTwitter - It tells you all you need to know
+[1670424630282] : ---[Downloaded] : r/WhitePeopleTwitter - aye better late than never?
+[1670424630338] : ---[Downloaded] : r/WhitePeopleTwitter - Teach 'em young!
+[1670424630481] : ---[Downloaded] : r/WhitePeopleTwitter - Say it with ya chest!!!!
+[1670424630526] : ---[Downloaded] : r/WhitePeopleTwitter - Trump is going to jail
+[1670424630582] : ---[Downloaded] : r/WhitePeopleTwitter - Odds on him being a Republican?
+[1670424630724] : ---[Downloaded] : r/WhitePeopleTwitter - Volodomyr Zelenskyy has been named TIME's Person of the Year.
+[1670424630801] : ---[Downloaded] : r/WhitePeopleTwitter - lol
+[1670424630875] : ---[Downloaded] : r/WhitePeopleTwitter - Guilty
+[1670424631909] : ---[Downloaded] : r/WhitePeopleTwitter - Thank you
+[1670424631948] : ---[Downloaded] : r/WhitePeopleTwitter - He sure did. He lost😂
+[1670424631980] : ---[Downloaded] : r/WhitePeopleTwitter - When You Need To Pay Up, But What's Above You Doesn't
+[1670424632027] : ---[Downloaded] : r/WhitePeopleTwitter - It's unfortunate this had to be said
+[1670424632060] : ---[Downloaded] : r/WhitePeopleTwitter - Amen.
+[1670424632119] : ---[Downloaded] : r/WhitePeopleTwitter - Senator Raphael Warnock, D-GA
+[1670424632156] : ---[Downloaded] : r/WhitePeopleTwitter - A handprint in a sidewalk is beautiful too
+[1670424632547] : ---[Downloaded] : r/WhitePeopleTwitter - CVS and “donations”
+[1670424632614] : ---[Downloaded] : r/WhitePeopleTwitter - Wow
+[1670424632657] : ---[Downloaded] : r/WhitePeopleTwitter - probably
+[1670424632715] : ---[Downloaded] : r/WhitePeopleTwitter - richest guy on Earth is so stingy he won't even treat essential...
+[1670424632760] : ---[Downloaded] : r/WhitePeopleTwitter - Just in case
+[1670424632821] : ---[Downloaded] : r/WhitePeopleTwitter - Felt good to get it out
+[1670424632917] : ---[Downloaded] : r/WhitePeopleTwitter - IYKYK
+[1670424632958] : ---[Downloaded] : r/WhitePeopleTwitter - I WAS BORN A BABY
+[1670424633032] : ---[Downloaded] : r/WhitePeopleTwitter - Agreed
+[1670424633117] : ---[Downloaded] : r/WhitePeopleTwitter - Hey Joe Manchin! How does it feel that a progressive candidate ...
+[1670424633261] : ---[Downloaded] : r/WhitePeopleTwitter - The 2022 midterm results explaining Republican opposition to ed...
+[1670424633312] : ---[Downloaded] : r/WhitePeopleTwitter - Did Elon notice the humans being being held at gunpoint? Not a ...
+[1670424633343] : ---[Downloaded] : r/WhitePeopleTwitter - Walker Texas Ranger can go be a full time werewolf now.
+[1670424633414] : ---[Downloaded] : r/WhitePeopleTwitter - Confused Herschel
+[1670424633506] : ---[Downloaded] : r/WhitePeopleTwitter - Thanks for all your help, Ted!
+[1670424633732] : ---[Downloaded] : r/WhitePeopleTwitter - It's a Tuesday guys🥰🥰🥰
+[1670424633826] : ---[Downloaded] : r/WhitePeopleTwitter - Found this off Tumblr, found it very fitting
+[1670424633882] : ---[Downloaded] : r/WhitePeopleTwitter - We love you Bindi 💖
+[1670424633914] : ---[Downloaded] : r/WhitePeopleTwitter - Wendy’s isn’t lacking
+[1670424633962] : ---[Downloaded] : r/WhitePeopleTwitter - TRANSLATION: He’s in big trouble and he's a mess.
+[1670424634012] : ---[Downloaded] : r/WhitePeopleTwitter - But I might need it later
+[1670424634079] : ---[Downloaded] : r/WhitePeopleTwitter - Hail Satan.
+[1670424634119] : ---[Downloaded] : r/WhitePeopleTwitter - whitepeopletwitter
+[1670424634475] : ---[Downloaded] : r/WhitePeopleTwitter - Satanic panic is back
+[1670424634622] : ---[Downloaded] : r/WhitePeopleTwitter - These bees got the best knees
+[1670424634700] : ---[Downloaded] : r/WhitePeopleTwitter - Should not have been that close!
+[1670424634819] : ---[Downloaded] : r/WhitePeopleTwitter - Valid Question.
+[1670424634898] : ---[Downloaded] : r/WhitePeopleTwitter - yea pretty much
+[1670424634988] : ---[Downloaded] : r/WhitePeopleTwitter - $35 Insulin
+[1670424635551] : ---[Downloaded] : r/WhitePeopleTwitter - Wasting No Time Here.
+[1670424635741] : ---[Downloaded] : r/WhitePeopleTwitter - This is the very antithesis of what it means to be an American.
+[1670425116849] : Proxy selected
+[1670425119931] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670425121940] : Selected sort Type = sort=top&t=week
+[1670425121940] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=top&t=week&after=
+[1670425122389] : Got 100 posts till now.
+[1670425122390] : No after token Reached the end of the Feed
+[1670425122390] : Found 100 posts that can be downloaded.  
+[1670425122655] : NSFW Posts allowed : false
+[1670425122656] : Starting Download 100
+[1670425122656] : Clearing Cache
+[1670425122657] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=top&t=week&after=
+[1670425124650] : Got 200 posts till now.
+[1670425125072] : Got 300 posts till now.
+[1670425125072] : 300--GOT TIll Noew
+[1670425125084] : 200--POSTS IN DOWNLOAD QUEUE
+[1670425125140] : ---[Downloaded] : r/meirl - meirl
+[1670425125172] : ---[Downloaded] : r/meirl - meirl
+[1670425125236] : ---[Downloaded] : r/meirl - Meirl
+[1670425125296] : ---[Downloaded] : r/meirl - meirl
+[1670425125352] : ---[Downloaded] : r/meirl - meirl
+[1670425125394] : ---[Downloaded] : r/meirl - meirl
+[1670425125439] : ---[Downloaded] : r/meirl - meirl
+[1670425125474] : ---[Downloaded] : r/meirl - meirl
+[1670425125529] : ---[Downloaded] : r/meirl - meirl
+[1670425125596] : ---[Downloaded] : r/meirl - me🥪irl
+[1670425125978] : ---[Downloaded] : r/meirl - meirl
+[1670425126029] : ---[Downloaded] : r/meirl - meirl
+[1670425126071] : ---[Downloaded] : r/meirl - meirl
+[1670425126523] : ---[Downloaded] : r/meirl - meirl
+[1670425127628] : ---[Downloaded] : r/meirl - meirl
+[1670425128662] : ---[Downloaded] : r/meirl - me irl
+[1670425129758] : ---[Downloaded] : r/meirl - Meirl
+[1670425129885] : ---[Downloaded] : r/meirl - Meirl
+[1670425130763] : ---[Downloaded] : r/meirl - meirl
+[1670425130813] : ---[Downloaded] : r/meirl - meirl
+[1670425130862] : ---[Downloaded] : r/meirl - ME_IRL
+[1670425130895] : ---[Downloaded] : r/meirl - Meirl
+[1670425130938] : ---[Downloaded] : r/meirl - meirl
+[1670425130971] : ---[Downloaded] : r/meirl - meirl
+[1670425131047] : ---[Downloaded] : r/meirl - Me irl
+[1670425131089] : ---[Downloaded] : r/meirl - meirl
+[1670425131412] : ---[Downloaded] : r/meirl - meirl
+[1670425131478] : ---[Downloaded] : r/meirl - meirl
+[1670425131528] : ---[Downloaded] : r/meirl - meirl
+[1670425131842] : ---[Downloaded] : r/meirl - Meirl
+[1670425131912] : ---[Downloaded] : r/meirl - Meirl
+[1670425131986] : ---[Downloaded] : r/meirl - meirl
+[1670425132941] : ---[Downloaded] : r/meirl - me_irl
+[1670425133259] : ---[Downloaded] : r/meirl - meirl
+[1670425133321] : ---[Downloaded] : r/meirl - Meirl
+[1670425133564] : ---[Downloaded] : r/meirl - Meirl
+[1670425133986] : ---[Downloaded] : r/meirl - meirl
+[1670425180546] : Proxy selected
+[1670425182257] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670425184033] : Selected sort Type = sort=hot
+[1670425184034] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670425184641] : Got 100 posts till now.
+[1670425184642] : No after token Reached the end of the Feed
+[1670425184642] : Found 100 posts that can be downloaded.  
+[1670425185356] : NSFW Posts allowed : false
+[1670425185357] : Starting Download 100
+[1670425185357] : Clearing Cache
+[1670425185358] : Generated Main URL : https://www.reddit.com/r/meirl/.json?limit=100&sort=hot&after=
+[1670425186497] : Got 200 posts till now.
+[1670425187654] : Got 300 posts till now.
+[1670425187655] : 300--GOT TIll Noew
+[1670425187667] : 200--POSTS IN DOWNLOAD QUEUE
+[1670425187724] : ---[Downloaded] : r/meirl - meirl
+[1670425187755] : ---[Downloaded] : r/meirl - meirl
+[1670425187795] : ---[Downloaded] : r/meirl - Meirl
+[1670425187891] : ---[Downloaded] : r/meirl - meirl
+[1670425187999] : ---[Downloaded] : r/meirl - meirl
+[1670425188039] : ---[Downloaded] : r/meirl - meirl
+[1670425188079] : ---[Downloaded] : r/meirl - meirl
+[1670425188112] : ---[Downloaded] : r/meirl - meirl
+[1670425188159] : ---[Downloaded] : r/meirl - meirl
+[1670425188213] : ---[Downloaded] : r/meirl - me🥪irl
+[1670425188305] : ---[Downloaded] : r/meirl - meirl
+[1670425188341] : ---[Downloaded] : r/meirl - meirl
+[1670425188379] : ---[Downloaded] : r/meirl - meirl
+[1670425188413] : ---[Downloaded] : r/meirl - meirl
+[1670425188656] : ---[Downloaded] : r/meirl - meirl
+[1670425188743] : ---[Downloaded] : r/meirl - me irl
+[1670425188969] : ---[Downloaded] : r/meirl - Meirl
+[1670425189022] : ---[Downloaded] : r/meirl - Meirl
+[1670425189978] : ---[Downloaded] : r/meirl - meirl
+[1670425190248] : ---[Downloaded] : r/meirl - meirl
+[1670425190488] : ---[Downloaded] : r/meirl - ME_IRL
+[1670425190641] : ---[Downloaded] : r/meirl - Meirl
+[1670425190928] : ---[Downloaded] : r/meirl - meirl
+[1670425191300] : ---[Downloaded] : r/meirl - meirl
+[1670425191593] : ---[Downloaded] : r/meirl - Me irl
+[1670425191820] : ---[Downloaded] : r/meirl - meirl
+[1670425191948] : ---[Downloaded] : r/meirl - meirl
+[1670425192048] : ---[Downloaded] : r/meirl - meirl
+[1670425192159] : ---[Downloaded] : r/meirl - meirl
+[1670425192450] : ---[Downloaded] : r/meirl - Meirl
+[1670425192694] : ---[Downloaded] : r/meirl - Meirl
+[1670425192939] : ---[Downloaded] : r/meirl - meirl
+[1670425193839] : ---[Downloaded] : r/meirl - me_irl
+[1670425193957] : ---[Downloaded] : r/meirl - meirl
+[1670425194006] : ---[Downloaded] : r/meirl - Meirl
+[1670425194145] : ---[Downloaded] : r/meirl - Meirl
+[1670425194264] : ---[Downloaded] : r/meirl - meirl
+[1670425194309] : ---[Downloaded] : r/meirl - Meirl
+[1670425194359] : ---[Downloaded] : r/meirl - meirl
+[1670425194386] : ---[Downloaded] : r/meirl - me🥢irl
+[1670425194641] : ---[Downloaded] : r/meirl - meirl
+[1670425194896] : ---[Downloaded] : r/meirl - Meirl
+[1670425195124] : ---[Downloaded] : r/meirl - Meirl
+[1670425195170] : ---[Downloaded] : r/meirl - Meirl
+[1670425195456] : ---[Downloaded] : r/meirl - meirl
+[1670425196040] : ---[Downloaded] : r/meirl - Meirl
+[1670425196081] : ---[Downloaded] : r/meirl - meirl
+[1670425196181] : ---[Downloaded] : r/meirl - meirl
+[1670425196231] : ---[Downloaded] : r/meirl - meirl
+[1670425196308] : ---[Downloaded] : r/meirl - meirl
+[1670425197438] : ---[Downloaded] : r/meirl - meirl
+[1670425197488] : ---[Downloaded] : r/meirl - me_irl
+[1670425197520] : ---[Downloaded] : r/meirl - meirl
+[1670425197771] : ---[Downloaded] : r/meirl - Meirl
+[1670425198016] : ---[Downloaded] : r/meirl - me_irl
+[1670425198055] : ---[Downloaded] : r/meirl - meirl
+[1670425198310] : ---[Downloaded] : r/meirl - meirl
+[1670425198360] : ---[Downloaded] : r/meirl - Meirl
+[1670425198414] : ---[Downloaded] : r/meirl - meirl
+[1670425198456] : ---[Downloaded] : r/meirl - meirl
+[1670425198495] : ---[Downloaded] : r/meirl - meirl
+[1670425198862] : ---[Downloaded] : r/meirl - Me irl
+[1670425199565] : ---[Downloaded] : r/meirl - Meirl
+[1670425200913] : ---[Downloaded] : r/meirl - meirl
+[1670425206691] : ---[Downloaded] : r/meirl - meirl
+[1670425210181] : ---[Downloaded] : r/meirl - meirl
+[1670425210636] : ---[Downloaded] : r/meirl - Meirl
+[1670425210886] : ---[Downloaded] : r/meirl - me_irl
+[1670425211457] : ---[Downloaded] : r/meirl - meirl
+[1670425211857] : ---[Downloaded] : r/meirl - Meirl
+[1670425212205] : ---[Downloaded] : r/meirl - me irl
+[1670425212661] : ---[Downloaded] : r/meirl - meirl
+[1670425213261] : ---[Downloaded] : r/meirl - me irl
+[1670425213801] : ---[Downloaded] : r/meirl - Meirl
+[1670425214442] : ---[Downloaded] : r/meirl - meirl
+[1670425214812] : ---[Downloaded] : r/meirl - Meirl
+[1670425215202] : ---[Downloaded] : r/meirl - meirl
+[1670425215466] : ---[Downloaded] : r/meirl - me irl
+[1670425215498] : ---[Downloaded] : r/meirl - meirl
+[1670425215541] : ---[Downloaded] : r/meirl - meirl
+[1670425215601] : ---[Downloaded] : r/meirl - meirl
+[1670425215645] : ---[Downloaded] : r/meirl - meirl
+[1670425215693] : ---[Downloaded] : r/meirl - meirl
+[1670425215789] : ---[Downloaded] : r/meirl - meirl
+[1670425215862] : ---[Downloaded] : r/meirl - meirl
+[1670425216197] : ---[Downloaded] : r/meirl - Meirl
+[1670425217228] : ---[Downloaded] : r/meirl - meirl
+[1670425218438] : ---[Downloaded] : r/meirl - meirl
+[1670425218559] : ---[Downloaded] : r/meirl - me irl
+[1670425218937] : ---[Downloaded] : r/meirl - meirl
+[1670425219249] : ---[Downloaded] : r/meirl - meirl
+[1670425219594] : ---[Downloaded] : r/meirl - meirl
+[1670425219881] : ---[Downloaded] : r/meirl - me👯‍♀️irl
+[1670425220406] : ---[Downloaded] : r/meirl - meirl
+[1670425221001] : ---[Downloaded] : r/meirl - Meirl
+[1670425221156] : ---[Downloaded] : r/meirl - meirl
+[1670425221659] : ---[Downloaded] : r/meirl - meirl
+[1670425222215] : ---[Downloaded] : r/meirl - meirl
+[1670425222622] : ---[Downloaded] : r/meirl - meirl
+[1670426446244] : Proxy selected
+[1670426503818] : Generated Main URL : https://www.reddit.com/r/todayilearned/.json?limit=100&sort=hot&after=
+[1670426506506] : Got 100 posts till now.
+[1670426506507] : No after token Reached the end of the Feed
+[1670426506507] : Found 100 posts that can be downloaded.  
+[1670426513066] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426513120] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426513497] : No search results from query [object Object]
+[1670426513548] : No search results from query [object Object]
+[1670426516416] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670426516829] : No search results from query [object Object]
+[1670426517752] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426517834] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426518199] : No search results from query [object Object]
+[1670426518259] : No search results from query [object Object]
+[1670426519934] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670426520332] : No search results from query [object Object]
+[1670426600187] : Proxy selected
+[1670426681000] : Proxy selected
+[1670429128025] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670429130699] : Got 101 posts till now.
+[1670429130700] : No after token Reached the end of the Feed
+[1670429130701] : Found 101 posts that can be downloaded.  
+[1670429258111] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429260787] : Got 202 posts till now.
+[1670429260787] : Found a non Media post.
+[1670429363241] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429365887] : Got 303 posts till now.
+[1670429365888] : Found a non Media post.
+[1670429491202] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429494495] : Got 404 posts till now.
+[1670429494496] : Found a non Media post.
+[1670429511157] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429513968] : Got 505 posts till now.
+[1670429513968] : Found a non Media post.
+[1670429657750] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429660303] : Got 606 posts till now.
+[1670429660303] : Found a non Media post.
+[1670429699315] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429701907] : Got 707 posts till now.
+[1670429701908] : Found a non Media post.
+[1670429742381] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429745081] : Got 808 posts till now.
+[1670429745082] : Found a non Media post.
+[1670429762293] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429765191] : Got 909 posts till now.
+[1670429765191] : Found a non Media post.
+[1670429799968] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429800070] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429800242] : Search for "red" resolved Url = https://www.reddit.com/search.json?q=red&source=recent&type=sr%2Cuser
+[1670429800253] : No search results from query [object Object]
+[1670429800360] : No search results from query [object Object]
+[1670429812385] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429812550] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670429812683] : No search results from query [object Object]
+[1670429812841] : No search results from query [object Object]
+[1670429839442] : Generated Main URL : https://www.reddit.com/r/funny/.json?limit=100&sort=hot&after=
+[1670429842228] : Got 1011 posts till now.
+[1670429842228] : Found a non Media post.
+[1670429867999] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670429870411] : Got 1111 posts till now.
+[1670429879478] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429882968] : Got 1212 posts till now.
+[1670429882968] : Found a non Media post.
