@@ -5,7 +5,10 @@ const { logging } = require("../utils");
 
 const channel = "search";
 
-const callback = (e, query) => {
+const callback = (
+  /** @type {any} */ e,
+  /** @type {{ query: string; safeSearch: boolean; }} */ query
+) => {
   var url = `https://www.reddit.com/search.json?q=${query.query}&source=recent&type=sr%2Cuser`;
   if (query.safeSearch == false) {
     url += "&include_over_18=1";

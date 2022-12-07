@@ -1,8 +1,7 @@
 const globals = require("../globals");
 const channel = "windowaction";
 
-const callback = (e, action) => {
-  //logging(action)
+const callback = (e, /** @type {number} */ action) => {
   if (action == 1) {
     globals.mainWindow.minimize();
   }

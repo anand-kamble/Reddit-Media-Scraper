@@ -29,7 +29,7 @@ class global_values {
      */
     this.parallelDownloads = parseInt(config.parallellimit) || 1;
     /**
-     * @type {{ push: (arg0: { data: any; count: number; }) => void; drain: (arg0: () => void) => void; } | null}
+     * @type {async.QueueObject<any> | null}
      */
     this.queue = null;
     /**
@@ -96,7 +96,7 @@ class global_values {
 
   /**
    * @param {string} variableName
-   * @param {number | boolean | BrowserWindow | async.QueueObject<any> | any[]} value
+   * @param {number | string | boolean | BrowserWindow | async.QueueObject<any> | any[]} value
    */
   setGlobal(variableName, value) {
     this[variableName] = value;

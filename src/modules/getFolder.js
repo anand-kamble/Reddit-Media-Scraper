@@ -4,11 +4,13 @@ const globals = require("../globals");
 
 const channel = "getFolder";
 
-const callback = async (e, d) => {
-  const result = await dialog.showOpenDialog(globals.mainWindow, {
-    properties: ["openDirectory"],
-  });
-  globals.mainWindow.webContents.send("takedefaultfolder", result.filePaths);
+const callback = async () => {
+  if (globals.mainWindow) {
+    const result = await dialog.showOpenDialog(globals.mainWindow, {
+      properties: ["openDirectory"],
+    });
+    globals.mainWindow?.webContents.send("takedefaultfolder", result.filePaths);
+  }
 };
 
 module.exports = { channel, callback };
