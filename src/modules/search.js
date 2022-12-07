@@ -1,20 +1,24 @@
-const { ipcMain } = require("electron")
+//@ts-check
+const request = require("request");
+const { processSearchJSON } = require("../api");
+const { logging } = require("../utils");
 
-const channel = "search"
+const channel = "search";
 
 const callback = (e, query) => {
-  var url = `https://www.reddit.com/search.json?q=${query.query}&source=recent&type=sr%2Cuser`
+  var url = `https://www.reddit.com/search.json?q=${query.query}&source=recent&type=sr%2Cuser`;
   if (query.safeSearch == false) {
-    url += "&include_over_18=1"
+    url += "&include_over_18=1";
   }
-  logging('Search for "' + query.query + '" resolved Url = ' + url)
+  logging('Search for "' + query.query + '" resolved Url = ' + url);
   request(url, { json: true }, (err, res, body) => {
     if (err) {
-      return logging(`Can't Connect to Reddit.com`)
+      return logging(`Can't Connect to Reddit.com`);
     }
     if (!err && res.statusCode == 200) {
-      processSearchJSON(body, query)
+      processSearchJSON(body, query);
     }
-  })
-}
-export { channel, callback }
+  });
+};
+
+module.exports = { channel, callback };

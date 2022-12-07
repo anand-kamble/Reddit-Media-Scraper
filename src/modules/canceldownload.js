@@ -1,14 +1,17 @@
-const { ipcMain } = require("electron")
-
-const channel = "canceldownload"
+//@ts-check
+const globals = require("../globals");
+const channel = "canceldownload";
 
 const callback = (e, d) => {
-  is_download_cancelled = true
-  q.kill()
-  postsdata = []
-  postsdata.length = 0
-  numofPostsGot = 0
-  mainWindow.webContents.send("cancelConfirm")
-}
+  globals.setGlobal("is_download_cancelled", true);
+  globals.queue.kill();
+  // postsdata = [];
+  // postsdata.length = 0;
+  // numofPostsGot = 0;
+  globals.setGlobal("numofPostsGot", 0);
+  globals.setGlobal("postsdata", []);
+  globals.mainWindow.webContents.send("cancelConfirm");
+};
 
-export { channel, callback }
+// export { channel, callback }
+module.exports = { channel, callback };

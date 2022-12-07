@@ -1,13 +1,18 @@
-const { ipcMain } = require("electron")
-
-const channel = "subredditSelected"
+//@ts-check
+const { get_subreddit_posts } = require("../api");
+const globals = require("../globals");
+const channel = "subredditSelected";
 
 const callback = (e, subreddit) => {
-  sub_reddit = subreddit
-  postsdata = []
-  postsdata.length = 0
-  numofPostsGot = 0
-  get_subreddit_posts("", false)
-}
+  globals.setGlobal("sub_reddit", subreddit);
+  globals.setGlobal("postsdata", []);
+  globals.setGlobal("numofPostsGot", 0);
 
-export { channel, callback }
+  // globals.sub_reddit = subreddit;
+  // globals.postsdata = [];
+  // globals.postsdata.length = 0;
+  // globals.numofPostsGot = 0;
+  get_subreddit_posts("", false);
+};
+
+module.exports = { channel, callback };

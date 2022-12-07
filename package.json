@@ -10,21 +10,23 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build-installer":"electron-builder"
+    "build-installer": "electron-builder"
   },
-  "build":{
+  "build": {
     "appId": "redditscraper",
-    "win":{
-      "target":["nsis"],
-      "icon":"src/logo.png",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/logo.png",
       "legalTrademarks": "(c) 2021 Anand Kamble",
       "publisherName": "Anand Kamble"
     },
-    "nsis":{
-      "uninstallDisplayName" : "Reddit Media Scraper",
-      "license":"license.txt",
-      "oneClick":false,
-      "allowToChangeInstallationDirectory":true
+    "nsis": {
+      "uninstallDisplayName": "Reddit Media Scraper",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   },
   "keywords": [],

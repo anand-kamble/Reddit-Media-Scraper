@@ -1,9 +1,11 @@
-const { ipcMain } = require("electron")
+//@ts-check
+const globals = require("../globals");
 
-const channel = "givedownloadsfolder"
+const channel = "givedownloadsfolder";
 
 const callback = (e, data) => {
-  mainWindow.webContents.send("getdownloadsfolder", downloadFolder)
-}
+  const mainWindow = globals.getGlobal("mainWindow");
+  mainWindow.webContents.send("getdownloadsfolder", globals.downloadFolder);
+};
 
-export { channel, callback }
+module.exports = { channel, callback };

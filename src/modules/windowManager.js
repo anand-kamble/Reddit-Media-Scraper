@@ -1,22 +1,21 @@
-const { ipcMain } = require("electron")
-
-const channel = "windowaction"
+const globals = require("../globals");
+const channel = "windowaction";
 
 const callback = (e, action) => {
   //logging(action)
   if (action == 1) {
-    mainWindow.minimize()
+    globals.mainWindow.minimize();
   }
   if (action == 2) {
-    if (mainWindow.isMaximized()) {
-      mainWindow.restore()
+    if (globals.mainWindow.isMaximized()) {
+      globals.mainWindow.restore();
     } else {
-      mainWindow.maximize()
+      globals.mainWindow.maximize();
     }
   }
   if (action == 3) {
-    mainWindow.close()
+    globals.mainWindow.close();
   }
-}
+};
 
-export { channel, callback }
+module.exports = { channel, callback };

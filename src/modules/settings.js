@@ -1,12 +1,19 @@
-const { ipcMain } = require("electron")
+//@ts-check
+const fs = require("fs");
+const globals = require("../globals");
 
-const channel = "settings"
+const channel = "settings";
 
-const callback = (e, d) => {
-  console.log(d)
-  fs.writeFileSync("./config.json", JSON.stringify(d))
-  downloadFolder = d.downloadpath
-  proxy = d.parallellimit
-  parallelDownloads = d.proxy
-}
-export { channel, callback }
+const callback = (
+  /** @type {any} */ e,
+  /** @type {{ downloadpath: string; proxy: string; parallellimit: number; }} */ d
+) => {
+  fs.writeFileSync("./config.json", JSON.stringify(d));
+  // globals.downloadFolder = d.downloadpath;
+  globals.setGlobal("downloadFolder", d.downloadpath);
+  // globals.proxy = d.proxy;
+  globals.setGlobal("proxy", d.proxy);
+  // globals.parallelDownloads = d.parallellimit;
+  globals.setGlobal("parallelDownloads", d.parallellimit);
+};
+module.exports = { channel, callback };

@@ -1,12 +1,14 @@
-const { ipcMain } = require("electron")
+//@ts-check
+const { dialog } = require("electron");
+const globals = require("../globals");
 
-const channel = "getFolder"
+const channel = "getFolder";
 
 const callback = async (e, d) => {
-  const result = await dialog.showOpenDialog(mainWindow, {
+  const result = await dialog.showOpenDialog(globals.mainWindow, {
     properties: ["openDirectory"],
-  })
-  mainWindow.webContents.send("takedefaultfolder", result.filePaths)
-}
+  });
+  globals.mainWindow.webContents.send("takedefaultfolder", result.filePaths);
+};
 
-export { channel, callback }
+module.exports = { channel, callback };
