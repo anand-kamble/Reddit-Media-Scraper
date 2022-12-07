@@ -8815,3 +8815,52 @@ TypeError: Cannot read properties of undefined (reading '0')
 [1670429879478] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
 [1670429882968] : Got 1212 posts till now.
 [1670429882968] : Found a non Media post.
+[1670432068992] : Proxy selected
+[1670432081972] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670432084571] : Got 101 posts till now.
+[1670432084571] : Found a non Media post.
+[1670432084572] : No after token Reached the end of the Feed
+[1670432084572] : Found 100 posts that can be downloaded.  
+[1670432105573] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670432108135] : Got 201 posts till now.
+[1670432188719] : Generated Main URL : https://www.reddit.com/r/politics/.json?limit=100&sort=hot&after=
+[1670432191229] : Got 302 posts till now.
+[1670432191230] : Found a non Media post.
+[1670432191231] : Found a non Media post.
+[1670432200055] : Generated Main URL : https://www.reddit.com/r/politics/.json?limit=100&sort=hot&after=
+[1670432202634] : Got 403 posts till now.
+[1670432202635] : Found a non Media post.
+[1670432202636] : Found a non Media post.
+[1670432204453] : Selected sort Type = sort=hot
+[1670432204453] : Generated Main URL : https://www.reddit.com/r/politics/.json?limit=100&sort=hot&after=
+[1670432205430] : NSFW Posts allowed : false
+[1670432205430] : Starting Download 10
+[1670432205430] : Clearing Cache
+[1670432205431] : Generated Main URL : https://www.reddit.com/r/politics/.json?limit=100&sort=hot&after=
+[1670432206842] : Got 504 posts till now.
+[1670432206842] : Found a non Media post.
+[1670432206843] : Found a non Media post.
+[1670432208051] : Got 605 posts till now.
+[1670432208051] : Found a non Media post.
+[1670432208052] : Found a non Media post.
+[1670432208052] : 605--GOT TIll Noew
+[1670432208053] : 198--POSTS IN DOWNLOAD QUEUE
+[1670432215989] : Proxy selected
+[1670432219018] : Generated Main URL : https://www.reddit.com/r/aww/.json?limit=100&sort=hot&after=
+[1670432221766] : Got 100 posts till now.
+[1670432221767] : No after token Reached the end of the Feed
+[1670432221768] : Found 100 posts that can be downloaded.  
+[1670432226518] : Selected sort Type = sort=hot
+[1670432226518] : Generated Main URL : https://www.reddit.com/r/aww/.json?limit=100&sort=hot&after=
+[1670432227677] : NSFW Posts allowed : false
+[1670432227677] : Starting Download 10
+[1670432227678] : Clearing Cache
+[1670432227678] : Generated Main URL : https://www.reddit.com/r/aww/.json?limit=100&sort=hot&after=
+[1670432229574] : Got 200 posts till now.
+[1670432230472] : Got 300 posts till now.
+[1670432230473] : 300--GOT TIll Noew
+[1670432230474] : 200--POSTS IN DOWNLOAD QUEUE
+[1670432230517] : ---[Downloaded] : r/aww - Mobile check deposit background
+[1670432230586] : ---[Downloaded] : r/aww - [OC]Kitty: what is wrong with you?
+[1670432232460] : ---[Downloaded] : r/aww - Ducks in a roll, nah cats in a roll.
+[1670432233285] : ---[Downloaded] : r/aww - Sora staring at me🐱👀(OC)

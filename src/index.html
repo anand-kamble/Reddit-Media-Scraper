@@ -166,15 +166,6 @@
             <label>Path</label>
             <p>Path to the folder where you want to Download posts</p>
           </div>
-          <div id="downloadnsfwtoggle">
-            <p style="margin-top: 1px">Download NSFW posts.</p>
-            <input
-              id="downloadnsfw"
-              type="checkbox"
-              class="toggle"
-              onchange=""
-            />
-          </div>
           <div id="downloadnsfwtoggle2">
             <p style="margin-top: 1px">Rename posts while downloading.</p>
             <input
@@ -349,18 +340,34 @@
         $("#currdwnlfiles").fadeIn();
       });
     }
+    const nsfw = (/** @type {string} */ title) => {
+      const NSFWkeywords = [
+        "YXNz",
+        "Ym9vYg==",
+        "dGl0",
+        "c2V4",
+        "cG9ybg==",
+        "cHVzc3k=",
+        "Y3VudA==",
+        "ZGljaw==",
+      ];
+      return NSFWkeywords.some((keyword) => title.includes(atob(keyword)));
+    };
 
     function getPopular() {
       $.get("https://www.reddit.com/r/popular/.json?limit=32", (json) => {
         json.data.children.forEach((post) => {
-          document.getElementById("popularsubredditholder").insertAdjacentHTML(
-            "beforeend",
-            `      <div onclick="selectsubreddit('${post.data.subreddit}','${post.data.thumbnail}')" class="popularSureddit" style="">
+          if (!nsfw(post.data.subreddit_name_prefixed))
+            document
+              .getElementById("popularsubredditholder")
+              .insertAdjacentHTML(
+                "beforeend",
+                `      <div onclick="selectsubreddit('${post.data.subreddit}','${post.data.thumbnail}')" class="popularSureddit" style="">
               <div class="popularsubreddittitleHolder">
         <p class="popularsubreddittitle">${post.data.subreddit_name_prefixed}</p></div>
         <img class="popularsubredditimage" src="${post.data.thumbnail}" onerror=this.src="data:image/png;base64,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">
       </div>`
-          );
+              );
         });
       });
     }
@@ -434,7 +441,7 @@
               ipcRenderer.send(
                 "StartDownload",
                 numberofpoststodwnl,
-                document.getElementById("downloadnsfw").checked,
+                false,
                 document.getElementById("downloadnsfw2").checked
               );
               is_download_cancelled = false;
@@ -468,7 +475,7 @@
             ipcRenderer.send(
               "StartDownload",
               numberofpoststodwnl,
-              document.getElementById("downloadnsfw").checked,
+              false,
               document.getElementById("downloadnsfw2").checked
             );
             is_download_cancelled = false;
