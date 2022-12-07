@@ -8751,3 +8751,67 @@ TypeError: Cannot read properties of undefined (reading '0')
 [1670425221659] : ---[Downloaded] : r/meirl - meirl
 [1670425222215] : ---[Downloaded] : r/meirl - meirl
 [1670425222622] : ---[Downloaded] : r/meirl - meirl
+[1670426446244] : Proxy selected
+[1670426503818] : Generated Main URL : https://www.reddit.com/r/todayilearned/.json?limit=100&sort=hot&after=
+[1670426506506] : Got 100 posts till now.
+[1670426506507] : No after token Reached the end of the Feed
+[1670426506507] : Found 100 posts that can be downloaded.  
+[1670426513066] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426513120] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426513497] : No search results from query [object Object]
+[1670426513548] : No search results from query [object Object]
+[1670426516416] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670426516829] : No search results from query [object Object]
+[1670426517752] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426517834] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670426518199] : No search results from query [object Object]
+[1670426518259] : No search results from query [object Object]
+[1670426519934] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670426520332] : No search results from query [object Object]
+[1670426600187] : Proxy selected
+[1670426681000] : Proxy selected
+[1670429128025] : Generated Main URL : https://www.reddit.com/r/Unexpected/.json?limit=100&sort=hot&after=
+[1670429130699] : Got 101 posts till now.
+[1670429130700] : No after token Reached the end of the Feed
+[1670429130701] : Found 101 posts that can be downloaded.  
+[1670429258111] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429260787] : Got 202 posts till now.
+[1670429260787] : Found a non Media post.
+[1670429363241] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429365887] : Got 303 posts till now.
+[1670429365888] : Found a non Media post.
+[1670429491202] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429494495] : Got 404 posts till now.
+[1670429494496] : Found a non Media post.
+[1670429511157] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429513968] : Got 505 posts till now.
+[1670429513968] : Found a non Media post.
+[1670429657750] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429660303] : Got 606 posts till now.
+[1670429660303] : Found a non Media post.
+[1670429699315] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429701907] : Got 707 posts till now.
+[1670429701908] : Found a non Media post.
+[1670429742381] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429745081] : Got 808 posts till now.
+[1670429745082] : Found a non Media post.
+[1670429762293] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429765191] : Got 909 posts till now.
+[1670429765191] : Found a non Media post.
+[1670429799968] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429800070] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429800242] : Search for "red" resolved Url = https://www.reddit.com/search.json?q=red&source=recent&type=sr%2Cuser
+[1670429800253] : No search results from query [object Object]
+[1670429800360] : No search results from query [object Object]
+[1670429812385] : Search for "re" resolved Url = https://www.reddit.com/search.json?q=re&source=recent&type=sr%2Cuser
+[1670429812550] : Search for "r" resolved Url = https://www.reddit.com/search.json?q=r&source=recent&type=sr%2Cuser
+[1670429812683] : No search results from query [object Object]
+[1670429812841] : No search results from query [object Object]
+[1670429839442] : Generated Main URL : https://www.reddit.com/r/funny/.json?limit=100&sort=hot&after=
+[1670429842228] : Got 1011 posts till now.
+[1670429842228] : Found a non Media post.
+[1670429867999] : Generated Main URL : https://www.reddit.com/r/news/.json?limit=100&sort=hot&after=
+[1670429870411] : Got 1111 posts till now.
+[1670429879478] : Generated Main URL : https://www.reddit.com/r/WhitePeopleTwitter/.json?limit=100&sort=hot&after=
+[1670429882968] : Got 1212 posts till now.
+[1670429882968] : Found a non Media post.
