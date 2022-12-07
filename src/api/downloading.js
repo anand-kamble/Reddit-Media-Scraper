@@ -29,7 +29,7 @@ const downloading = (sData, cb) => {
       }
       if (globals.do_I_have_to_rename_posts == true) {
         let urlsplit = postsData.url.split(".");
-        title = globals.sub_reddit + "_" + (file_count + 1); //globals.total_downloaded_count;
+        title = globals.sub_reddit + "_" + (file_count + 1);
         title +=
           "." + urlsplit[urlsplit.length - 1].replace(/[\\/:*?'"<>|]/g, "");
         title = title.replace(/\\|\//g, "");
@@ -51,9 +51,7 @@ const downloading = (sData, cb) => {
               " - " +
               postsData.title
           );
-          globals.mainWindow.webContents.send("downloadedFiles", postsData);
-          // total_downloaded_count++;
-
+          globals.mainWindow?.webContents.send("downloadedFiles", postsData);
           cb();
         });
       } else {
@@ -64,7 +62,7 @@ const downloading = (sData, cb) => {
         globals.is_download_cancelled == true &&
         globals.is_cancel_confirm_sent == false
       ) {
-        globals.mainWindow.webContents.send("cancelConfirm");
+        globals.mainWindow?.webContents.send("cancelConfirm");
         globals.is_cancel_confirm_sent = true;
       }
       cb();

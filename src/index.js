@@ -1,11 +1,9 @@
 //@ts-check
-const { app, BrowserWindow, Menu, ipcMain, dialog } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const request = require("request");
 const fs = require("fs");
-const async = require("async");
 //request.defaults({'proxy': proxyUrl});
-const config = require("./config.json");
 const { logging } = require("./utils");
 const globals = require("./globals");
 
@@ -68,8 +66,9 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      // @ts-ignore
       enableRemoteModule: true,
-      devTools: true,
+      devTools: false,
       icon: __dirname + "assets/src/logo.ico",
     },
   });
@@ -461,7 +460,7 @@ for (const file of moduleFiles) {
 //   }
 // }
 
-var total_downloaded_count = 0;
+// var total_downloaded_count = 0;
 // function downloading(sData, cb) {
 //   try {
 //     var postsData = sData.data;

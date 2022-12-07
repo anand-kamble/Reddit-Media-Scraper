@@ -8,7 +8,6 @@ let afterToken;
 let numofPostsGot = 0;
 
 const get_subreddit_posts = (aftertoken, is_final_download) => {
-  console.log("get_subreddit_posts : ", globals.sub_reddit);
   try {
     let mainURL =
       "https://www.reddit.com/r/" +
@@ -42,7 +41,7 @@ const processSearchJSON = (jsonData, query) => {
         length: 0,
         kids: [],
       };
-      mainWindow.webContents.send("searchResult", searchresults);
+      mainWindow?.webContents.send("searchResult", searchresults);
     } else {
       let searchresults = {
         query: query,
@@ -78,7 +77,7 @@ const processSearchJSON = (jsonData, query) => {
         // @ts-ignore
         searchresults.kids.push(subredditIntro);
       });
-      mainWindow.webContents.send("searchResult", searchresults);
+      mainWindow?.webContents.send("searchResult", searchresults);
     }
   } catch (e) {
     logging(e);
@@ -161,7 +160,6 @@ const processJSON = (jsonData, is_final_download) => {
               if (postObj.title.length > 65) {
                 postObj.title = postObj.title.slice(0, 63) + "...";
               }
-              // globals.postsdata.push(postObj);
               globals.setGlobal("postsdata", [...globals.postsdata, postObj]);
             } else {
               if (post.data.media !== null) {
@@ -186,7 +184,6 @@ const processJSON = (jsonData, is_final_download) => {
                 if (postObj.title.length > 65) {
                   postObj.title = postObj.title.slice(0, 63) + "...";
                 }
-                // globals.postsdata.push(postObj);
                 globals.setGlobal("postsdata", [...globals.postsdata, postObj]);
               } else {
               }
@@ -204,14 +201,13 @@ const processJSON = (jsonData, is_final_download) => {
             if (postObj.title.length > 65) {
               postObj.title = postObj.title.slice(0, 63) + "...";
             }
-            // globals.postsdata.push(postObj);
             globals.setGlobal("postsdata", [...globals.postsdata, postObj]);
           }
         }
       });
     }
     if (is_final_download == false) {
-      globals.mainWindow.webContents.send(
+      globals.mainWindow?.webContents.send(
         "takesubredditdata",
         globals.postsdata
       );
@@ -254,17 +250,12 @@ const createDir = (nameofDir) => {
     if (!fs.existsSync(globals.downloadFolder + "/" + nameofDir)) {
       fs.mkdirSync(globals.downloadFolder + "/" + nameofDir);
     }
-    // console.log(
-    //   `Number of parallels too download ${globals.parallelDownloads}`
-    // );
-    // console.log("Numberof posts to download = " + NumberPostsToDownload);
     for (let i = 0; i < globals.NumberPostsToDownload; i++) {
-      console.log("added to q");
       var dataforfunction = {
         data: globals.postsdata[i],
         count: i,
       };
-      globals.queue.push(dataforfunction);
+      globals.queue?.push(dataforfunction);
     }
   } catch (e) {
     logging(e);

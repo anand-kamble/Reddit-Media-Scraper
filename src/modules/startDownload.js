@@ -42,9 +42,9 @@ const callback = (
     "queue",
     async.queue(downloading, globals.parallelDownloads)
   );
-  globals.queue.drain(() => {
+  globals.queue?.drain(() => {
     var filesDownloaded = fs.readdirSync(globals.downloadsfinalPath);
-    globals.mainWindow.webContents.send(
+    globals.mainWindow?.webContents.send(
       "DownloadFinished",
       filesDownloaded.length
     );
