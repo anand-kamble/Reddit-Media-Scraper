@@ -31,7 +31,7 @@ const createWindow = () => {
       contextIsolation: false,
       // @ts-ignore
       enableRemoteModule: true,
-      devTools: true,
+      devTools: false,
       icon: __dirname + "assets/src/logo.ico",
     },
   });
